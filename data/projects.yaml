@@ -3,78 +3,94 @@
   description: "R package for SONG dimensionality reduction — structured, interpretable embeddings for high-dimensional biological data"
   github: https://github.com/CTTIR/songR
   docs: https://r-heller.github.io/songr/
+  logo: https://raw.githubusercontent.com/CTTIR/songR/main/man/figures/logo.png
 - name: bambamR
   language: R
   description: "R package for streamlined RNA-seq analysis pipelines — from count matrices to publication-ready results"
   github: https://github.com/CTTIR/bambamR
   docs: https://cttir.github.io/bambamR/
+  logo: https://raw.githubusercontent.com/CTTIR/bambamR/main/man/figures/logo.png
 - name: hexmakR
   language: R
   description: "R package for generating polished hex sticker logos for R packages using customizable templates"
   github: https://github.com/CTTIR/hexmakR
   docs: https://cttir.github.io/hexmakR/
+  logo: ""
 - name: reflowR
   language: R
   description: "Custom workflowr themes and templates for reproducible research websites in R"
   github: https://github.com/CTTIR/reflowR
   docs: https://cttir.github.io/reflowR/
+  logo: https://raw.githubusercontent.com/CTTIR/reflowR/main/man/figures/logo.png
 - name: phenoscapR
   language: R
   description: "R package for analyzing and visualizing single-cell spatial data"
   github: https://github.com/CTTIR/phenoscapR
   docs: https://r-heller.github.io/phenoscapR/
+  logo: ""
 - name: molpathR
   language: R
   description: "Unified R platform for molecular pathology data — parse NGS files (VCF, BAM, FASTQ), XML/PDF reports, and clinical data into a queryable database with an interactive Shiny app for clinical exploration and visualization."
   github: https://github.com/CTTIR/molpathR
   docs: https://cttir.github.io/molpathR/
+  logo: ""
 - name: qviewparsR
   language: R
   description: "Pure-R parser for the binary .Q-View project file format used in chemiluminescent multiplex ELISA plate imaging and quantification."
   github: https://github.com/CTTIR/qviewparsR
   docs: https://cttir.github.io/qviewparsR/
+  logo: https://raw.githubusercontent.com/CTTIR/qviewparsR/main/man/figures/logo.png
 - name: cellreportR
   language: R
   description: "TODO: GitHub About field is empty."
   github: https://github.com/CTTIR/cellreportR
   docs: https://cttir.github.io/cellreportR/
+  logo: https://raw.githubusercontent.com/CTTIR/cellreportR/main/man/figures/logo.png
 - name: pressR
   language: R
   description: "TODO: GitHub About field is empty."
   github: https://github.com/CTTIR/pressR
   docs: https://cttir.github.io/pressR/
+  logo: https://raw.githubusercontent.com/CTTIR/pressR/main/man/figures/logo.png
 - name: scimagR
   language: R
   description: "TODO: GitHub About field is empty."
   github: https://github.com/CTTIR/scimagR
   docs: https://cttir.github.io/scimagR/
+  logo: ""
 - name: segmantR
   language: R
   description: "TODO: GitHub About field is empty."
   github: https://github.com/CTTIR/segmantR
   docs: https://cttir.github.io/segmantR/
+  logo: ""
 - name: hyperspectR
   language: R
   description: "TODO: GitHub About field is empty."
   github: https://github.com/CTTIR/hyperspectR
   docs: https://cttir.github.io/hyperspectR/
+  logo: https://raw.githubusercontent.com/CTTIR/hyperspectR/main/man/figures/logo.png
 - name: libscanR
   language: R
   description: "TODO: GitHub About field is empty."
   github: https://github.com/CTTIR/libscanR
   docs: https://cttir.github.io/libscanR/
+  logo: https://raw.githubusercontent.com/CTTIR/libscanR/main/man/figures/logo.png
 - name: dynasimR
   language: R
   description: "TODO: GitHub About field is empty."
   github: https://github.com/CTTIR/dynasimR
   docs: https://cttir.github.io/dynasimR/
+  logo: https://raw.githubusercontent.com/CTTIR/dynasimR/main/man/figures/logo.png
 - name: cuvis.r
   language: R
   description: "TODO: GitHub About field is empty."
   github: https://github.com/CTTIR/cuvis.r
   docs: ""
+  logo: ""
 - name: pwa-quest
   language: TypeScript
   description: "TODO: GitHub About field is empty."
   github: https://github.com/CTTIR/pwa-quest
   docs: https://cttir.github.io/pwa-quest/
+  logo: ""

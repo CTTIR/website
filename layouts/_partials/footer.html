@@ -1,0 +1,28 @@
+<footer class="footer">
+  <section class="container">
+    <nav class="cttir-footer-nav">
+      <a href="{{ "about/" | relURL }}">About</a>
+      <a href="{{ "projects/" | relURL }}">Projects</a>
+      <a href="{{ "tutorials/" | relURL }}">Tutorials &amp; Courses</a>
+      <a href="{{ "ressources/" | relURL }}">Ressources</a>
+      <a href="https://github.com/CTTIR" rel="noopener">GitHub</a>
+    </nav>
+    <div class="cttir-footer-copy">
+      ©
+      {{ if (and .Site.Params.since (lt .Site.Params.since now.Year)) }}
+        {{ .Site.Params.since }} -
+      {{ end }}
+      {{ now.Year }}
+      {{ with .Site.Params.author }} {{ . }} {{ end }}
+      ·
+      {{ if (and .Site.Params.license) }}
+        {{ i18n "licensed_under" }} {{ .Site.Params.license | safeHTML }}
+      ·
+      {{ end }}
+      {{ i18n "powered_by" }} <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+      {{ if (and .Site.Params.commit .GitInfo) }}
+        [<a href="{{ .Site.Params.commit }}/{{ .GitInfo.Hash }}" target="_blank" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>]
+      {{ end }}
+    </div>
+  </section>
+</footer>

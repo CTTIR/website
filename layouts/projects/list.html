@@ -5,8 +5,9 @@
     {{ .Content }}
 
     <div class="cttir-projects">
-      {{ range .Site.Data.projects }}
+      {{ range $p := .Site.Data.projects }}
       <article class="cttir-card">
+        {{ with $p.logo }}<img class="cttir-card__logo" src="{{ . }}" alt="{{ $p.name }} hex logo" loading="lazy" />{{ end }}
         <header class="cttir-card__head">
           <h3 class="cttir-card__name">{{ .name }}</h3>
           {{ with .language }}<span class="cttir-card__lang">{{ . }}</span>{{ end }}
