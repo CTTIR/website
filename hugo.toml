@@ -1,6 +1,6 @@
 baseURL = "https://cttir.github.io/website/"
 languageCode = "en-us"
-title = "CTIR — Computational Trauma and Tissue Injury Research"
+title = "CTIR"
 theme = "github.com/luizdepra/hugo-coder"
 defaultContentLanguage = "en"
 enableEmoji = true
@@ -17,7 +17,8 @@ enableEmoji = true
 
 [params]
   author = "CTIR"
-  info = "Computational Trauma and Tissue Injury Research"
+  HeadTitle = "CTIR — Computational Trauma and Tissue Injury Research"
+  info = ["Computational Trauma", "Tissue Injury Research"]
   description = "CTIR — Computational Trauma and Tissue Injury Research. Open-source tools, tutorials, and resources."
   keywords = "trauma,tissue injury,computational biology,bioinformatics,R,research"
   avatarURL = "images/cttir-logo.png"
