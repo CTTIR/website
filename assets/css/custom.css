@@ -15,43 +15,27 @@
 a { color: var(--cttir-accent); }
 a:hover { color: var(--cttir-accent-hover); }
 
-/* Landing hero */
-.cttir-hero {
-  text-align: center;
-  padding: 4rem 1rem 2rem;
+/* Landing avatar + nav */
+.about .avatar img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
 }
-.cttir-hero__logo {
-  width: 160px;
-  height: 160px;
-  display: block;
-  margin: 0 auto 1.5rem;
-  border-radius: 8px;
-}
-.cttir-hero__title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  margin: 0 0 0.5rem;
-}
-.cttir-hero__tagline {
-  font-size: 1.05rem;
-  opacity: 0.8;
-  max-width: 36rem;
-  margin: 0 auto 2rem;
-}
-.cttir-hero__links {
+.cttir-home-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.25rem;
-}
-.cttir-hero__links a {
+  gap: 1.5rem;
+  margin: 1.5rem auto 0;
+  font-size: 1rem;
   font-weight: 600;
+}
+.cttir-home-links a {
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
   transition: border-color 0.15s ease;
 }
-.cttir-hero__links a:hover { border-bottom-color: var(--cttir-accent); }
+.cttir-home-links a:hover { border-bottom-color: var(--cttir-accent); }
 
 /* Project cards */
 .cttir-projects {
