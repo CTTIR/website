@@ -4,22 +4,28 @@
     <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
     {{ .Content }}
 
-    <div class="cttir-projects">
-      {{ range $p := .Site.Data.projects }}
-      <article class="cttir-card">
-        {{ with $p.logo }}<img class="cttir-card__logo" src="{{ . }}" alt="{{ $p.name }} hex logo" loading="lazy" />{{ end }}
-        <header class="cttir-card__head">
-          <h3 class="cttir-card__name">{{ .name }}</h3>
-          {{ with .language }}<span class="cttir-card__lang">{{ . }}</span>{{ end }}
-        </header>
-        <p class="cttir-card__desc">{{ .description }}</p>
-        <footer class="cttir-card__links">
-          {{ with .github }}<a href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
-          {{ with .docs }}<a href="{{ . }}" rel="noopener">Docs</a>{{ end }}
-        </footer>
-      </article>
+    {{ $projects := .Site.Data.projects }}
+    {{ range $cat := slice "R Packages" "Others" }}
+      {{ $items := where $projects "category" $cat }}
+      {{ if $items }}
+        <h2 class="cttir-section-title">{{ $cat }}</h2>
+        <div class="cttir-projects">
+          {{ range $p := $items }}
+          <article class="cttir-card">
+            {{ with $p.logo }}<img class="cttir-card__logo" src="{{ . }}" alt="{{ $p.name }} logo" loading="lazy" />{{ end }}
+            <header class="cttir-card__head">
+              <h3 class="cttir-card__name">{{ $p.name }}</h3>
+            </header>
+            <p class="cttir-card__desc">{{ $p.description }}</p>
+            <footer class="cttir-card__links">
+              {{ with $p.github }}<a href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
+              {{ with $p.docs }}<a href="{{ . }}" rel="noopener">Docs</a>{{ end }}
+            </footer>
+          </article>
+          {{ end }}
+        </div>
       {{ end }}
-    </div>
+    {{ end }}
   </article>
 </section>
 {{ end }}

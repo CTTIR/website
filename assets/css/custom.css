@@ -134,15 +134,14 @@ table.cttir-toc td:last-child {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   color: var(--cttir-card-fg);
 }
-.cttir-card__lang {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.15rem 0.5rem;
-  border: 1px solid var(--cttir-accent);
-  color: var(--cttir-accent);
-  border-radius: 999px;
-  white-space: nowrap;
+.cttir-section-title {
+  margin: 2.5rem 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--cttir-border);
+  padding-bottom: 0.4rem;
 }
+.cttir-section-title:first-of-type { margin-top: 1.5rem; }
 .cttir-card__desc {
   margin: 0;
   font-size: 0.95rem;
