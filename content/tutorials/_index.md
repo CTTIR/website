@@ -11,10 +11,10 @@ A four-part biostatistics curriculum, taught with R. Site: <https://cttir.github
 
 <table class="cttir-toc">
 <tbody>
-<tr><td><a href="https://cttir.github.io/courses/course1_foundations/">Foundations of Biostatistics with R</a></td><td>— The scientific process, data hygiene, probability, sampling, and the core hypothesis tests that anchor everything else.</td></tr>
-<tr><td><a href="https://cttir.github.io/courses/course2_regression/">Regression, ANOVA &amp; Model Diagnostics</a></td><td>— Linear models, ANOVA, GLMs, diagnostics, calibration, and honest model evaluation.</td></tr>
-<tr><td><a href="https://cttir.github.io/courses/course3_design_causal/">Study Design, Longitudinal Data &amp; Causal Inference</a></td><td>— Designing studies; handling missing, clustered, and time-to-event data; and making causal claims with care.</td></tr>
-<tr><td><a href="https://cttir.github.io/courses/course4_ml_highdim/">Modern Statistical Learning &amp; High-Dimensional Biomedicine</a></td><td>— Regularisation, tree ensembles, Bayesian modelling, omics, and reproducibility at scale.</td></tr>
+<tr><td><a href="https://cttir.github.io/courses/course1_foundations/">Course 1</a></td><td>— Foundations of Biostatistics with R: the scientific process, data hygiene, probability, sampling, and the core hypothesis tests that anchor everything else.</td></tr>
+<tr><td><a href="https://cttir.github.io/courses/course2_regression/">Course 2</a></td><td>— Regression, ANOVA &amp; Model Diagnostics: linear models, ANOVA, GLMs, diagnostics, calibration, and honest model evaluation.</td></tr>
+<tr><td><a href="https://cttir.github.io/courses/course3_design_causal/">Course 3</a></td><td>— Study Design, Longitudinal Data &amp; Causal Inference: designing studies; handling missing, clustered, and time-to-event data; and making causal claims with care.</td></tr>
+<tr><td><a href="https://cttir.github.io/courses/course4_ml_highdim/">Course 4</a></td><td>— Modern Statistical Learning &amp; High-Dimensional Biomedicine: regularisation, tree ensembles, Bayesian modelling, omics, and reproducibility at scale.</td></tr>
 </tbody>
 </table>
 
