@@ -4,7 +4,9 @@ title = "CTIR — Computational Trauma and Tissue Injury Research"
 theme = "github.com/luizdepra/hugo-coder"
 defaultContentLanguage = "en"
 enableEmoji = true
-paginate = 20
+
+[pagination]
+  pagerSize = 20
 
 [module]
   [[module.imports]]
