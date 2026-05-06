@@ -12,7 +12,14 @@
         <div class="cttir-projects">
           {{ range $p := $items }}
           <article class="cttir-card">
-            {{ with $p.logo }}<img class="cttir-card__logo" src="{{ . }}" alt="{{ $p.name }} logo" loading="lazy" />{{ end }}
+            {{ if $p.logo }}
+              <img class="cttir-card__logo" src="{{ $p.logo }}" alt="{{ $p.name }} logo" loading="lazy" />
+            {{ else }}
+              <svg class="cttir-card__logo cttir-card__logo--placeholder" viewBox="0 0 200 230" role="img" aria-label="{{ $p.name }}">
+                <polygon points="100,4 196,59 196,171 100,226 4,171 4,59" fill="none" stroke="currentColor" stroke-width="3" />
+                <text x="100" y="115" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="currentColor">{{ $p.name }}</text>
+              </svg>
+            {{ end }}
             <header class="cttir-card__head">
               <h3 class="cttir-card__name">{{ $p.name }}</h3>
             </header>
