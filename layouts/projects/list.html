@@ -1,0 +1,24 @@
+{{ define "content" }}
+<section class="container page">
+  <article>
+    <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
+    {{ .Content }}
+
+    <div class="cttir-projects">
+      {{ range .Site.Data.projects }}
+      <article class="cttir-card">
+        <header class="cttir-card__head">
+          <h3 class="cttir-card__name">{{ .name }}</h3>
+          {{ with .language }}<span class="cttir-card__lang">{{ . }}</span>{{ end }}
+        </header>
+        <p class="cttir-card__desc">{{ .description }}</p>
+        <footer class="cttir-card__links">
+          {{ with .github }}<a href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
+          {{ with .docs }}<a href="{{ . }}" rel="noopener">Docs</a>{{ end }}
+        </footer>
+      </article>
+      {{ end }}
+    </div>
+  </article>
+</section>
+{{ end }}

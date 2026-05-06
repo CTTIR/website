@@ -1,0 +1,45 @@
+- name: songR
+  language: R
+  description: "R package for SONG dimensionality reduction — structured, interpretable embeddings for high-dimensional biological data"
+  github: https://github.com/CTTIR/songR
+  docs: ""
+- name: bambamR
+  language: R
+  description: "R package for streamlined RNA-seq analysis pipelines — from count matrices to publication-ready results"
+  github: https://github.com/CTTIR/bambamR
+  docs: ""
+- name: hexmakR
+  language: R
+  description: "R package for generating polished hex sticker logos for R packages using customizable templates"
+  github: https://github.com/CTTIR/hexmakR
+  docs: ""
+- name: reflowR
+  language: R
+  description: "Custom workflowr themes and templates for reproducible research websites in R"
+  github: https://github.com/CTTIR/reflowR
+  docs: ""
+- name: molpathR
+  language: R
+  description: "Unified R platform for molecular pathology data — parse NGS files (VCF, BAM, FASTQ), XML/PDF reports, and clinical data into a queryable database with an interactive Shiny app for clinical exploration and visualization"
+  github: https://github.com/CTTIR/molpathR
+  docs: ""
+- name: cellreportR
+  language: R
+  description: "TODO: Description (verbatim from GitHub About field)."
+  github: https://github.com/CTTIR/cellreportR
+  docs: ""
+- name: pressR
+  language: R
+  description: "TODO: Description (verbatim from GitHub About field)."
+  github: https://github.com/CTTIR/pressR
+  docs: ""
+- name: scimagR
+  language: R
+  description: "TODO: Description (verbatim from GitHub About field)."
+  github: https://github.com/CTTIR/scimagR
+  docs: ""
+- name: "TODO: additional repo"
+  language: "TODO"
+  description: "TODO: Add a card here for any further CTTIR repository."
+  github: ""
+  docs: ""

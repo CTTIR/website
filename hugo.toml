@@ -1,0 +1,57 @@
+baseURL = "https://cttir.github.io/website/"
+languageCode = "en-us"
+title = "CTIR — Computational Trauma and Tissue Injury Research"
+theme = "github.com/luizdepra/hugo-coder"
+defaultContentLanguage = "en"
+enableEmoji = true
+paginate = 20
+
+[module]
+  [[module.imports]]
+    path = "github.com/luizdepra/hugo-coder"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  author = "CTIR"
+  info = "Computational Trauma and Tissue Injury Research"
+  description = "CTIR — Computational Trauma and Tissue Injury Research. Open-source tools, tutorials, and resources."
+  keywords = "trauma,tissue injury,computational biology,bioinformatics,R,research"
+  avatarURL = "images/cttir-logo.png"
+  faviconSVG = "images/cttir-logo.png"
+  favicon_32 = "images/cttir-logo.png"
+  favicon_16 = "images/cttir-logo.png"
+  since = 2025
+  enableTwemoji = false
+  colorScheme = "auto"
+  hideColorSchemeToggle = false
+  customCSS = ["css/custom.css"]
+
+  [[params.social]]
+    name = "GitHub"
+    icon = "fa-brands fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/CTTIR"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    weight = 1
+    url = "about/"
+  [[menu.main]]
+    name = "Projects"
+    weight = 2
+    url = "projects/"
+  [[menu.main]]
+    name = "Tutorials & Courses"
+    weight = 3
+    url = "tutorials/"
+  [[menu.main]]
+    name = "Ressources"
+    weight = 4
+    url = "ressources/"
+  [[menu.main]]
+    name = "Impressum"
+    weight = 5
+    url = "impressum/"

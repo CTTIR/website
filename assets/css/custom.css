@@ -1,0 +1,116 @@
+:root {
+  --cttir-accent: #0e7c86;
+  --cttir-accent-hover: #0a5e66;
+  --cttir-fg: #000000;
+  --cttir-bg: #ffffff;
+  --cttir-border: rgba(0, 0, 0, 0.12);
+}
+
+:root[data-theme="dark"] {
+  --cttir-fg: #ffffff;
+  --cttir-bg: #000000;
+  --cttir-border: rgba(255, 255, 255, 0.16);
+}
+
+a { color: var(--cttir-accent); }
+a:hover { color: var(--cttir-accent-hover); }
+
+/* Landing hero */
+.cttir-hero {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+.cttir-hero__logo {
+  width: 160px;
+  height: 160px;
+  display: block;
+  margin: 0 auto 1.5rem;
+  border-radius: 8px;
+}
+.cttir-hero__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+}
+.cttir-hero__tagline {
+  font-size: 1.05rem;
+  opacity: 0.8;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+}
+.cttir-hero__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.cttir-hero__links a {
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease;
+}
+.cttir-hero__links a:hover { border-bottom-color: var(--cttir-accent); }
+
+/* Project cards */
+.cttir-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+@media (min-width: 640px) {
+  .cttir-projects { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .cttir-projects { grid-template-columns: repeat(3, 1fr); }
+}
+
+.cttir-card {
+  border: 1px solid var(--cttir-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  background: var(--cttir-bg);
+}
+.cttir-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--cttir-accent);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+.cttir-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.cttir-card__name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.cttir-card__lang {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--cttir-accent);
+  color: var(--cttir-accent);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.cttir-card__desc {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex: 1;
+}
+.cttir-card__links {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
