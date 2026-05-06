@@ -53,6 +53,36 @@ a:hover { color: var(--cttir-accent-hover); }
 .cttir-footer-nav a:hover { border-bottom-color: var(--cttir-accent); }
 .cttir-footer-copy { font-size: 0.85rem; opacity: 0.85; }
 
+/* Borderless TOC table for Tutorials & Courses */
+table.cttir-toc {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+  background: transparent;
+  border: 0;
+}
+table.cttir-toc tr,
+table.cttir-toc td,
+table.cttir-toc th {
+  border: 0;
+  background: transparent;
+  padding: 0.4rem 0.75rem 0.4rem 0;
+  vertical-align: top;
+  line-height: 1.5;
+}
+table.cttir-toc td:first-child {
+  white-space: nowrap;
+  font-weight: 600;
+  width: 1%;
+}
+table.cttir-toc td:last-child {
+  padding-right: 0;
+  opacity: 0.92;
+}
+@media (max-width: 640px) {
+  table.cttir-toc td:first-child { white-space: normal; }
+}
+
 /* Project cards */
 .cttir-projects {
   display: grid;

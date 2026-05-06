@@ -9,32 +9,36 @@ Teaching material maintained by CTIR. Source repositories: [CTTIR/tutorials](htt
 
 A four-part biostatistics curriculum, taught with R. Site: <https://cttir.github.io/courses/>.
 
-| Course | Description | Link |
-|---|---|---|
-| Foundations of Biostatistics with R | The scientific process, data hygiene, probability, sampling, and the core hypothesis tests that anchor everything else. | [Open](https://cttir.github.io/courses/course1_foundations/) |
-| Regression, ANOVA & Model Diagnostics | Linear models, ANOVA, GLMs, diagnostics, calibration, and honest model evaluation. | [Open](https://cttir.github.io/courses/course2_regression/) |
-| Study Design, Longitudinal Data & Causal Inference | Designing studies; handling missing, clustered, and time-to-event data; and making causal claims with care. | [Open](https://cttir.github.io/courses/course3_design_causal/) |
-| Modern Statistical Learning & High-Dimensional Biomedicine | Regularisation, tree ensembles, Bayesian modelling, omics, and reproducibility at scale. | [Open](https://cttir.github.io/courses/course4_ml_highdim/) |
+<table class="cttir-toc">
+<tbody>
+<tr><td><a href="https://cttir.github.io/courses/course1_foundations/">Foundations of Biostatistics with R</a></td><td>— The scientific process, data hygiene, probability, sampling, and the core hypothesis tests that anchor everything else.</td></tr>
+<tr><td><a href="https://cttir.github.io/courses/course2_regression/">Regression, ANOVA &amp; Model Diagnostics</a></td><td>— Linear models, ANOVA, GLMs, diagnostics, calibration, and honest model evaluation.</td></tr>
+<tr><td><a href="https://cttir.github.io/courses/course3_design_causal/">Study Design, Longitudinal Data &amp; Causal Inference</a></td><td>— Designing studies; handling missing, clustered, and time-to-event data; and making causal claims with care.</td></tr>
+<tr><td><a href="https://cttir.github.io/courses/course4_ml_highdim/">Modern Statistical Learning &amp; High-Dimensional Biomedicine</a></td><td>— Regularisation, tree ensembles, Bayesian modelling, omics, and reproducibility at scale.</td></tr>
+</tbody>
+</table>
 
 ## Tutorials
 
 A topic-organised library of standalone biostatistics tutorials in R. Site: <https://cttir.github.io/tutorials/>.
 
-| Topic | Description | Link |
-|---|---|---|
-| Statistical Foundations | Foundational concepts: probability, sampling, inference framework. | [Open](https://cttir.github.io/tutorials/tutorials/statistical-foundations/) |
-| Descriptive Statistics | Summarising and exploring data before modelling. | [Open](https://cttir.github.io/tutorials/tutorials/descriptive-statistics/) |
-| Probability Theory | Axioms, distributions, expectations, and the algebra of random variables. | [Open](https://cttir.github.io/tutorials/tutorials/probability/) |
-| Inferential Statistics | Hypothesis tests, confidence intervals, and the logic of inference. | [Open](https://cttir.github.io/tutorials/tutorials/inference/) |
-| Sample Size & Power | Planning studies with adequate statistical power. | [Open](https://cttir.github.io/tutorials/tutorials/sample-size/) |
-| Data Visualisation | Publication-quality graphics with ggplot2 and friends. | [Open](https://cttir.github.io/tutorials/tutorials/visualisation/) |
-| Regression & Modelling | Linear models, GLMs, mixed models, and beyond. | [Open](https://cttir.github.io/tutorials/tutorials/regression-modelling/) |
-| Multivariate Methods | PCA, clustering, factor analysis, discriminant analysis. | [Open](https://cttir.github.io/tutorials/tutorials/multivariate/) |
-| Time-Series Analysis | ARIMA, state-space, spectral, and forecasting methods. | [Open](https://cttir.github.io/tutorials/tutorials/time-series/) |
-| Bayesian Statistics | Bayesian inference, MCMC, and probabilistic programming. | [Open](https://cttir.github.io/tutorials/tutorials/bayesian/) |
-| Survival Analysis | Censored time-to-event data: Kaplan-Meier, Cox, AFT, competing risks. | [Open](https://cttir.github.io/tutorials/tutorials/survival-analysis/) |
-| Bioinformatics | Genomics pipelines from FASTQ to differential expression and beyond. | [Open](https://cttir.github.io/tutorials/tutorials/bioinformatics/) |
-| Machine Learning | Tree ensembles, neural networks, calibration, interpretability. | [Open](https://cttir.github.io/tutorials/tutorials/machine-learning/) |
-| Clinical Biostatistics | RCT design, adaptive trials, diagnostic accuracy, agreement. | [Open](https://cttir.github.io/tutorials/tutorials/clinical-biostatistics/) |
-| Meta-Analysis | Effect-size pooling, heterogeneity, bias, network meta-analysis. | [Open](https://cttir.github.io/tutorials/tutorials/meta-analysis/) |
-| Experimental Design | Factorials, response surfaces, mixture designs, robust design. | [Open](https://cttir.github.io/tutorials/tutorials/experimental-design/) |
+<table class="cttir-toc">
+<tbody>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/statistical-foundations/">Statistical Foundations</a></td><td>— Foundational concepts: probability, sampling, inference framework.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/descriptive-statistics/">Descriptive Statistics</a></td><td>— Summarising and exploring data before modelling.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/probability/">Probability Theory</a></td><td>— Axioms, distributions, expectations, and the algebra of random variables.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/inference/">Inferential Statistics</a></td><td>— Hypothesis tests, confidence intervals, and the logic of inference.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/sample-size/">Sample Size &amp; Power</a></td><td>— Planning studies with adequate statistical power.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/visualisation/">Data Visualisation</a></td><td>— Publication-quality graphics with ggplot2 and friends.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/regression-modelling/">Regression &amp; Modelling</a></td><td>— Linear models, GLMs, mixed models, and beyond.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/multivariate/">Multivariate Methods</a></td><td>— PCA, clustering, factor analysis, discriminant analysis.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/time-series/">Time-Series Analysis</a></td><td>— ARIMA, state-space, spectral, and forecasting methods.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/bayesian/">Bayesian Statistics</a></td><td>— Bayesian inference, MCMC, and probabilistic programming.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/survival-analysis/">Survival Analysis</a></td><td>— Censored time-to-event data: Kaplan-Meier, Cox, AFT, competing risks.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/bioinformatics/">Bioinformatics</a></td><td>— Genomics pipelines from FASTQ to differential expression and beyond.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/machine-learning/">Machine Learning</a></td><td>— Tree ensembles, neural networks, calibration, interpretability.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/clinical-biostatistics/">Clinical Biostatistics</a></td><td>— RCT design, adaptive trials, diagnostic accuracy, agreement.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/meta-analysis/">Meta-Analysis</a></td><td>— Effect-size pooling, heterogeneity, bias, network meta-analysis.</td></tr>
+<tr><td><a href="https://cttir.github.io/tutorials/tutorials/experimental-design/">Experimental Design</a></td><td>— Factorials, response surfaces, mixture designs, robust design.</td></tr>
+</tbody>
+</table>
