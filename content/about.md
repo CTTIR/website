@@ -28,15 +28,3 @@ to clinical registries — into transparent, reusable software and workflows.
   utilities (e.g. [qviewparsR](https://github.com/CTTIR/qviewparsR) for
   Q-View chemiluminescent ELISA data).
 
-### People
-
-TODO: List principal investigator(s), members, and affiliations.
-
-### Affiliation
-
-TODO: Institutional affiliation(s).
-
-### Contact
-
-- E-mail: <58561665+r-heller@users.noreply.github.com>
-- GitHub organisation: <https://github.com/CTTIR>
