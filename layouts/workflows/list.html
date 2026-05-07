@@ -1,0 +1,45 @@
+{{ define "content" }}
+<section class="container page">
+  <article>
+    <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
+    {{ .Content }}
+
+    {{ $workflows := sort .Site.Data.workflows "weight" "asc" }}
+    {{ if $workflows }}
+      <div class="cttir-projects">
+        {{ range $w := $workflows }}
+        <article class="cttir-card">
+          <svg class="cttir-card__logo cttir-card__logo--placeholder" viewBox="0 0 200 230" role="img" aria-label="{{ $w.name }}">
+            <polygon points="100,4 196,59 196,171 100,226 4,171 4,59" fill="none" stroke="currentColor" stroke-width="3" />
+            <text x="100" y="115" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="currentColor">workflow</text>
+          </svg>
+          <header class="cttir-card__head">
+            <h3 class="cttir-card__name">{{ $w.name }}</h3>
+            {{ with $w.status }}<span class="cttir-card__status">{{ . }}</span>{{ end }}
+          </header>
+          {{ with $w.research_question }}<p class="cttir-card__question"><em>{{ . }}</em></p>{{ end }}
+          <p class="cttir-card__desc">{{ $w.description }}</p>
+          {{ with $w.featured_packages }}
+            <p class="cttir-card__packages"><strong>Featured packages:</strong>
+              {{ range $i, $p := . }}{{ if $i }}, {{ end }}<code>{{ $p }}</code>{{ end }}
+            </p>
+          {{ end }}
+          {{ with $w.learn }}
+            <details class="cttir-card__learn">
+              <summary>What you'll learn</summary>
+              <ul>
+                {{ range . }}<li>{{ . }}</li>{{ end }}
+              </ul>
+            </details>
+          {{ end }}
+          <footer class="cttir-card__links">
+            {{ with $w.workflow_url }}<a href="{{ . }}" rel="noopener">Workflow</a>{{ end }}
+            {{ with $w.repo_url }}<a href="{{ . }}" rel="noopener">Source</a>{{ end }}
+          </footer>
+        </article>
+        {{ end }}
+      </div>
+    {{ end }}
+  </article>
+</section>
+{{ end }}
