@@ -7,3 +7,4 @@
 - `feat(workflows): add HSI tissue characterization placeholder` — weight 20, packages hyperspectR/libscanR/songR/reflowR; TODO URLs.
 - `feat(workflows): add multiplex protein cohort placeholder` — weight 30, packages qviewparsR/pressR/songR; TODO URLs.
 - `feat(workflows): add bulk transcriptomic response placeholder` — weight 40, packages bambamR/songR/reflowR; TODO URLs.
+- `feat(workflows): add molecular pathology cohort placeholder` — weight 50, packages molpathR/songR/pressR; TODO URLs.

@@ -66,3 +66,20 @@
     - "Producing publication-ready figures, tables, and a reproducible report"
   workflow_url: https://example.com/TODO-workflowr-bulk-transcriptomic-response
   repo_url: https://github.com/CTTIR/TODO-bulk-transcriptomic-response-workflow
+
+# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
+- name: "Molecular Pathology Cohort — From Heterogeneous Reports to Queryable Cohort"
+  slug: molecular-pathology-cohort
+  weight: 50
+  status: "Coming soon"
+  research_question: "How can heterogeneous molecular pathology data (NGS files, structured reports, free-text PDFs, clinical metadata) be unified into a queryable cohort and explored interactively?"
+  description: "Workflow for ingesting VCF/BAM/FASTQ, XML and PDF reports, and clinical metadata into a unified queryable database, with cohort-level summaries and an interactive Shiny exploration layer. Pairs ingestion with downstream cohort statistics."
+  featured_packages: [molpathR, songR, pressR]
+  learn:
+    - "Ingesting heterogeneous molecular pathology files with molpathR"
+    - "Building a queryable cohort database with provenance"
+    - "Cohort-level descriptive statistics and embeddings via songR"
+    - "Standardized cohort reports with pressR"
+    - "Launching the interactive Shiny exploration app"
+  workflow_url: https://example.com/TODO-workflowr-molecular-pathology-cohort
+  repo_url: https://github.com/CTTIR/TODO-molecular-pathology-cohort-workflow
