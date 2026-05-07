@@ -16,3 +16,17 @@
   workflows:
     - { slug: single-cell-tissue-atlas,      title: "Single-Cell Tissue Atlas" }
     - { slug: multimodal-tissue-integration, title: "Multi-Modal Tissue Integration", note: "(includes single-cell)" }
+
+# TODO: Add a project hero image / illustration once available.
+- name: "Hyperspectral Imaging"
+  slug: hsi
+  weight: 20
+  description: "<em>Label-free tissue characterization from spectral signatures.</em> CTIR develops HSI ingest, preprocessing, library matching, and interpretable embedding methods for tissue-region classification, with reproducible reporting baked in."
+  software:
+    - { pkg: hyperspectR, note: "HSI cube ingest and preprocessing" }
+    - { pkg: libscanR,    note: "reference-spectrum library matching" }
+    - { pkg: songR,       note: "interpretable embeddings over spectral features" }
+    - { pkg: reflowR,     note: "CTIR-styled reproducible report themes" }
+  workflows:
+    - { slug: hsi-tissue-characterization,   title: "Hyperspectral Tissue Characterization" }
+    - { slug: multimodal-tissue-integration, title: "Multi-Modal Tissue Integration", note: "(includes HSI)" }
