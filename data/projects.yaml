@@ -52,3 +52,19 @@
     - { slug: multiplex-protein-cohort,      title: "Multiplex Protein Quantification & Cohort Analysis" }
     - { slug: molecular-pathology-cohort,    title: "Molecular Pathology Cohort" }
     - { slug: bulk-transcriptomic-response,  title: "Bulk Transcriptomic Response" }
+
+# TODO: Add a project hero image / illustration once available.
+- name: "Basic Bioinformatics"
+  slug: basic-bioinformatics
+  weight: 40
+  description: "<em>Foundational methods, benchmarking, and reproducibility infrastructure.</em> The methodological backbone of CTIR's applied work: interpretable dimensionality reduction, RNA-seq fundamentals, simulation-based benchmarking, and reproducible reporting templates that the applied projects build on."
+  software:
+    - { pkg: songR,    note: "SONG dimensionality reduction" }
+    - { pkg: bambamR,  note: "RNA-seq pipeline fundamentals" }
+    - { pkg: dynasimR, note: "synthetic ground-truth simulation" }
+    - { pkg: reflowR,  note: "reproducible report themes" }
+    - { pkg: hexmakR,  note: "package branding utilities" }
+  workflows:
+    - { slug: bulk-transcriptomic-response, title: "Bulk Transcriptomic Response" }
+    - { slug: method-benchmarking,          title: "Method Benchmarking on Synthetic Ground Truth" }
+    - { slug: ctir-site-template,           title: "Templating a CTIR-Styled Reproducible Site" }
