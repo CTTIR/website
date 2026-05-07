@@ -83,3 +83,20 @@
     - "Launching the interactive Shiny exploration app"
   workflow_url: https://example.com/TODO-workflowr-molecular-pathology-cohort
   repo_url: https://github.com/CTTIR/TODO-molecular-pathology-cohort-workflow
+
+# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
+- name: "Multi-Modal Tissue Integration — HSI x Single-Cell x Bulk"
+  slug: multimodal-tissue-integration
+  weight: 60
+  status: "Coming soon"
+  research_question: "Can hyperspectral tissue maps, single-cell composition, and bulk transcriptomic signatures be jointly aligned to produce a coherent multi-modal view of injured tissue?"
+  description: "Cross-modality integration workflow: align HSI tissue-class maps, single-cell composition estimates, and bulk RNA-seq signatures across matched synthetic samples, with shared embeddings and consistency checks. The flagship 'puts it all together' workflow."
+  featured_packages: [hyperspectR, cellreportR, bambamR, songR, segmantR]
+  learn:
+    - "Harmonizing modalities at the sample/region level"
+    - "Joint embeddings with songR across modalities"
+    - "Cross-modality consistency and disagreement diagnostics"
+    - "Composite reporting that surfaces concordance and conflict"
+    - "Limits and pitfalls of multi-modal alignment with synthetic data"
+  workflow_url: https://example.com/TODO-workflowr-multimodal-tissue-integration
+  repo_url: https://github.com/CTTIR/TODO-multimodal-tissue-integration-workflow
