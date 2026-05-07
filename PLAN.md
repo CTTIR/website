@@ -45,3 +45,20 @@
 
 ## Spelling
 - Org GitHub: `CTTIR`. Body copy: `CTIR`. Same as before.
+
+---
+
+# Horizontal tile layout — recon
+
+## Current state
+- Both `layouts/projects/list.html` and `layouts/workflows/list.html` render `.cttir-card` items inside a `.cttir-projects` CSS Grid (1col / 2col / 3col responsive). Per card: vertical flex column — icon on top, then heading, description, optional refs/packages/learn, footer.
+- Data flows from `data/projects.yaml` and `data/workflows.yaml` — **not Hugo `Pages`**. The shared partial must accept a list of dicts + a `kind` discriminator, not `Pages`.
+- `assets/css/custom.css` defines `.cttir-projects`, `.cttir-card`, `.cttir-card__logo`, `.cttir-card__head` etc., using CSS variables for color (no hardcoded values).
+- Coder theme is a Hugo module — no vendored partials; cannot reuse a theme tile partial. Building one is required.
+- Software list (`/software/`) is also `.cttir-card` based but with category grouping. Spec says it must stay unchanged → keep `layouts/software/list.html` untouched and ensure CSS changes are scoped via a new modifier class so `.cttir-card` default remains identical for Software.
+
+## Decisions
+- Add `layouts/partials/tile-grid.html` that takes `{ "items": <slice>, "kind": "project"|"workflow" }`.
+- Add a CSS modifier class `.cttir-card--tile` that overrides `flex-direction` to `row` on desktop and reverts to `column` on narrow widths. Keep `.cttir-card` default behavior so Software is untouched.
+- Tiles get a smaller icon column (~96px) flush-left; text column flexes to fill. On `<= 640px` viewport, stack vertically (column) so it remains readable on mobile.
+- Existing rich per-card content (cross-link lists, featured packages, learn details, status, links footer) is preserved inside the right-hand text column — "Content untouched" in spec.
