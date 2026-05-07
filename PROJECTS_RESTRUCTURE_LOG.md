@@ -1,5 +1,6 @@
 # Projects→Software restructure + new Projects page log
 
+- `fix(projects): use relURL on full path so cross-links honor baseURL` — switched layout to `printf "software/#%s" .pkg | relURL` so links render `/website/software/#<pkg>` under the GitHub Pages subpath. Verified all 13 software anchors and 8 workflow anchors resolve.
 - `feat(projects): add basic bioinformatics research theme` — weight 40; 5 software pkgs, 3 workflows.
 - `feat(projects): add cross-modal integration research theme` — weight 30; 10 software pkgs, 4 workflows.
 - `feat(projects): add HSI research theme` — weight 20; 4 software pkgs, 2 workflows.

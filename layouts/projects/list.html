@@ -22,7 +22,7 @@
               <strong>Software:</strong>
               <ul>
                 {{ range . }}
-                <li><a href="{{ "/software/#" | relURL }}{{ .pkg }}"><code>{{ .pkg }}</code></a> — {{ .note }}</li>
+                <li><a href="{{ printf "software/#%s" .pkg | relURL }}"><code>{{ .pkg }}</code></a> — {{ .note }}</li>
                 {{ end }}
               </ul>
             </div>
@@ -32,7 +32,7 @@
               <strong>Workflows:</strong>
               <ul>
                 {{ range . }}
-                <li><a href="{{ "/workflows/#" | relURL }}{{ .slug }}">{{ .title }}</a>{{ with .note }} <em>{{ . }}</em>{{ end }}</li>
+                <li><a href="{{ printf "workflows/#%s" .slug | relURL }}">{{ .title }}</a>{{ with .note }} <em>{{ . }}</em>{{ end }}</li>
                 {{ end }}
               </ul>
             </div>
