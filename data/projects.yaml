@@ -1,3 +1,18 @@
 # Research-theme projects. Cross-links resolve to:
 #   Software cards: /software/#<packageName>
 #   Workflow cards: /workflows/#<slug>
+
+# TODO: Add a project hero image / illustration once available.
+- name: "Single-Cell Analysis"
+  slug: single-cell-analysis
+  weight: 10
+  description: "<em>Cellular composition and state in injured and healthy tissue.</em> CTIR develops methods and software for end-to-end single-cell analysis — from raw counts through QC, embedding, segmentation-aware spatial context, and publication-ready cell-level reporting."
+  software:
+    - { pkg: cellreportR, note: "publication-ready cell-level reports" }
+    - { pkg: scimagR,     note: "single-cell imaging integration" }
+    - { pkg: segmantR,    note: "segmentation utilities" }
+    - { pkg: bambamR,     note: "bulk reference profiles for calibration" }
+    - { pkg: songR,       note: "interpretable embeddings" }
+  workflows:
+    - { slug: single-cell-tissue-atlas,      title: "Single-Cell Tissue Atlas" }
+    - { slug: multimodal-tissue-integration, title: "Multi-Modal Tissue Integration", note: "(includes single-cell)" }
