@@ -10,3 +10,4 @@
 - `feat(workflows): add molecular pathology cohort placeholder` — weight 50, packages molpathR/songR/pressR; TODO URLs.
 - `feat(workflows): add multi-modal integration placeholder` — weight 60, packages hyperspectR/cellreportR/bambamR/songR/segmantR; TODO URLs.
 - `feat(workflows): add method benchmarking placeholder` — weight 70, packages dynasimR/songR/bambamR/reflowR; TODO URLs.
+- `feat(workflows): add CTIR site template placeholder` — weight 80, packages reflowR/hexmakR; TODO URLs.

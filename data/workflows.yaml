@@ -117,3 +117,19 @@
     - "Reusing the template for new methods papers"
   workflow_url: https://example.com/TODO-workflowr-method-benchmarking
   repo_url: https://github.com/CTTIR/TODO-method-benchmarking-workflow
+
+# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
+- name: "Templating a CTIR-Styled Reproducible Site"
+  slug: ctir-site-template
+  weight: 80
+  status: "Coming soon"
+  research_question: "How do I scaffold a new CTIR-styled reproducible analysis site from scratch, with consistent theming and branding?"
+  description: "Meta-workflow for scaffolding a new workflowr project with CTIR theming, branded hex-sticker logo, navigation, and reproducibility checks — usable as the starting point for any of the workflows above."
+  featured_packages: [reflowR, hexmakR]
+  learn:
+    - "Initializing a workflowr project with reflowR themes"
+    - "Generating a hex-sticker logo with hexmakR"
+    - "Structuring analysis pages, navigation, and reproducibility checks"
+    - "Publishing to GitHub Pages with consistent CTIR branding"
+  workflow_url: https://example.com/TODO-workflowr-ctir-site-template
+  repo_url: https://github.com/CTTIR/TODO-ctir-site-template-workflow
