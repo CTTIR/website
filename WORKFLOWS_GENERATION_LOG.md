@@ -9,3 +9,4 @@
 - `feat(workflows): add bulk transcriptomic response placeholder` — weight 40, packages bambamR/songR/reflowR; TODO URLs.
 - `feat(workflows): add molecular pathology cohort placeholder` — weight 50, packages molpathR/songR/pressR; TODO URLs.
 - `feat(workflows): add multi-modal integration placeholder` — weight 60, packages hyperspectR/cellreportR/bambamR/songR/segmantR; TODO URLs.
+- `feat(workflows): add method benchmarking placeholder` — weight 70, packages dynasimR/songR/bambamR/reflowR; TODO URLs.

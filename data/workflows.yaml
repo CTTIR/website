@@ -100,3 +100,20 @@
     - "Limits and pitfalls of multi-modal alignment with synthetic data"
   workflow_url: https://example.com/TODO-workflowr-multimodal-tissue-integration
   repo_url: https://github.com/CTTIR/TODO-multimodal-tissue-integration-workflow
+
+# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
+- name: "Method Benchmarking — Synthetic Ground Truth and Recovery"
+  slug: method-benchmarking
+  weight: 70
+  status: "Coming soon"
+  research_question: "Under what conditions do CTIR analysis methods recover known signal, and how do they compare to standard alternatives?"
+  description: "Benchmarking workflow that generates synthetic datasets with known ground truth, runs matched analyses across CTIR and reference methods, and quantifies recovery, calibration, and failure modes. Designed as a methods-paper companion template."
+  featured_packages: [dynasimR, songR, bambamR, reflowR]
+  learn:
+    - "Configuring synthetic scenarios with dynasimR (effect sizes, noise, confounding)"
+    - "Running matched analyses across methods on identical inputs"
+    - "Quantifying recovery, calibration, and false-discovery behavior"
+    - "Producing a benchmark report site with reflowR themes"
+    - "Reusing the template for new methods papers"
+  workflow_url: https://example.com/TODO-workflowr-method-benchmarking
+  repo_url: https://github.com/CTTIR/TODO-method-benchmarking-workflow
