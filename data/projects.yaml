@@ -30,3 +30,25 @@
   workflows:
     - { slug: hsi-tissue-characterization,   title: "Hyperspectral Tissue Characterization" }
     - { slug: multimodal-tissue-integration, title: "Multi-Modal Tissue Integration", note: "(includes HSI)" }
+
+# TODO: Add a project hero image / illustration once available.
+- name: "Cross-Modal Integration"
+  slug: cross-modal-integration
+  weight: 30
+  description: "<em>Aligning high-dimensional modalities — imaging, single-cell, bulk omics, multiplex protein, molecular pathology — into a coherent translational view.</em> CTIR's flagship integration theme: methods and software for harmonizing heterogeneous data into shared representations, with cohort-level inference and interactive exploration. Connects assay-level processing to translational inference end-to-end."
+  software:
+    - { pkg: hyperspectR, note: "modality-specific ingest and processing" }
+    - { pkg: cellreportR, note: "cell-level reporting" }
+    - { pkg: bambamR,     note: "bulk RNA-seq processing" }
+    - { pkg: segmantR,    note: "segmentation utilities" }
+    - { pkg: scimagR,     note: "single-cell imaging integration" }
+    - { pkg: qviewparsR,  note: "multiplex protein parsing" }
+    - { pkg: pressR,      note: "cohort reporting" }
+    - { pkg: molpathR,    note: "molecular pathology cohort assembly and interactive exploration" }
+    - { pkg: songR,       note: "joint interpretable embeddings across modalities" }
+    - { pkg: dynasimR,    note: "synthetic ground truth for integration benchmarking" }
+  workflows:
+    - { slug: multimodal-tissue-integration, title: "Multi-Modal Tissue Integration", note: "(flagship)" }
+    - { slug: multiplex-protein-cohort,      title: "Multiplex Protein Quantification & Cohort Analysis" }
+    - { slug: molecular-pathology-cohort,    title: "Molecular Pathology Cohort" }
+    - { slug: bulk-transcriptomic-response,  title: "Bulk Transcriptomic Response" }

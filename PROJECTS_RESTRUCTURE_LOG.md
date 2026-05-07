@@ -1,5 +1,6 @@
 # Projects→Software restructure + new Projects page log
 
+- `feat(projects): add cross-modal integration research theme` — weight 30; 10 software pkgs, 4 workflows.
 - `feat(projects): add HSI research theme` — weight 20; 4 software pkgs, 2 workflows.
 - `feat(projects): add single-cell analysis research theme` — weight 10; links to 5 software pkgs and 2 workflows.
 - `feat(projects): add research-themes section landing page` — content/projects/_index.md, empty data/projects.yaml, layouts/projects/list.html mirroring Software card pattern with software[]/workflows[] cross-link arrays.
