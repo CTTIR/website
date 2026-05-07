@@ -1,5 +1,6 @@
 # Projects→Software restructure + new Projects page log
 
+- `feat(projects): add research-themes section landing page` — content/projects/_index.md, empty data/projects.yaml, layouts/projects/list.html mirroring Software card pattern with software[]/workflows[] cross-link arrays.
 - `feat(menu): add new Projects (research themes) menu entry above Software` — weights renumbered 1..7 to insert Projects=2; Software=3, Workflows=4, Tutorials=5, Ressources=6, Impressum=7. Removed `/projects/` alias from Software _index.md to free the route for the new section.
 - `refactor: update internal references from projects to software` — footer nav now links both Projects (new) and Software; workflows layout adds id=slug anchors on card heading.
 - `feat(menu): rename Projects menu entry to Software` — menu now: About · Software · Workflows · Tutorials & Courses · Ressources · Impressum. /software/ renders cards correctly with id anchors; /projects/ alias works.

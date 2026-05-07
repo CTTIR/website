@@ -1,0 +1,47 @@
+{{ define "content" }}
+<section class="container page">
+  <article>
+    <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
+    {{ .Content }}
+
+    {{ $themes := sort .Site.Data.projects "weight" "asc" }}
+    {{ if $themes }}
+      <div class="cttir-projects">
+        {{ range $t := $themes }}
+        <article class="cttir-card">
+          <svg class="cttir-card__logo cttir-card__logo--placeholder" viewBox="0 0 200 230" role="img" aria-label="{{ $t.name }}">
+            <polygon points="100,4 196,59 196,171 100,226 4,171 4,59" fill="none" stroke="currentColor" stroke-width="3" />
+            <text x="100" y="115" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="currentColor">project</text>
+          </svg>
+          <header class="cttir-card__head">
+            <h3 class="cttir-card__name" id="{{ $t.slug }}">{{ $t.name }}</h3>
+          </header>
+          <p class="cttir-card__desc">{{ $t.description | safeHTML }}</p>
+          {{ with $t.software }}
+            <div class="cttir-card__refs">
+              <strong>Software:</strong>
+              <ul>
+                {{ range . }}
+                <li><a href="{{ "/software/#" | relURL }}{{ .pkg }}"><code>{{ .pkg }}</code></a> — {{ .note }}</li>
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+          {{ with $t.workflows }}
+            <div class="cttir-card__refs">
+              <strong>Workflows:</strong>
+              <ul>
+                {{ range . }}
+                <li><a href="{{ "/workflows/#" | relURL }}{{ .slug }}">{{ .title }}</a>{{ with .note }} <em>{{ . }}</em>{{ end }}</li>
+                {{ end }}
+              </ul>
+            </div>
+          {{ end }}
+          {{ with $t.outlook }}<p class="cttir-card__outlook"><em>{{ . }}</em></p>{{ end }}
+        </article>
+        {{ end }}
+      </div>
+    {{ end }}
+  </article>
+</section>
+{{ end }}
