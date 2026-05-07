@@ -4,28 +4,44 @@
 - Hugo site, theme `github.com/luizdepra/hugo-coder` via Hugo Modules.
 - Config: `hugo.toml` (single TOML, root).
 - Menu defined under `[menu] [[menu.main]]` with integer `weight` and string `url`.
-  - About=1, Projects=2, Tutorials & Courses=3, Ressources=4, Impressum=5.
-- Plausible analytics injected via `layouts/_partials/head/extensions.html`.
 
 ## Projects pattern (canonical pattern to mirror)
-- `content/projects/_index.md`: minimal TOML front matter (`title`, `description`) + tiny intro paragraph.
-- `data/projects.yaml`: list of cards (`name`, `category`, `description`, `github`, `docs`, `logo`).
-- `layouts/projects/list.html`: custom list template that:
-  - Renders `.Title` and `.Content`.
-  - Loops over fixed category order (`R Packages`, `Others`).
-  - Renders `.cttir-card` for each entry; logo URL or inline SVG placeholder if `logo` empty.
-  - Cards link to `github` and `docs`.
-- `assets/css/custom.css`: defines `.cttir-projects`, `.cttir-card*`, `.cttir-section-title`.
+- `content/projects/_index.md`: minimal TOML front matter + intro paragraph.
+- `data/projects.yaml`: list of cards.
+- `layouts/projects/list.html`: custom list template; loops categories, renders `.cttir-card` per item.
+- `assets/css/custom.css`: defines card styles.
 
-## Tutorials pattern
-- Plain markdown landing page using HTML tables (`table.cttir-toc`). Different pattern from Projects — content-driven, not data-driven. Not relevant for Workflows.
+---
 
-## Decisions for Workflows
-- Mirror **Projects** pattern: `data/workflows.yaml` + `layouts/workflows/list.html` + `content/workflows/_index.md`.
-- Order: ascending integer `weight` (10, 20, ..., 80) — sort cards by `weight` in template (Projects relies on yaml order; we'll explicitly sort by weight to be safe and match the spec's order requirement).
-- Per-card extended fields beyond Projects: `research_question`, `featured_packages` (list), `learn` (list), `status`, `workflow_url` (workflowr site), `repo_url` (source repo). Logo intentionally omitted — placeholder hex SVG (already in projects template) reused.
-- Menu: insert `Workflows` weight=3, bump Tutorials→4, Ressources→5, Impressum→6.
-- All workflow URLs and repos are TODO placeholders — `https://example.com/TODO-...` and `https://github.com/CTTIR/TODO-...-workflow`.
+# Projects→Software rename + new Projects page — recon
+
+## Workflows merge status
+- Confirmed merged on `main` at commit `4679bd4`. `content/workflows/_index.md`, `data/workflows.yaml` (8 entries weight 10..80), `layouts/workflows/list.html` all present. Safe to proceed.
+
+## References to `projects` section in repo (full grep)
+- `hugo.toml` lines 45,47 — menu entry name + url.
+- `content/projects/_index.md` — section landing.
+- `data/projects.yaml` — card data.
+- `layouts/projects/list.html` — list template (`.Site.Data.projects` lookup).
+- `layouts/_partials/footer.html` line 5 — footer nav link to `projects/`.
+- `assets/css/custom.css` — `.cttir-projects` grid class (CSS class name only, not a path; **leave unchanged** — `cttir-projects` is the grid utility used by both Projects and Workflows; renaming would force CSS+template churn for no semantic gain).
+- `WORKFLOWS_GENERATION_LOG.md`, `PLAN.md` — historical references; leave.
+- `content/about.md` — no direct link to /projects/, only external GitHub links.
+
+## Workflow slug/route pattern — critical finding
+- **Workflows are a single page at `/workflows/`**; per-workflow entries live in `data/workflows.yaml` and are rendered as cards on that one landing page.
+- **No per-workflow Hugo routes exist** (e.g. `/workflows/single-cell-tissue-atlas/` 404s).
+- Each entry has a `slug` field (e.g. `single-cell-tissue-atlas`) but it is data, not a route.
+
+## Software (formerly Projects) anchor pattern — critical finding
+- `layouts/projects/list.html` renders `<h3 class="cttir-card__name">` with no `id` attribute. **Per-package anchors do not currently exist.**
+
+## Decision: minimal layout addition to enable cross-links
+- Per spec ("cross-links must resolve to actual existing routes"), the cleanest fix is to add `id="<name>"` / `id="<slug>"` to the card heading in **our own** layouts (`layouts/projects/list.html` → renamed `layouts/software/list.html`, and `layouts/workflows/list.html`). These are repo-local layouts, not theme files. This is a small, justified layout change.
+- Project cards then link to:
+  - Software: `/software/#<packageName>` (e.g. `/software/#songR`)
+  - Workflows: `/workflows/#<slug>` (e.g. `/workflows/#single-cell-tissue-atlas`)
+- No new per-page routes are invented; everything lands on the existing single-page sections, scrolled to the right card.
 
 ## Spelling
-- Org GitHub: `CTTIR`. Body copy: `CTIR`. `hugo.toml` uses `CTIR` for title/author and `CTTIR` for repo URLs. Will follow same convention.
+- Org GitHub: `CTTIR`. Body copy: `CTIR`. Same as before.
