@@ -33,3 +33,20 @@
     - "Building a CTIR-styled reproducible report site with reflowR"
   workflow_url: https://example.com/TODO-workflowr-hsi-tissue-characterization
   repo_url: https://github.com/CTTIR/TODO-hsi-tissue-characterization-workflow
+
+# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
+- name: "Multiplex Protein Quantification — From Plate Images to Cohort Inference"
+  slug: multiplex-protein-cohort
+  weight: 30
+  status: "Coming soon"
+  research_question: "How do circulating protein biomarker panels stratify outcome groups in a synthetic trauma-like cohort?"
+  description: "Wet-lab-to-statistics workflow: parse .Q-View chemiluminescent multiplex ELISA project files, run plate-level quantification and QC, then perform cohort-level statistical analysis and reporting. Connects assay-level processing to inference."
+  featured_packages: [qviewparsR, pressR, songR]
+  learn:
+    - "Parsing the binary .Q-View format with qviewparsR"
+    - "Standard curve fitting, plate QC, and outlier handling"
+    - "Per-plate and cohort-level reporting with pressR"
+    - "Cohort stratification and exploratory embeddings with songR"
+    - "Building a reproducible analysis trail from raw plate to inference"
+  workflow_url: https://example.com/TODO-workflowr-multiplex-protein-cohort
+  repo_url: https://github.com/CTTIR/TODO-multiplex-protein-cohort-workflow
