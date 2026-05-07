@@ -4,7 +4,7 @@
     <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
     {{ .Content }}
 
-    {{ $projects := .Site.Data.projects }}
+    {{ $projects := .Site.Data.software }}
     {{ range $cat := slice "R Packages" "Others" }}
       {{ $items := where $projects "category" $cat }}
       {{ if $items }}
@@ -21,7 +21,7 @@
               </svg>
             {{ end }}
             <header class="cttir-card__head">
-              <h3 class="cttir-card__name">{{ $p.name }}</h3>
+              <h3 class="cttir-card__name" id="{{ $p.name }}">{{ $p.name }}</h3>
             </header>
             <p class="cttir-card__desc">{{ $p.description }}</p>
             <footer class="cttir-card__links">
