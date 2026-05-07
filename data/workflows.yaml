@@ -16,3 +16,20 @@
     - "Cross-referencing bulk reference profiles via bambamR for population calibration"
   workflow_url: https://example.com/TODO-workflowr-single-cell-tissue-atlas
   repo_url: https://github.com/CTTIR/TODO-single-cell-tissue-atlas-workflow
+
+# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
+- name: "Hyperspectral Tissue Characterization — Imaging to Tissue Class Maps"
+  slug: hsi-tissue-characterization
+  weight: 20
+  status: "Coming soon"
+  research_question: "Can tissue regions in injured tissue be classified from hyperspectral signatures alone, and how interpretable is the resulting embedding?"
+  description: "End-to-end HSI workflow: raw cube ingest, preprocessing, spectral library matching, dimensionality reduction, and tissue-region classification on a synthetic hyperspectral dataset. Composed from CTIR's HSI and dimensionality-reduction packages."
+  featured_packages: [hyperspectR, libscanR, songR, reflowR]
+  learn:
+    - "Ingesting and preprocessing HSI cubes with hyperspectR"
+    - "Reference-spectrum matching via libscanR"
+    - "SONG-based interpretable embeddings (songR) over spectral features"
+    - "Tissue-region classification and map generation"
+    - "Building a CTIR-styled reproducible report site with reflowR"
+  workflow_url: https://example.com/TODO-workflowr-hsi-tissue-characterization
+  repo_url: https://github.com/CTTIR/TODO-hsi-tissue-characterization-workflow
