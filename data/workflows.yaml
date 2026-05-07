@@ -50,3 +50,19 @@
     - "Building a reproducible analysis trail from raw plate to inference"
   workflow_url: https://example.com/TODO-workflowr-multiplex-protein-cohort
   repo_url: https://github.com/CTTIR/TODO-multiplex-protein-cohort-workflow
+
+# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
+- name: "Bulk Transcriptomic Response — DE, Pathways, and Signature Discovery"
+  slug: bulk-transcriptomic-response
+  weight: 40
+  status: "Coming soon"
+  research_question: "Which transcriptional programs separate injury severity groups, and which signatures are robust across subcohorts?"
+  description: "Bulk RNA-seq workflow from count matrices to differential expression, pathway enrichment, and signature discovery, with reproducible figures and tables. Combines CTIR's bulk RNA-seq toolkit with interpretable embeddings."
+  featured_packages: [bambamR, songR, reflowR]
+  learn:
+    - "Running bambamR from counts to DE and pathway results"
+    - "Exploratory and signature-level embeddings with songR"
+    - "Subcohort robustness checks and sensitivity analyses"
+    - "Producing publication-ready figures, tables, and a reproducible report"
+  workflow_url: https://example.com/TODO-workflowr-bulk-transcriptomic-response
+  repo_url: https://github.com/CTTIR/TODO-bulk-transcriptomic-response-workflow

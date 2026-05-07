@@ -6,3 +6,4 @@
 - `feat(workflows): add single-cell tissue atlas placeholder` — weight 10, packages cellreportR/scimagR/segmantR/bambamR/songR; TODO URLs.
 - `feat(workflows): add HSI tissue characterization placeholder` — weight 20, packages hyperspectR/libscanR/songR/reflowR; TODO URLs.
 - `feat(workflows): add multiplex protein cohort placeholder` — weight 30, packages qviewparsR/pressR/songR; TODO URLs.
+- `feat(workflows): add bulk transcriptomic response placeholder` — weight 40, packages bambamR/songR/reflowR; TODO URLs.
