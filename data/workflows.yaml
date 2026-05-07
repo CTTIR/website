@@ -1,1 +1,18 @@
 # TODO: Replace placeholder workflow_url and repo_url for each entry once the workflowr site is published.
+
+# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
+- name: "Single-Cell Tissue Atlas — From Raw Counts to Annotated Atlas"
+  slug: single-cell-tissue-atlas
+  weight: 10
+  status: "Coming soon"
+  research_question: "Which cell populations and states characterize injured vs. healthy tissue, and how do they relate to spatial context?"
+  description: "End-to-end single-cell workflow on a synthetic injured-tissue dataset: QC, normalization, clustering, annotation, segmentation-derived spatial context, and a publication-ready cell-level report. Demonstrates the CTIR single-cell stack composed end-to-end."
+  featured_packages: [cellreportR, scimagR, segmantR, bambamR, songR]
+  learn:
+    - "Scaffolding a reproducible single-cell project with workflowr"
+    - "QC, normalization, and SONG-based embeddings (songR) for interpretable structure"
+    - "Linking segmentation (segmantR) and cell imaging (scimagR) outputs to expression data"
+    - "Producing publication-ready cell-level reports with cellreportR"
+    - "Cross-referencing bulk reference profiles via bambamR for population calibration"
+  workflow_url: https://example.com/TODO-workflowr-single-cell-tissue-atlas
+  repo_url: https://github.com/CTTIR/TODO-single-cell-tissue-atlas-workflow
