@@ -163,3 +163,51 @@ body.colorscheme-dark .cttir-card__logo--placeholder { color: #9a9a9a; }
   font-size: 0.9rem;
   font-weight: 600;
 }
+
+/* Horizontal tile grid (Projects + Workflows) */
+.cttir-tiles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+@media (min-width: 960px) {
+  .cttir-tiles { grid-template-columns: repeat(2, 1fr); }
+}
+.cttir-card--tile {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.cttir-card--tile .cttir-tile__icon {
+  flex: 0 0 96px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.cttir-card--tile .cttir-tile__icon .cttir-card__logo {
+  width: 96px;
+  margin: 0;
+  align-self: flex-start;
+}
+.cttir-card--tile .cttir-tile__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cttir-card--tile .cttir-card__refs ul,
+.cttir-card--tile .cttir-card__learn ul {
+  margin: 0.25rem 0 0 1.1rem;
+  padding: 0;
+}
+@media (max-width: 640px) {
+  .cttir-card--tile {
+    flex-direction: column;
+  }
+  .cttir-card--tile .cttir-tile__icon {
+    flex: 0 0 auto;
+    align-self: center;
+  }
+}

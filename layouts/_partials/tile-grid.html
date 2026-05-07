@@ -1,0 +1,80 @@
+{{/*
+  Shared horizontal tile partial used by Projects and Workflows.
+  Input: dict with "items" (slice of map entries from data/*.yaml) and "kind" ("project" or "workflow").
+*/}}
+{{ $items := .items }}
+{{ $kind := .kind }}
+{{ if $items }}
+<div class="cttir-tiles">
+  {{ range $it := $items }}
+  <article class="cttir-card cttir-card--tile">
+    <div class="cttir-tile__icon">
+      {{ if $it.logo }}
+        <img class="cttir-card__logo" src="{{ $it.logo }}" alt="{{ $it.name }} logo" loading="lazy" />
+      {{ else }}
+        <svg class="cttir-card__logo cttir-card__logo--placeholder" viewBox="0 0 200 230" role="img" aria-label="{{ $it.name }}">
+          <polygon points="100,4 196,59 196,171 100,226 4,171 4,59" fill="none" stroke="currentColor" stroke-width="3" />
+          <text x="100" y="115" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" font-weight="700" fill="currentColor">{{ $kind }}</text>
+        </svg>
+      {{ end }}
+    </div>
+    <div class="cttir-tile__body">
+      <header class="cttir-card__head">
+        <h3 class="cttir-card__name" id="{{ or $it.slug $it.name }}">{{ $it.name }}</h3>
+        {{ with $it.status }}<span class="cttir-card__status">{{ . }}</span>{{ end }}
+      </header>
+      {{ with $it.research_question }}<p class="cttir-card__question"><em>{{ . }}</em></p>{{ end }}
+      <p class="cttir-card__desc">{{ $it.description | safeHTML }}</p>
+
+      {{ with $it.featured_packages }}
+        <p class="cttir-card__packages"><strong>Featured packages:</strong>
+          {{ range $i, $p := . }}{{ if $i }}, {{ end }}<code>{{ $p }}</code>{{ end }}
+        </p>
+      {{ end }}
+
+      {{ with $it.software }}
+        <div class="cttir-card__refs">
+          <strong>Software:</strong>
+          <ul>
+            {{ range . }}
+            <li><a href="{{ printf "software/#%s" .pkg | relURL }}"><code>{{ .pkg }}</code></a> — {{ .note }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+
+      {{ with $it.workflows }}
+        <div class="cttir-card__refs">
+          <strong>Workflows:</strong>
+          <ul>
+            {{ range . }}
+            <li><a href="{{ printf "workflows/#%s" .slug | relURL }}">{{ .title }}</a>{{ with .note }} <em>{{ . }}</em>{{ end }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+
+      {{ with $it.learn }}
+        <details class="cttir-card__learn">
+          <summary>What you'll learn</summary>
+          <ul>
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </details>
+      {{ end }}
+
+      {{ with $it.outlook }}<p class="cttir-card__outlook"><em>{{ . }}</em></p>{{ end }}
+
+      {{ if or $it.workflow_url $it.repo_url $it.github $it.docs }}
+      <footer class="cttir-card__links">
+        {{ with $it.workflow_url }}<a href="{{ . }}" rel="noopener">Workflow</a>{{ end }}
+        {{ with $it.repo_url }}<a href="{{ . }}" rel="noopener">Source</a>{{ end }}
+        {{ with $it.github }}<a href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
+        {{ with $it.docs }}<a href="{{ . }}" rel="noopener">Docs</a>{{ end }}
+      </footer>
+      {{ end }}
+    </div>
+  </article>
+  {{ end }}
+</div>
+{{ end }}
