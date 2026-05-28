@@ -5,7 +5,7 @@
     {{ .Content }}
 
     {{ $projects := .Site.Data.software }}
-    {{ range $cat := slice "R Packages" "Zotero Plugins" "Others" }}
+    {{ range $cat := slice "R Packages" "Zotero Plugins" "Applications" "Others" }}
       {{ $items := where $projects "category" $cat }}
       {{ if $items }}
         <h2 class="cttir-section-title">{{ $cat }}</h2>
