@@ -3,7 +3,7 @@
   description: "Streamlined RNA-seq analysis pipelines — from count matrices to publication-ready results."
   github: https://github.com/CTTIR/bambamR
   docs: https://cttir.github.io/bambamR/
-  logo: https://raw.githubusercontent.com/CTTIR/bambamR/main/man/figures/logo.png
+  logo: https://raw.githubusercontent.com/CTTIR/bambamR/main/man/figures/logo.svg
 - name: bamflowR
   category: "R Packages"
   description: "End-to-end RNA-seq and DNA-seq pipeline (STAR, BWA-MEM2, GATK, featureCounts, fastp) with documented R functions and a Shiny front-end."
@@ -15,7 +15,7 @@
   description: "Statistical analysis and audit-ready reporting pipeline for routine cell-culture diagnostics with microscopic evaluation."
   github: https://github.com/CTTIR/cellreportR
   docs: https://cttir.github.io/cellreportR/
-  logo: https://raw.githubusercontent.com/CTTIR/cellreportR/main/man/figures/logo.png
+  logo: https://raw.githubusercontent.com/CTTIR/cellreportR/main/man/figures/logo.svg
 - name: cuvis.r
   category: "R Packages"
   description: "R bindings to the Cubert CUVIS SDK for reading, calibrating, and exporting hyperspectral camera data."
@@ -27,37 +27,37 @@
   description: "Domain-neutral analysis and visualisation layer for discrete-event, agent-based, and node-actor simulation outputs."
   github: https://github.com/CTTIR/dynasimR
   docs: https://cttir.github.io/dynasimR/
-  logo: https://raw.githubusercontent.com/CTTIR/dynasimR/main/man/figures/logo.png
+  logo: https://raw.githubusercontent.com/CTTIR/dynasimR/main/man/figures/logo.svg
 - name: hexmakR
   category: "R Packages"
   description: "Generate polished hex sticker logos for R packages using customizable templates."
   github: https://github.com/CTTIR/hexmakR
   docs: https://cttir.github.io/hexmakR/
-  logo: https://raw.githubusercontent.com/CTTIR/hexmakR/main/inst/logo/logo.svg
+  logo: https://raw.githubusercontent.com/CTTIR/hexmakR/main/man/figures/logo.svg
 - name: hyperspectR
   category: "R Packages"
   description: "Complete R pipeline for biomedical hyperspectral imaging — from raw camera data to clinical tissue oxygenation maps."
   github: https://github.com/CTTIR/hyperspectR
   docs: https://cttir.github.io/hyperspectR/
-  logo: https://raw.githubusercontent.com/CTTIR/hyperspectR/main/man/figures/logo.png
+  logo: https://raw.githubusercontent.com/CTTIR/hyperspectR/main/man/figures/logo.svg
 - name: libscanR
   category: "R Packages"
   description: "Vendor-agnostic analysis and visualisation of Laser-Induced Breakdown Spectroscopy (LIBS) data, with a focus on biomedical tissue applications."
   github: https://github.com/CTTIR/libscanR
   docs: https://cttir.github.io/libscanR/
-  logo: https://raw.githubusercontent.com/CTTIR/libscanR/main/man/figures/logo.png
+  logo: https://raw.githubusercontent.com/CTTIR/libscanR/main/man/figures/logo.svg
 - name: lstparsR
   category: "R Packages"
   description: "Parser for NONMEM .lst output files — extracts THETA / OMEGA / SIGMA estimates into tidy data frames for population PK/PD analysis."
   github: https://github.com/CTTIR/lstparsR
   docs: https://cttir.github.io/lstparsR/
-  logo: https://raw.githubusercontent.com/CTTIR/lstparsR/main/man/figures/logo.png
+  logo: https://raw.githubusercontent.com/CTTIR/lstparsR/main/man/figures/logo.svg
 - name: molpathR
   category: "R Packages"
   description: "Unified R platform for molecular pathology data — parses NGS files (VCF, BAM, FASTQ), XML/PDF reports, and clinical data into a queryable database with an interactive Shiny app."
   github: https://github.com/CTTIR/molpathR
   docs: https://cttir.github.io/molpathR/
-  logo: https://raw.githubusercontent.com/CTTIR/molpathR/main/docs/reference/figures/logo.svg
+  logo: https://raw.githubusercontent.com/CTTIR/molpathR/main/man/figures/logo.svg
 - name: phenoscapR
   category: "R Packages"
   description: "Reading, QC, phenotyping, spatial statistics, and visualisation of single-cell spatial biology data from multiplexed imaging platforms."
@@ -69,7 +69,7 @@
   description: "Parsing, analysis, and visualisation of capacitive pressure-distribution data — insoles, saddles (equine and bicycle), seating, and barefoot pedography."
   github: https://github.com/CTTIR/pressR
   docs: https://cttir.github.io/pressR/
-  logo: https://raw.githubusercontent.com/CTTIR/pressR/main/man/figures/logo.png
+  logo: https://raw.githubusercontent.com/CTTIR/pressR/main/man/figures/logo.svg
 - name: qviewparsR
   category: "R Packages"
   description: "Pure-R parser for the binary .Q-View project file format used in chemiluminescent multiplex ELISA plate imaging and quantification."
@@ -81,7 +81,7 @@
   description: "Custom workflowr themes and templates for reproducible research websites in R."
   github: https://github.com/CTTIR/reflowR
   docs: https://cttir.github.io/reflowR/
-  logo: https://raw.githubusercontent.com/CTTIR/reflowR/main/man/figures/logo.png
+  logo: https://raw.githubusercontent.com/CTTIR/reflowR/main/man/figures/logo.svg
 - name: scimagR
   category: "R Packages"
   description: "End-to-end R pipeline for longitudinal MRI and CT analysis in spinal-cord injury research (wraps Spinal Cord Toolbox, dcm2niix, pydicom)."
@@ -99,7 +99,7 @@
   description: "Native R/C++ implementation of SONG (Self-Organizing Nebulous Growths) for nonlinear dimensionality reduction and visualisation."
   github: https://github.com/CTTIR/songR
   docs: https://cttir.github.io/songR/
-  logo: https://raw.githubusercontent.com/CTTIR/songR/main/man/figures/logo.png
+  logo: https://raw.githubusercontent.com/CTTIR/songR/main/man/figures/logo.svg
 
 - name: argus-one
   category: "Zotero Plugins"
@@ -119,3 +119,10 @@
   github: https://github.com/CTTIR/metadata-mender
   docs: ""
   logo: ""
+
+- name: pwa-quest
+  category: "Applications"
+  description: "Offline-first Progressive Web App for collecting questionnaire responses in research and field settings — exports sessions as QR codes or CSV / XLSX / TXT / XML."
+  github: https://github.com/CTTIR/pwa-quest
+  docs: ""
+  logo: https://raw.githubusercontent.com/CTTIR/pwa-quest/main/public/icons/icon.svg
