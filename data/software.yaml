@@ -55,9 +55,9 @@
 - name: lstparsR
   category: "R Packages"
   description: "Parser for NONMEM .lst output files — extracts THETA / OMEGA / SIGMA estimates into tidy data frames for population PK/PD analysis."
-  github: https://github.com/CTTIR/lstparsR
-  docs: https://cttir.github.io/lstparsR/
-  logo: https://raw.githubusercontent.com/CTTIR/lstparsR/main/man/figures/logo.svg
+  github: https://github.com/Clinical-Pharmacy-Saarland-University/lstparsR
+  docs: https://clinical-pharmacy-saarland-university.github.io/lstparsR/
+  logo: https://raw.githubusercontent.com/Clinical-Pharmacy-Saarland-University/lstparsR/main/man/figures/logo.svg
 - name: molpathR
   category: "R Packages"
   description: "Unified R platform for molecular pathology data — parses NGS files (VCF, BAM, FASTQ), XML/PDF reports, and clinical data into a queryable database with an interactive Shiny app."
