@@ -28,6 +28,12 @@
   github: https://github.com/CTTIR/dynasimR
   docs: https://cttir.github.io/dynasimR/
   logo: https://raw.githubusercontent.com/CTTIR/dynasimR/main/man/figures/logo.svg
+- name: harbouR
+  category: "R Packages"
+  description: "Unofficial R client for the SeaTable REST API — read, write, and sync collaborative cloud databases from R."
+  github: https://github.com/CTTIR/harbouR
+  docs: https://cttir.github.io/harbouR/
+  logo: https://raw.githubusercontent.com/CTTIR/harbouR/main/man/figures/logo.svg
 - name: hexmakR
   category: "R Packages"
   description: "Generate polished hex sticker logos for R packages using customizable templates."
@@ -87,19 +93,31 @@
   description: "End-to-end R pipeline for longitudinal MRI and CT analysis in spinal-cord injury research (wraps Spinal Cord Toolbox, dcm2niix, pydicom)."
   github: https://github.com/CTTIR/scimagR
   docs: https://cttir.github.io/scimagR/
-  logo: https://raw.githubusercontent.com/CTTIR/scimagR/main/scimagR_icon.svg
+  logo: https://raw.githubusercontent.com/CTTIR/scimagR/main/man/figures/logo.svg
+- name: scimapR
+  category: "R Packages"
+  description: "Reproducible, question-driven, embedding-aware science mapping — a toolkit for bibliometric and scientometric analysis."
+  github: https://github.com/CTTIR/scimapR
+  docs: https://cttir.github.io/scimapR/
+  logo: https://raw.githubusercontent.com/CTTIR/scimapR/main/man/figures/logo.svg
 - name: segmantR
   category: "R Packages"
   description: "Cell segmentation for histology and multiplexed tissue imaging with human-in-the-loop training — classical methods plus Cellpose, StarDist, and Mesmer."
   github: https://github.com/CTTIR/segmantR
   docs: https://cttir.github.io/segmantR/
-  logo: https://raw.githubusercontent.com/CTTIR/segmantR/main/segmantR_icon.svg
+  logo: https://raw.githubusercontent.com/CTTIR/segmantR/main/man/figures/logo.svg
 - name: songR
   category: "R Packages"
   description: "Native R/C++ implementation of SONG (Self-Organizing Nebulous Growths) for nonlinear dimensionality reduction and visualisation."
   github: https://github.com/CTTIR/songR
   docs: https://cttir.github.io/songR/
   logo: https://raw.githubusercontent.com/CTTIR/songR/main/man/figures/logo.svg
+- name: themakR
+  category: "R Packages"
+  description: "Shared pkgdown template giving the CTTIR package suite a unified look — Hugo Coder palette with a light/dark toggle."
+  github: https://github.com/CTTIR/themakR
+  docs: https://cttir.github.io/themakR/
+  logo: https://raw.githubusercontent.com/CTTIR/themakR/main/man/figures/logo.svg
 
 - name: argus-one
   category: "Zotero Plugins"
