@@ -4,12 +4,6 @@
   github: https://github.com/CTTIR/bambamR
   docs: https://cttir.github.io/bambamR/
   logo: https://raw.githubusercontent.com/CTTIR/bambamR/main/man/figures/logo.svg
-- name: bamflowR
-  category: "R Packages"
-  description: "End-to-end RNA-seq and DNA-seq pipeline (STAR, BWA-MEM2, GATK, featureCounts, fastp) with documented R functions and a Shiny front-end."
-  github: https://github.com/CTTIR/bamflowR
-  docs: https://cttir.github.io/bamflowR/
-  logo: https://raw.githubusercontent.com/CTTIR/bamflowR/main/man/figures/logo.svg
 - name: cellreportR
   category: "R Packages"
   description: "Statistical analysis and audit-ready reporting pipeline for routine cell-culture diagnostics with microscopic evaluation."
