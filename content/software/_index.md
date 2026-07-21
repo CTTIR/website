@@ -1,6 +1,6 @@
 +++
 title = "Software"
-description = "Open-source software from the CTIR group"
+description = "Open-source software from the CTTIR group"
 +++
 
-Open-source software developed by CTIR. Each card links to the GitHub repository.
+Open-source software developed by CTTIR. Each card links to the GitHub repository.

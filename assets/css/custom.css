@@ -150,6 +150,13 @@ body.colorscheme-dark .cttir-card__logo--placeholder { color: #9a9a9a; }
   padding-bottom: 0.4rem;
 }
 .cttir-section-title:first-of-type { margin-top: 1.5rem; }
+.cttir-subsection-title {
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--cttir-card-muted);
+}
 .cttir-card__desc {
   margin: 0;
   font-size: 0.95rem;

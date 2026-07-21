@@ -6,8 +6,8 @@
   weight: 10
   status: "Coming soon"
   research_question: "Which cell populations and states characterize injured vs. healthy tissue, and how do they relate to spatial context?"
-  description: "End-to-end single-cell workflow on a synthetic injured-tissue dataset: QC, normalization, clustering, annotation, segmentation-derived spatial context, and a publication-ready cell-level report. Demonstrates the CTIR single-cell stack composed end-to-end."
-  featured_packages: [cellreportR, scimagR, segmantR, bambamR, songR]
+  description: "End-to-end single-cell workflow on a synthetic injured-tissue dataset: QC, normalization, clustering, annotation, segmentation-derived spatial context, and a publication-ready cell-level report. Demonstrates the CTTIR single-cell stack composed end-to-end."
+  featured_packages: [cellreportR, scimagR, segmantR, annotatR, bambamR, songR]
   learn:
     - "Scaffolding a reproducible single-cell project with workflowr"
     - "QC, normalization, and SONG-based embeddings (songR) for interpretable structure"
@@ -23,14 +23,14 @@
   weight: 20
   status: "Coming soon"
   research_question: "Can tissue regions in injured tissue be classified from hyperspectral signatures alone, and how interpretable is the resulting embedding?"
-  description: "End-to-end HSI workflow: raw cube ingest, preprocessing, spectral library matching, dimensionality reduction, and tissue-region classification on a synthetic hyperspectral dataset. Composed from CTIR's HSI and dimensionality-reduction packages."
-  featured_packages: [hyperspectR, libscanR, songR, reflowR]
+  description: "End-to-end HSI workflow: raw cube ingest, preprocessing, spectral library matching, dimensionality reduction, and tissue-region classification on a synthetic hyperspectral dataset. Composed from CTTIR's HSI and dimensionality-reduction packages."
+  featured_packages: [hyperspectR, libscanR, annotatR, songR, reflowR]
   learn:
     - "Ingesting and preprocessing HSI cubes with hyperspectR"
     - "Reference-spectrum matching via libscanR"
     - "SONG-based interpretable embeddings (songR) over spectral features"
     - "Tissue-region classification and map generation"
-    - "Building a CTIR-styled reproducible report site with reflowR"
+    - "Building a CTTIR-styled reproducible report site with reflowR"
   workflow_url: https://example.com/TODO-workflowr-hsi-tissue-characterization
   repo_url: https://github.com/CTTIR/TODO-hsi-tissue-characterization-workflow
 
@@ -57,7 +57,7 @@
   weight: 40
   status: "Coming soon"
   research_question: "Which transcriptional programs separate injury severity groups, and which signatures are robust across subcohorts?"
-  description: "Bulk RNA-seq workflow from count matrices to differential expression, pathway enrichment, and signature discovery, with reproducible figures and tables. Combines CTIR's bulk RNA-seq toolkit with interpretable embeddings."
+  description: "Bulk RNA-seq workflow from count matrices to differential expression, pathway enrichment, and signature discovery, with reproducible figures and tables. Combines CTTIR's bulk RNA-seq toolkit with interpretable embeddings."
   featured_packages: [bambamR, songR, reflowR]
   learn:
     - "Running bambamR from counts to DE and pathway results"
@@ -74,7 +74,7 @@
   status: "Coming soon"
   research_question: "How can heterogeneous molecular pathology data (NGS files, structured reports, free-text PDFs, clinical metadata) be unified into a queryable cohort and explored interactively?"
   description: "Workflow for ingesting VCF/BAM/FASTQ, XML and PDF reports, and clinical metadata into a unified queryable database, with cohort-level summaries and an interactive Shiny exploration layer. Pairs ingestion with downstream cohort statistics."
-  featured_packages: [molpathR, songR, pressR]
+  featured_packages: [molpathR, zhncommandR, songR, pressR]
   learn:
     - "Ingesting heterogeneous molecular pathology files with molpathR"
     - "Building a queryable cohort database with provenance"
@@ -106,8 +106,8 @@
   slug: method-benchmarking
   weight: 70
   status: "Coming soon"
-  research_question: "Under what conditions do CTIR analysis methods recover known signal, and how do they compare to standard alternatives?"
-  description: "Benchmarking workflow that generates synthetic datasets with known ground truth, runs matched analyses across CTIR and reference methods, and quantifies recovery, calibration, and failure modes. Designed as a methods-paper companion template."
+  research_question: "Under what conditions do CTTIR analysis methods recover known signal, and how do they compare to standard alternatives?"
+  description: "Benchmarking workflow that generates synthetic datasets with known ground truth, runs matched analyses across CTTIR and reference methods, and quantifies recovery, calibration, and failure modes. Designed as a methods-paper companion template."
   featured_packages: [dynasimR, songR, bambamR, reflowR]
   learn:
     - "Configuring synthetic scenarios with dynasimR (effect sizes, noise, confounding)"
@@ -119,17 +119,17 @@
   repo_url: https://github.com/CTTIR/TODO-method-benchmarking-workflow
 
 # TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
-- name: "Templating a CTIR-Styled Reproducible Site"
-  slug: ctir-site-template
+- name: "Templating a CTTIR-Styled Reproducible Site"
+  slug: cttir-site-template
   weight: 80
   status: "Coming soon"
-  research_question: "How do I scaffold a new CTIR-styled reproducible analysis site from scratch, with consistent theming and branding?"
-  description: "Meta-workflow for scaffolding a new workflowr project with CTIR theming, branded hex-sticker logo, navigation, and reproducibility checks — usable as the starting point for any of the workflows above."
+  research_question: "How do I scaffold a new CTTIR-styled reproducible analysis site from scratch, with consistent theming and branding?"
+  description: "Meta-workflow for scaffolding a new workflowr project with CTTIR theming, branded hex-sticker logo, navigation, and reproducibility checks — usable as the starting point for any of the workflows above."
   featured_packages: [reflowR, hexmakR]
   learn:
     - "Initializing a workflowr project with reflowR themes"
     - "Generating a hex-sticker logo with hexmakR"
     - "Structuring analysis pages, navigation, and reproducibility checks"
-    - "Publishing to GitHub Pages with consistent CTIR branding"
-  workflow_url: https://example.com/TODO-workflowr-ctir-site-template
-  repo_url: https://github.com/CTTIR/TODO-ctir-site-template-workflow
+    - "Publishing to GitHub Pages with consistent CTTIR branding"
+  workflow_url: https://example.com/TODO-workflowr-cttir-site-template
+  repo_url: https://github.com/CTTIR/TODO-cttir-site-template-workflow

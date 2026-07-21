@@ -1,6 +1,6 @@
-# CTIR — Computational Trauma and Tissue Injury Research
+# CTTIR — Computational Trauma and Tissue Injury Research
 
-Source for the CTIR group website, published at <https://cttir.github.io/website/>.
+Source for the CTTIR group website, published at <https://cttir.github.io/website/>.
 
 Built with [Hugo](https://gohugo.io/) (extended) and the [Coder](https://github.com/luizdepra/hugo-coder) theme loaded as a Hugo Module. Deployed to GitHub Pages by GitHub Actions on every push to `main`.
 

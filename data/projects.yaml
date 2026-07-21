@@ -6,11 +6,12 @@
 - name: "Single-Cell Analysis"
   slug: single-cell-analysis
   weight: 10
-  description: "<em>Cellular composition and state in injured and healthy tissue.</em> CTIR develops methods and software for end-to-end single-cell analysis — from raw counts through QC, embedding, segmentation-aware spatial context, and publication-ready cell-level reporting."
+  description: "<em>Cellular composition and state in injured and healthy tissue.</em> CTTIR develops methods and software for end-to-end single-cell analysis — from raw counts through QC, embedding, segmentation-aware spatial context, and publication-ready cell-level reporting."
   software:
     - { pkg: cellreportR, note: "publication-ready cell-level reports" }
     - { pkg: scimagR,     note: "single-cell imaging integration" }
     - { pkg: segmantR,    note: "segmentation utilities" }
+    - { pkg: annotatR,    note: "region-of-interest annotation and mask export" }
     - { pkg: bambamR,     note: "bulk reference profiles for calibration" }
     - { pkg: songR,       note: "interpretable embeddings" }
   workflows:
@@ -21,12 +22,13 @@
 - name: "Hyperspectral Imaging"
   slug: hsi
   weight: 20
-  description: "<em>Label-free tissue characterization from spectral signatures.</em> CTIR develops HSI ingest, preprocessing, library matching, and interpretable embedding methods for tissue-region classification, with reproducible reporting baked in."
+  description: "<em>Label-free tissue characterization from spectral signatures.</em> CTTIR develops HSI ingest, preprocessing, library matching, and interpretable embedding methods for tissue-region classification, with reproducible reporting baked in."
   software:
     - { pkg: hyperspectR, note: "HSI cube ingest and preprocessing" }
     - { pkg: libscanR,    note: "reference-spectrum library matching" }
+    - { pkg: annotatR,    note: "labelling regions of interest on spectral cubes" }
     - { pkg: songR,       note: "interpretable embeddings over spectral features" }
-    - { pkg: reflowR,     note: "CTIR-styled reproducible report themes" }
+    - { pkg: reflowR,     note: "CTTIR-styled reproducible report themes" }
   workflows:
     - { slug: hsi-tissue-characterization,   title: "Hyperspectral Tissue Characterization" }
     - { slug: multimodal-tissue-integration, title: "Multi-Modal Tissue Integration", note: "(includes HSI)" }
@@ -35,16 +37,18 @@
 - name: "Cross-Modal Integration"
   slug: cross-modal-integration
   weight: 30
-  description: "<em>Aligning high-dimensional modalities — imaging, single-cell, bulk omics, multiplex protein, molecular pathology — into a coherent translational view.</em> CTIR's flagship integration theme: methods and software for harmonizing heterogeneous data into shared representations, with cohort-level inference and interactive exploration. Connects assay-level processing to translational inference end-to-end."
+  description: "<em>Aligning high-dimensional modalities — imaging, single-cell, bulk omics, multiplex protein, molecular pathology — into a coherent translational view.</em> CTTIR's flagship integration theme: methods and software for harmonizing heterogeneous data into shared representations, with cohort-level inference and interactive exploration. Connects assay-level processing to translational inference end-to-end."
   software:
     - { pkg: hyperspectR, note: "modality-specific ingest and processing" }
     - { pkg: cellreportR, note: "cell-level reporting" }
     - { pkg: bambamR,     note: "bulk RNA-seq processing" }
     - { pkg: segmantR,    note: "segmentation utilities" }
+    - { pkg: annotatR,    note: "cross-modal region-of-interest annotation" }
     - { pkg: scimagR,     note: "single-cell imaging integration" }
     - { pkg: qviewparsR,  note: "multiplex protein parsing" }
     - { pkg: pressR,      note: "cohort reporting" }
     - { pkg: molpathR,    note: "molecular pathology cohort assembly and interactive exploration" }
+    - { pkg: zhncommandR, note: "haematological-oncology cohort audit dashboard" }
     - { pkg: songR,       note: "joint interpretable embeddings across modalities" }
     - { pkg: dynasimR,    note: "synthetic ground truth for integration benchmarking" }
   workflows:
@@ -57,7 +61,7 @@
 - name: "Basic Bioinformatics"
   slug: basic-bioinformatics
   weight: 40
-  description: "<em>Foundational methods, benchmarking, and reproducibility infrastructure.</em> The methodological backbone of CTIR's applied work: interpretable dimensionality reduction, RNA-seq fundamentals, simulation-based benchmarking, and reproducible reporting templates that the applied projects build on."
+  description: "<em>Foundational methods, benchmarking, and reproducibility infrastructure.</em> The methodological backbone of CTTIR's applied work: interpretable dimensionality reduction, RNA-seq fundamentals, simulation-based benchmarking, and reproducible reporting templates that the applied projects build on."
   software:
     - { pkg: songR,    note: "SONG dimensionality reduction" }
     - { pkg: bambamR,  note: "RNA-seq pipeline fundamentals" }
@@ -67,4 +71,4 @@
   workflows:
     - { slug: bulk-transcriptomic-response, title: "Bulk Transcriptomic Response" }
     - { slug: method-benchmarking,          title: "Method Benchmarking on Synthetic Ground Truth" }
-    - { slug: ctir-site-template,           title: "Templating a CTIR-Styled Reproducible Site" }
+    - { slug: cttir-site-template,           title: "Templating a CTTIR-Styled Reproducible Site" }

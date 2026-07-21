@@ -4,33 +4,36 @@
     <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
     {{ .Content }}
 
-    {{ $projects := .Site.Data.software }}
+    {{ $software := .Site.Data.software }}
+    {{ $rGroups := slice "Imaging & Microscopy" "Spectral & Hyperspectral" "Omics & Transcriptomics" "Clinical & Molecular Pathology" "Parsers & Data I/O" "Methods & Analytics" "Reproducibility & Tooling" }}
     {{ range $cat := slice "R Packages" "Zotero Plugins" "Applications" "Others" }}
-      {{ $items := where $projects "category" $cat }}
+      {{ $items := where $software "category" $cat }}
       {{ if $items }}
         <h2 class="cttir-section-title">{{ $cat }}</h2>
-        <div class="cttir-projects">
-          {{ range $p := $items }}
-          <article class="cttir-card">
-            {{ if $p.logo }}
-              <img class="cttir-card__logo" src="{{ $p.logo }}" alt="{{ $p.name }} logo" loading="lazy" />
-            {{ else }}
-              <svg class="cttir-card__logo cttir-card__logo--placeholder" viewBox="0 0 200 230" role="img" aria-label="{{ $p.name }}">
-                <polygon points="100,4 196,59 196,171 100,226 4,171 4,59" fill="none" stroke="currentColor" stroke-width="3" />
-                <text x="100" y="115" text-anchor="middle" dominant-baseline="central" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="currentColor">{{ $p.name }}</text>
-              </svg>
+        {{ if eq $cat "R Packages" }}
+          {{ range $group := $rGroups }}
+            {{ $gitems := where $items "group" $group }}
+            {{ if $gitems }}
+              <h3 class="cttir-subsection-title">{{ $group }}</h3>
+              <div class="cttir-projects">
+                {{ range $p := $gitems }}{{ partial "software-card.html" (dict "p" $p "cat" $cat) }}{{ end }}
+              </div>
             {{ end }}
-            <header class="cttir-card__head">
-              <h3 class="cttir-card__name" id="{{ $p.name }}">{{ $p.name }}</h3>
-            </header>
-            <p class="cttir-card__desc">{{ $p.description }}</p>
-            <footer class="cttir-card__links">
-              {{ with $p.github }}<a href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
-              {{ with $p.docs }}<a href="{{ . }}" rel="noopener">Docs</a>{{ end }}
-            </footer>
-          </article>
           {{ end }}
-        </div>
+          {{/* Defensive: surface any R package whose group is not in the list above. */}}
+          {{ $ungrouped := slice }}
+          {{ range $p := $items }}{{ if not (in $rGroups $p.group) }}{{ $ungrouped = $ungrouped | append $p }}{{ end }}{{ end }}
+          {{ if $ungrouped }}
+            <h3 class="cttir-subsection-title">More</h3>
+            <div class="cttir-projects">
+              {{ range $p := $ungrouped }}{{ partial "software-card.html" (dict "p" $p "cat" $cat) }}{{ end }}
+            </div>
+          {{ end }}
+        {{ else }}
+          <div class="cttir-projects">
+            {{ range $p := $items }}{{ partial "software-card.html" (dict "p" $p "cat" $cat) }}{{ end }}
+          </div>
+        {{ end }}
       {{ end }}
     {{ end }}
   </article>

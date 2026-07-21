@@ -44,7 +44,7 @@
 - No new per-page routes are invented; everything lands on the existing single-page sections, scrolled to the right card.
 
 ## Spelling
-- Org GitHub: `CTTIR`. Body copy: `CTIR`. Same as before.
+- Org GitHub: `CTTIR`. Body copy: `CTTIR`. Same as before.
 
 ---
 

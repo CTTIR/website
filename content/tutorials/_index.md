@@ -1,9 +1,9 @@
 +++
 title = "Tutorials & Courses"
-description = "Tutorials and course material from CTIR"
+description = "Tutorials and course material from CTTIR"
 +++
 
-Teaching material maintained by CTIR. Source repositories: [CTTIR/tutorials](https://github.com/CTTIR/tutorials) and [CTTIR/courses](https://github.com/CTTIR/courses). Material is published under the MIT license, matching the upstream repositories.
+Teaching material maintained by CTTIR. Source repositories: [CTTIR/tutorials](https://github.com/CTTIR/tutorials) and [CTTIR/courses](https://github.com/CTTIR/courses). Material is published under the MIT license, matching the upstream repositories.
 
 ## Courses
 

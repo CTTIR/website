@@ -1,4 +1,4 @@
 +++
-title = "CTIR"
+title = "CTTIR"
 description = "Computational Trauma and Tissue Injury Research"
 +++

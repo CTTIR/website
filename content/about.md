@@ -1,11 +1,11 @@
 +++
 title = "About"
-description = "About the CTIR group"
+description = "About the CTTIR group"
 +++
 
-## Computational Trauma and Tissue Injury Research (CTIR)
+## Computational Trauma and Tissue Injury Research (CTTIR)
 
-CTIR develops open-source computational tools, reproducible analysis pipelines,
+CTTIR develops open-source computational tools, reproducible analysis pipelines,
 and teaching material at the interface of trauma, tissue-injury biology, and
 quantitative biomedicine. We focus on turning heterogeneous biological and
 clinical data — from molecular pathology and single-cell spatial measurements

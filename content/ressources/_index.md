@@ -1,6 +1,6 @@
 +++
 title = "Ressources"
-description = "Curated resources from CTIR"
+description = "Curated resources from CTTIR"
 +++
 
 Curated external links and downloadable assets, organised by category. Mirrors
