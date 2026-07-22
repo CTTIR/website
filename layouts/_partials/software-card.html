@@ -29,7 +29,7 @@
     <h3 class="cttir-card__name" id="{{ $p.name }}">{{ $p.name }}</h3>
     {{ $status := $p.status | default "usable" }}
     {{ $filled := 2 }}{{ $label := "Usable" }}
-    {{ if eq $status "cran" }}{{ $filled = 3 }}{{ $label = "Fully functional — on CRAN" }}
+    {{ if eq $status "cran" }}{{ $filled = 3 }}{{ $label = "Published" }}
     {{ else if eq $status "usable" }}{{ $filled = 2 }}{{ $label = "Usable" }}
     {{ else if eq $status "draft" }}{{ $filled = 1 }}{{ $label = "Draft" }}
     {{ else if eq $status "idea" }}{{ $filled = 0 }}{{ $label = "Idea" }}{{ end }}
