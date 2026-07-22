@@ -27,10 +27,20 @@
   {{ end }}
   <header class="cttir-card__head">
     <h3 class="cttir-card__name" id="{{ $p.name }}">{{ $p.name }}</h3>
+    {{ $status := $p.status | default "usable" }}
+    {{ $filled := 2 }}{{ $label := "Usable" }}
+    {{ if eq $status "cran" }}{{ $filled = 3 }}{{ $label = "Fully functional — on CRAN" }}
+    {{ else if eq $status "usable" }}{{ $filled = 2 }}{{ $label = "Usable" }}
+    {{ else if eq $status "draft" }}{{ $filled = 1 }}{{ $label = "Draft" }}
+    {{ else if eq $status "idea" }}{{ $filled = 0 }}{{ $label = "Idea" }}{{ end }}
+    <span class="cttir-status cttir-status--{{ $status }}" role="img" aria-label="Status: {{ $label }}" title="{{ $label }}">
+      {{ range $i := (seq 3) }}<span class="cttir-status__dot{{ if le $i $filled }} is-filled{{ end }}"></span>{{ end }}
+    </span>
   </header>
   <p class="cttir-card__desc">{{ $p.description }}</p>
   <footer class="cttir-card__links">
     {{ with $p.github }}<a href="{{ . }}" rel="noopener">GitHub</a>{{ end }}
     {{ with $p.docs }}<a href="{{ . }}" rel="noopener">Docs</a>{{ end }}
+    {{ with $p.zenodo }}<a href="{{ . }}" rel="noopener">Zenodo</a>{{ end }}
   </footer>
 </article>

@@ -4,6 +4,14 @@
     <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
     {{ .Content }}
 
+    <div class="cttir-status-legend">
+      <span class="cttir-status-legend__key">Status</span>
+      <span class="cttir-status-legend__item"><span class="cttir-status"><span class="cttir-status__dot is-filled"></span><span class="cttir-status__dot is-filled"></span><span class="cttir-status__dot is-filled"></span></span> on CRAN</span>
+      <span class="cttir-status-legend__item"><span class="cttir-status"><span class="cttir-status__dot is-filled"></span><span class="cttir-status__dot is-filled"></span><span class="cttir-status__dot"></span></span> usable</span>
+      <span class="cttir-status-legend__item"><span class="cttir-status"><span class="cttir-status__dot is-filled"></span><span class="cttir-status__dot"></span><span class="cttir-status__dot"></span></span> draft</span>
+      <span class="cttir-status-legend__item"><span class="cttir-status"><span class="cttir-status__dot"></span><span class="cttir-status__dot"></span><span class="cttir-status__dot"></span></span> idea</span>
+    </div>
+
     {{ $software := .Site.Data.software }}
     {{ $rGroups := slice "Imaging & Microscopy" "Spectral & Hyperspectral" "Omics & Transcriptomics" "Clinical & Molecular Pathology" "Parsers & Data I/O" "Methods & Analytics" "Reproducibility & Tooling" }}
     {{ range $cat := slice "R Packages" "Zotero Plugins" "Applications" "Others" }}

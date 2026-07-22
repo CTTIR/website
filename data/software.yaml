@@ -4,9 +4,12 @@
 # Cards with an empty `logo` fall back to a monochrome, name-inside outline
 # whose shape encodes the category: hexagon = R package, pentagon = Zotero
 # plugin, square = application.
+# `status` sets the three-dot maturity indicator on each card:
+#   cran = ●●● (fully functional, on CRAN)  usable = ●●○  draft = ●○○  idea = ○○○
 
 # ── R Packages · Imaging & Microscopy ──────────────────────────────────────
 - name: annotatR
+  status: usable
   category: "R Packages"
   group: "Imaging & Microscopy"
   description: "Multi-layer region-of-interest annotation for whole-slide microscopy, hyperspectral cubes, and rasters — exports binary, labelled, and multi-class masks (GeoJSON, QuPath, TIFF) with a resumable Shiny/OpenSeadragon batch annotator."
@@ -14,6 +17,7 @@
   docs: https://cttir.github.io/annotatR/
   logo: https://raw.githubusercontent.com/CTTIR/annotatR/main/man/figures/logo.svg
 - name: cellreportR
+  status: usable
   category: "R Packages"
   group: "Imaging & Microscopy"
   description: "Statistical analysis and audit-ready reporting pipeline for routine cell-culture diagnostics with microscopic evaluation."
@@ -21,6 +25,7 @@
   docs: https://cttir.github.io/cellreportR/
   logo: https://raw.githubusercontent.com/CTTIR/cellreportR/main/man/figures/logo.svg
 - name: phenoscapR
+  status: usable
   category: "R Packages"
   group: "Imaging & Microscopy"
   description: "Reading, QC, phenotyping, spatial statistics, and visualisation of single-cell spatial biology data from multiplexed imaging platforms."
@@ -28,6 +33,7 @@
   docs: https://cttir.github.io/phenoscapR/
   logo: https://raw.githubusercontent.com/CTTIR/phenoscapR/main/man/figures/logo.svg
 - name: scimagR
+  status: usable
   category: "R Packages"
   group: "Imaging & Microscopy"
   description: "End-to-end R pipeline for longitudinal MRI and CT analysis in spinal-cord injury research (wraps Spinal Cord Toolbox, dcm2niix, pydicom)."
@@ -35,6 +41,7 @@
   docs: https://cttir.github.io/scimagR/
   logo: https://raw.githubusercontent.com/CTTIR/scimagR/main/man/figures/logo.svg
 - name: segmantR
+  status: usable
   category: "R Packages"
   group: "Imaging & Microscopy"
   description: "Cell segmentation for histology and multiplexed tissue imaging with human-in-the-loop training — classical methods plus Cellpose, StarDist, and Mesmer."
@@ -44,6 +51,7 @@
 
 # ── R Packages · Spectral & Hyperspectral ──────────────────────────────────
 - name: cuvis.r
+  status: usable
   category: "R Packages"
   group: "Spectral & Hyperspectral"
   description: "R bindings to the Cubert CUVIS SDK for reading, calibrating, and exporting hyperspectral camera data."
@@ -51,6 +59,7 @@
   docs: https://cttir.github.io/cuvis.r/
   logo: https://raw.githubusercontent.com/CTTIR/cuvis.r/main/man/figures/logo.svg
 - name: hyperspectR
+  status: usable
   category: "R Packages"
   group: "Spectral & Hyperspectral"
   description: "Complete R pipeline for biomedical hyperspectral imaging — from raw camera data to clinical tissue oxygenation maps."
@@ -58,6 +67,7 @@
   docs: https://cttir.github.io/hyperspectR/
   logo: https://raw.githubusercontent.com/CTTIR/hyperspectR/main/man/figures/logo.svg
 - name: libscanR
+  status: usable
   category: "R Packages"
   group: "Spectral & Hyperspectral"
   description: "Vendor-agnostic analysis and visualisation of Laser-Induced Breakdown Spectroscopy (LIBS) data, with a focus on biomedical tissue applications."
@@ -67,6 +77,7 @@
 
 # ── R Packages · Omics & Transcriptomics ───────────────────────────────────
 - name: bambamR
+  status: usable
   category: "R Packages"
   group: "Omics & Transcriptomics"
   description: "Streamlined RNA-seq analysis pipelines — from count matrices to publication-ready results."
@@ -76,6 +87,7 @@
 
 # ── R Packages · Clinical & Molecular Pathology ────────────────────────────
 - name: molpathR
+  status: usable
   category: "R Packages"
   group: "Clinical & Molecular Pathology"
   description: "Unified R platform for molecular pathology data — parses NGS files (VCF, BAM, FASTQ), XML/PDF reports, and clinical data into a queryable database with an interactive Shiny app."
@@ -83,6 +95,7 @@
   docs: https://cttir.github.io/molpathR/
   logo: https://raw.githubusercontent.com/CTTIR/molpathR/main/man/figures/logo.svg
 - name: zhncommandR
+  status: usable
   category: "R Packages"
   group: "Clinical & Molecular Pathology"
   description: "Auditor live-evaluation dashboard for haematological oncology cohorts — quality and coverage indicators, OPS-coded complex-therapy and diagnostics counts, Kaplan–Meier, oncoprint, and cytogenetics summaries in an interactive Shiny app."
@@ -92,6 +105,7 @@
 
 # ── R Packages · Parsers & Data I/O ────────────────────────────────────────
 - name: harbouR
+  status: usable
   category: "R Packages"
   group: "Parsers & Data I/O"
   description: "Unofficial R client for the SeaTable REST API — read, write, and sync collaborative cloud databases from R."
@@ -99,6 +113,7 @@
   docs: https://cttir.github.io/harbouR/
   logo: https://raw.githubusercontent.com/CTTIR/harbouR/main/man/figures/logo.svg
 - name: lstparsR
+  status: usable
   category: "R Packages"
   group: "Parsers & Data I/O"
   description: "Parser for NONMEM .lst output files — extracts THETA / OMEGA / SIGMA estimates into tidy data frames for population PK/PD analysis."
@@ -106,6 +121,7 @@
   docs: https://clinical-pharmacy-saarland-university.github.io/lstparsR/
   logo: https://raw.githubusercontent.com/Clinical-Pharmacy-Saarland-University/lstparsR/main/man/figures/logo.svg
 - name: pressR
+  status: usable
   category: "R Packages"
   group: "Parsers & Data I/O"
   description: "Parsing, analysis, and visualisation of capacitive pressure-distribution data — insoles, saddles (equine and bicycle), seating, and barefoot pedography."
@@ -113,15 +129,18 @@
   docs: https://cttir.github.io/pressR/
   logo: https://raw.githubusercontent.com/CTTIR/pressR/main/man/figures/logo.svg
 - name: qviewparsR
+  status: cran
   category: "R Packages"
   group: "Parsers & Data I/O"
   description: "Pure-R parser for the binary .Q-View project file format used in chemiluminescent multiplex ELISA plate imaging and quantification."
   github: https://github.com/CTTIR/qviewparsR
   docs: https://cttir.github.io/qviewparsR/
+  zenodo: https://doi.org/10.5281/zenodo.21395352
   logo: https://raw.githubusercontent.com/CTTIR/qviewparsR/main/man/figures/logo.svg
 
 # ── R Packages · Methods & Analytics ───────────────────────────────────────
 - name: dynasimR
+  status: usable
   category: "R Packages"
   group: "Methods & Analytics"
   description: "Domain-neutral analysis and visualisation layer for discrete-event, agent-based, and node-actor simulation outputs."
@@ -129,6 +148,7 @@
   docs: https://cttir.github.io/dynasimR/
   logo: https://raw.githubusercontent.com/CTTIR/dynasimR/main/man/figures/logo.svg
 - name: scimapR
+  status: usable
   category: "R Packages"
   group: "Methods & Analytics"
   description: "Reproducible, question-driven, embedding-aware science mapping — a toolkit for bibliometric and scientometric analysis."
@@ -136,6 +156,7 @@
   docs: https://cttir.github.io/scimapR/
   logo: https://raw.githubusercontent.com/CTTIR/scimapR/main/man/figures/logo.svg
 - name: songR
+  status: usable
   category: "R Packages"
   group: "Methods & Analytics"
   description: "Native R/C++ implementation of SONG (Self-Organizing Nebulous Growths) for nonlinear dimensionality reduction and visualisation."
@@ -145,6 +166,7 @@
 
 # ── R Packages · Reproducibility & Tooling ─────────────────────────────────
 - name: hexmakR
+  status: usable
   category: "R Packages"
   group: "Reproducibility & Tooling"
   description: "Generate polished hex sticker logos for R packages using customizable templates."
@@ -152,6 +174,7 @@
   docs: https://cttir.github.io/hexmakR/
   logo: https://raw.githubusercontent.com/CTTIR/hexmakR/main/man/figures/logo.svg
 - name: reflowR
+  status: usable
   category: "R Packages"
   group: "Reproducibility & Tooling"
   description: "Custom workflowr themes and templates for reproducible research websites in R."
@@ -159,6 +182,7 @@
   docs: https://cttir.github.io/reflowR/
   logo: https://raw.githubusercontent.com/CTTIR/reflowR/main/man/figures/logo.svg
 - name: themakR
+  status: usable
   category: "R Packages"
   group: "Reproducibility & Tooling"
   description: "Shared pkgdown template giving the CTTIR package suite a unified look — Hugo Coder palette with a light/dark toggle."
@@ -168,18 +192,21 @@
 
 # ── Zotero Plugins (pentagon placeholder) ──────────────────────────────────
 - name: argus-one
+  status: usable
   category: "Zotero Plugins"
   description: "Merges duplicate Zotero items by DOI only — keeps the newest record's fields, unions collections, tags, and attachments inside one transaction."
   github: https://github.com/CTTIR/argus-one
   docs: ""
   logo: ""
 - name: attaclone-dedup
+  status: usable
   category: "Zotero Plugins"
   description: "Detects and resolves duplicate file attachments by content hash — auto-removes byte-identical bare copies, prompts a review dialog for annotated PDFs."
   github: https://github.com/CTTIR/attaclone-dedup
   docs: ""
   logo: ""
 - name: metadata-mender
+  status: usable
   category: "Zotero Plugins"
   description: "Reconciles and completes item metadata against PubMed, OpenAlex, Crossref, Semantic Scholar, OpenAIRE, Unpaywall, CORE, and CRAN."
   github: https://github.com/CTTIR/metadata-mender
@@ -188,12 +215,14 @@
 
 # ── Applications (square placeholder) ──────────────────────────────────────
 - name: pwa-quest
+  status: usable
   category: "Applications"
   description: "Offline-first Progressive Web App for collecting questionnaire responses in research and field settings — exports sessions as QR codes or CSV / XLSX / TXT / XML."
   github: https://github.com/CTTIR/pwa-quest
   docs: ""
   logo: ""
 - name: shinylaunchR
+  status: usable
   category: "Applications"
   description: "Cross-platform desktop launchpad for R/Shiny apps — opens packaged apps, Shiny files, or hosted URLs each in its own native window while R runs headless in the background."
   github: https://github.com/CTTIR/shinylaunchR
