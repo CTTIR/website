@@ -168,10 +168,10 @@ body.colorscheme-dark .cttir-card__logo--placeholder { color: #9a9a9a; }
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  border: 1.5px solid var(--cttir-accent);
+  border: 1.5px solid var(--cttir-card-fg);
   background: transparent;
 }
-.cttir-status__dot.is-filled { background: var(--cttir-accent); }
+.cttir-status__dot.is-filled { background: var(--cttir-card-fg); }
 
 .cttir-status-legend {
   display: flex;
