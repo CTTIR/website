@@ -14,6 +14,8 @@
   group: "Imaging & Microscopy"
   description: "Multi-layer region-of-interest annotation for whole-slide microscopy, hyperspectral cubes, and rasters — exports binary, labelled, and multi-class masks (GeoJSON, QuPath, TIFF) with a resumable Shiny/OpenSeadragon batch annotator."
   github: https://github.com/CTTIR/annotatR
+  doi: 10.5281/zenodo.21889921
+  doi_status: reserved
   docs: https://cttir.github.io/annotatR/
   logo: https://raw.githubusercontent.com/CTTIR/annotatR/main/man/figures/logo.svg
 - name: cellreportR
@@ -22,6 +24,8 @@
   group: "Imaging & Microscopy"
   description: "Statistical analysis and audit-ready reporting pipeline for routine cell-culture diagnostics with microscopic evaluation."
   github: https://github.com/CTTIR/cellreportR
+  doi: 10.5281/zenodo.21889928
+  doi_status: reserved
   docs: https://cttir.github.io/cellreportR/
   logo: https://raw.githubusercontent.com/CTTIR/cellreportR/main/man/figures/logo.svg
 - name: phenoscapR
@@ -30,6 +34,8 @@
   group: "Imaging & Microscopy"
   description: "Reading, QC, phenotyping, spatial statistics, and visualisation of single-cell spatial biology data from multiplexed imaging platforms."
   github: https://github.com/CTTIR/phenoscapR
+  doi: 10.5281/zenodo.21889952
+  doi_status: reserved
   docs: https://cttir.github.io/phenoscapR/
   logo: https://raw.githubusercontent.com/CTTIR/phenoscapR/main/man/figures/logo.svg
 - name: scimagR
@@ -38,6 +44,8 @@
   group: "Imaging & Microscopy"
   description: "End-to-end R pipeline for longitudinal MRI and CT analysis in spinal-cord injury research (wraps Spinal Cord Toolbox, dcm2niix, pydicom)."
   github: https://github.com/CTTIR/scimagR
+  doi: 10.5281/zenodo.21889958
+  doi_status: reserved
   docs: https://cttir.github.io/scimagR/
   logo: https://raw.githubusercontent.com/CTTIR/scimagR/main/man/figures/logo.svg
 - name: segmantR
@@ -46,6 +54,8 @@
   group: "Imaging & Microscopy"
   description: "Cell segmentation for histology and multiplexed tissue imaging with human-in-the-loop training — classical methods plus Cellpose, StarDist, and Mesmer."
   github: https://github.com/CTTIR/segmantR
+  doi: 10.5281/zenodo.21889962
+  doi_status: reserved
   docs: https://cttir.github.io/segmantR/
   logo: https://raw.githubusercontent.com/CTTIR/segmantR/main/man/figures/logo.svg
 
@@ -56,6 +66,8 @@
   group: "Spectral & Hyperspectral"
   description: "R bindings to the Cubert CUVIS SDK for reading, calibrating, and exporting hyperspectral camera data."
   github: https://github.com/CTTIR/cuvis.r
+  doi: 10.5281/zenodo.21889930
+  doi_status: reserved
   docs: https://cttir.github.io/cuvis.r/
   logo: https://raw.githubusercontent.com/CTTIR/cuvis.r/main/man/figures/logo.svg
 - name: hyperspectR
@@ -64,6 +76,8 @@
   group: "Spectral & Hyperspectral"
   description: "Complete R pipeline for biomedical hyperspectral imaging — from raw camera data to clinical tissue oxygenation maps."
   github: https://github.com/CTTIR/hyperspectR
+  doi: 10.5281/zenodo.21889940
+  doi_status: reserved
   docs: https://cttir.github.io/hyperspectR/
   logo: https://raw.githubusercontent.com/CTTIR/hyperspectR/main/man/figures/logo.svg
 - name: libscanR
@@ -72,6 +86,8 @@
   group: "Spectral & Hyperspectral"
   description: "Vendor-agnostic analysis and visualisation of Laser-Induced Breakdown Spectroscopy (LIBS) data, with a focus on biomedical tissue applications."
   github: https://github.com/CTTIR/libscanR
+  doi: 10.5281/zenodo.21889942
+  doi_status: reserved
   docs: https://cttir.github.io/libscanR/
   logo: https://raw.githubusercontent.com/CTTIR/libscanR/main/man/figures/logo.svg
 
@@ -82,6 +98,8 @@
   group: "Omics & Transcriptomics"
   description: "Streamlined RNA-seq analysis pipelines — from count matrices to publication-ready results."
   github: https://github.com/CTTIR/bambamR
+  doi: 10.5281/zenodo.21889924
+  doi_status: reserved
   docs: https://cttir.github.io/bambamR/
   logo: https://raw.githubusercontent.com/CTTIR/bambamR/main/man/figures/logo.svg
 
@@ -92,6 +110,8 @@
   group: "Clinical & Molecular Pathology"
   description: "Unified R platform for molecular pathology data — parses NGS files (VCF, BAM, FASTQ), XML/PDF reports, and clinical data into a queryable database with an interactive Shiny app."
   github: https://github.com/CTTIR/molpathR
+  doi: 10.5281/zenodo.21889946
+  doi_status: reserved
   docs: https://cttir.github.io/molpathR/
   logo: https://raw.githubusercontent.com/CTTIR/molpathR/main/man/figures/logo.svg
 - name: zhncommandR
@@ -110,6 +130,8 @@
   group: "Parsers & Data I/O"
   description: "Unofficial R client for the SeaTable REST API — read, write, and sync collaborative cloud databases from R."
   github: https://github.com/CTTIR/harbouR
+  doi: 10.5281/zenodo.21889936
+  doi_status: reserved
   docs: https://cttir.github.io/harbouR/
   logo: https://raw.githubusercontent.com/CTTIR/harbouR/main/man/figures/logo.svg
 - name: lstparsR
@@ -126,6 +148,8 @@
   group: "Parsers & Data I/O"
   description: "Parsing, analysis, and visualisation of capacitive pressure-distribution data — insoles, saddles (equine and bicycle), seating, and barefoot pedography."
   github: https://github.com/CTTIR/pressR
+  doi: 10.5281/zenodo.21889954
+  doi_status: reserved
   docs: https://cttir.github.io/pressR/
   logo: https://raw.githubusercontent.com/CTTIR/pressR/main/man/figures/logo.svg
 - name: qviewparsR
@@ -134,6 +158,8 @@
   group: "Parsers & Data I/O"
   description: "Pure-R parser for the binary .Q-View project file format used in chemiluminescent multiplex ELISA plate imaging and quantification."
   github: https://github.com/CTTIR/qviewparsR
+  doi: 10.5281/zenodo.21395352
+  doi_status: registered
   docs: https://cttir.github.io/qviewparsR/
   zenodo: https://doi.org/10.5281/zenodo.21395352
   logo: https://raw.githubusercontent.com/CTTIR/qviewparsR/main/man/figures/logo.svg
@@ -145,6 +171,8 @@
   group: "Methods & Analytics"
   description: "Domain-neutral analysis and visualisation layer for discrete-event, agent-based, and node-actor simulation outputs."
   github: https://github.com/CTTIR/dynasimR
+  doi: 10.5281/zenodo.21889932
+  doi_status: reserved
   docs: https://cttir.github.io/dynasimR/
   logo: https://raw.githubusercontent.com/CTTIR/dynasimR/main/man/figures/logo.svg
 - name: scimapR
@@ -153,6 +181,8 @@
   group: "Methods & Analytics"
   description: "Reproducible, question-driven, embedding-aware science mapping — a toolkit for bibliometric and scientometric analysis."
   github: https://github.com/CTTIR/scimapR
+  doi: 10.5281/zenodo.21889960
+  doi_status: reserved
   docs: https://cttir.github.io/scimapR/
   logo: https://raw.githubusercontent.com/CTTIR/scimapR/main/man/figures/logo.svg
 - name: songR
@@ -161,6 +191,8 @@
   group: "Methods & Analytics"
   description: "Native R/C++ implementation of SONG (Self-Organizing Nebulous Growths) for nonlinear dimensionality reduction and visualisation."
   github: https://github.com/CTTIR/songR
+  doi: 10.5281/zenodo.21889964
+  doi_status: reserved
   docs: https://cttir.github.io/songR/
   logo: https://raw.githubusercontent.com/CTTIR/songR/main/man/figures/logo.svg
 
@@ -171,6 +203,8 @@
   group: "Reproducibility & Tooling"
   description: "Generate polished hex sticker logos for R packages using customizable templates."
   github: https://github.com/CTTIR/hexmakR
+  doi: 10.5281/zenodo.21889938
+  doi_status: reserved
   docs: https://cttir.github.io/hexmakR/
   logo: https://raw.githubusercontent.com/CTTIR/hexmakR/main/man/figures/logo.svg
 - name: reflowR
@@ -179,6 +213,8 @@
   group: "Reproducibility & Tooling"
   description: "Custom workflowr themes and templates for reproducible research websites in R."
   github: https://github.com/CTTIR/reflowR
+  doi: 10.5281/zenodo.21889956
+  doi_status: reserved
   docs: https://cttir.github.io/reflowR/
   logo: https://raw.githubusercontent.com/CTTIR/reflowR/main/man/figures/logo.svg
 - name: themakR
@@ -187,6 +223,8 @@
   group: "Reproducibility & Tooling"
   description: "Shared pkgdown template giving the CTTIR package suite a unified look — Hugo Coder palette with a light/dark toggle."
   github: https://github.com/CTTIR/themakR
+  doi: 10.5281/zenodo.21889968
+  doi_status: reserved
   docs: https://cttir.github.io/themakR/
   logo: https://raw.githubusercontent.com/CTTIR/themakR/main/man/figures/logo.svg
 
@@ -196,6 +234,8 @@
   category: "Zotero Plugins"
   description: "Merges duplicate Zotero items by DOI only — keeps the newest record's fields, unions collections, tags, and attachments inside one transaction."
   github: https://github.com/CTTIR/argus-one
+  doi: 10.5281/zenodo.21889976
+  doi_status: reserved
   docs: ""
   logo: ""
 - name: attaclone-dedup
@@ -203,6 +243,8 @@
   category: "Zotero Plugins"
   description: "Detects and resolves duplicate file attachments by content hash — auto-removes byte-identical bare copies, prompts a review dialog for annotated PDFs."
   github: https://github.com/CTTIR/attaclone-dedup
+  doi: 10.5281/zenodo.21889978
+  doi_status: reserved
   docs: ""
   logo: ""
 - name: metadata-mender
@@ -210,6 +252,8 @@
   category: "Zotero Plugins"
   description: "Reconciles and completes item metadata against PubMed, OpenAlex, Crossref, Semantic Scholar, OpenAIRE, Unpaywall, CORE, and CRAN."
   github: https://github.com/CTTIR/metadata-mender
+  doi: 10.5281/zenodo.21889980
+  doi_status: reserved
   docs: ""
   logo: ""
 
@@ -226,5 +270,7 @@
   category: "Applications"
   description: "Cross-platform desktop launchpad for R/Shiny apps — opens packaged apps, Shiny files, or hosted URLs each in its own native window while R runs headless in the background."
   github: https://github.com/CTTIR/shinylaunchR
+  doi: 10.5281/zenodo.21889984
+  doi_status: reserved
   docs: ""
   logo: ""
