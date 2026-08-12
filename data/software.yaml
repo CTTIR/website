@@ -70,6 +70,16 @@
   doi_status: reserved
   docs: https://cttir.github.io/cuvis.r/
   logo: https://raw.githubusercontent.com/CTTIR/cuvis.r/main/man/figures/logo.svg
+- name: hyperspectaculR
+  status: usable
+  category: "R Packages"
+  group: "Spectral & Hyperspectral"
+  description: "Publication-grade artistic visualisation of hyperspectral imagery, built on the hyperspectR cube class."
+  github: https://github.com/CTTIR/hyperspectaculR
+  doi: 10.5281/zenodo.21889974
+  doi_status: reserved
+  docs: ""
+  logo: ""
 - name: hyperspectR
   status: usable
   category: "R Packages"
@@ -90,6 +100,16 @@
   doi_status: reserved
   docs: https://cttir.github.io/libscanR/
   logo: https://raw.githubusercontent.com/CTTIR/libscanR/main/man/figures/logo.svg
+- name: tivis.r
+  status: usable
+  category: "R Packages"
+  group: "Spectral & Hyperspectral"
+  description: "Pure-R reader for Diaspective Vision TIVITA hyperspectral recordings — parses the SpecCube container, acquisition metadata and exported parameter images, with no vendor SDK required."
+  github: https://github.com/CTTIR/tivis.r
+  doi: 10.5281/zenodo.21889970
+  doi_status: reserved
+  docs: ""
+  logo: ""
 
 # ── R Packages · Omics & Transcriptomics ───────────────────────────────────
 - name: bambamR
