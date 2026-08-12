@@ -78,8 +78,8 @@
   github: https://github.com/CTTIR/hyperspectaculR
   doi: 10.5281/zenodo.21889974
   doi_status: reserved
-  docs: ""
-  logo: ""
+  docs: https://cttir.github.io/hyperspectaculR/
+  logo: https://raw.githubusercontent.com/CTTIR/hyperspectaculR/main/man/figures/logo.svg
 - name: hyperspectR
   status: usable
   category: "R Packages"
