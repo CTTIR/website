@@ -108,8 +108,8 @@
   github: https://github.com/CTTIR/tivis.r
   doi: 10.5281/zenodo.21889970
   doi_status: reserved
-  docs: ""
-  logo: ""
+  docs: https://cttir.github.io/tivis.r/
+  logo: https://raw.githubusercontent.com/CTTIR/tivis.r/main/man/figures/logo.svg
 
 # ── R Packages · Omics & Transcriptomics ───────────────────────────────────
 - name: bambamR
