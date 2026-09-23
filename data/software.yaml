@@ -1,4 +1,4 @@
-# Software catalogue.
+# Software catalogue. Reviewed against public GitHub repositories on 2026-09-23.
 # Rendered by layouts/software/list.html, grouped by `category` then, for
 # R Packages, sub-grouped by `group` (see the group order in that template).
 # Cards with an empty `logo` fall back to a monochrome, name-inside outline
@@ -288,9 +288,52 @@
 - name: shinylaunchR
   status: usable
   category: "Applications"
-  description: "Cross-platform desktop launchpad for R/Shiny apps — opens packaged apps, Shiny files, or hosted URLs each in its own native window while R runs headless in the background."
+  description: "Desktop launchpad for package apps, staged Shiny source apps and hosted HTTPS URLs. Version 0.1.0 has a GitHub release; 0.2.0-rc.1 is an unpublished release candidate with platform qualification still pending."
   github: https://github.com/CTTIR/shinylaunchR
   doi: 10.5281/zenodo.21889984
   doi_status: reserved
+  docs: ""
+  logo: ""
+
+- name: bloodspottR
+  status: draft
+  category: "R Packages"
+  group: "Imaging & Microscopy"
+  description: "Experimental package for calibrated histology burden measurements, traceable review, reporting and Shiny exploration of saved results; native whole-slide inference and portable DNN training are not yet qualified end to end."
+  github: https://github.com/CTTIR/bloodspottR
+  docs: ""
+  logo: ""
+
+- name: cellspecR
+  status: usable
+  category: "R Packages"
+  group: "Imaging & Microscopy"
+  description: "1.0.0 release candidate defining the cellspec table contract for segmented cells: import, validation, signal policies and integrity-checked exchange. External fixture comparisons and CRAN submission remain pending."
+  github: https://github.com/CTTIR/cellspecR
+  docs: ""
+  logo: ""
+
+- name: gatekeepR
+  status: usable
+  category: "R Packages"
+  group: "Imaging & Microscopy"
+  description: "1.0.0 release candidate for marker callability, thresholds, phenotype classification and Shiny review, with immutable snapshots and verifiable exports; preparation for first CRAN submission is ongoing."
+  github: https://github.com/CTTIR/gatekeepR
+  docs: ""
+  logo: ""
+
+- name: brainwritR
+  status: usable
+  category: "Applications"
+  description: "Development R/Shiny application for classroom brainwriting, with timed rounds, QR-code participation, SQLite persistence, mobile reconnect support and German, English and French interfaces."
+  github: https://github.com/CTTIR/brainwritR
+  docs: ""
+  logo: ""
+
+- name: qupflowR
+  status: idea
+  category: "Others"
+  description: "Repository placeholder: currently empty, with no published implementation or installation instructions."
+  github: https://github.com/CTTIR/qupflowR
   docs: ""
   logo: ""
