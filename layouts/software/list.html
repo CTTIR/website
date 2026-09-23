@@ -2,7 +2,7 @@
 <section class="container page">
   <article>
     <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
-    {{ .Content }}
+    {{ with .Params.intro }}<p>{{ . }}</p>{{ end }}
 
     <div class="cttir-status-legend">
       <span class="cttir-status-legend__key">Status</span>
@@ -44,6 +44,7 @@
         {{ end }}
       {{ end }}
     {{ end }}
+    {{ .Content }}
   </article>
 </section>
 {{ end }}
