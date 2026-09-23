@@ -302,7 +302,7 @@
   description: "Experimental package for calibrated histology burden measurements, traceable review, reporting and Shiny exploration of saved results; native whole-slide inference and portable DNN training are not yet qualified end to end."
   github: https://github.com/CTTIR/bloodspottR
   docs: ""
-  logo: ""
+  logo: https://raw.githubusercontent.com/CTTIR/bloodspottR/main/inst/figures/bloodspottR_icon_600dpi.png
 
 - name: cellspecR
   status: usable
@@ -311,7 +311,7 @@
   description: "1.0.0 release candidate defining the cellspec table contract for segmented cells: import, validation, signal policies and integrity-checked exchange. External fixture comparisons and CRAN submission remain pending."
   github: https://github.com/CTTIR/cellspecR
   docs: ""
-  logo: ""
+  logo: https://raw.githubusercontent.com/CTTIR/cellspecR/main/man/figures/logo.svg
 
 - name: gatekeepR
   status: usable
@@ -320,7 +320,7 @@
   description: "1.0.0 release candidate for marker callability, thresholds, phenotype classification and Shiny review, with immutable snapshots and verifiable exports; preparation for first CRAN submission is ongoing."
   github: https://github.com/CTTIR/gatekeepR
   docs: ""
-  logo: ""
+  logo: https://raw.githubusercontent.com/CTTIR/gatekeepR/main/man/figures/logo.svg
 
 - name: brainwritR
   status: usable
@@ -328,7 +328,7 @@
   description: "Development R/Shiny application for classroom brainwriting, with timed rounds, QR-code participation, SQLite persistence, mobile reconnect support and German, English and French interfaces."
   github: https://github.com/CTTIR/brainwritR
   docs: ""
-  logo: ""
+  logo: https://raw.githubusercontent.com/CTTIR/brainwritR/main/man/figures/logo.png
 
 - name: qupflowR
   status: idea
