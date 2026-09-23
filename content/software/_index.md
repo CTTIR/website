@@ -5,17 +5,7 @@ description = "Open-source software from the CTTIR group"
 
 Open-source software developed by CTTIR. Each card links to the GitHub repository.
 
-Last reviewed: **23 September 2026**. The [organisation inventory](https://github.com/orgs/CTTIR/repositories)
-contains 38 public repositories, including teaching and infrastructure.
-`cellspecR` and `gatekeepR` are 1.0.0 release candidates; `bloodspottR` is
-experimental; `brainwritR` is a development application. `qupflowR` is an empty
-placeholder. See each card and repository README for implementation status.
-
 ## DOI index
-
-The table below lists previously recorded Zenodo identifiers. New projects without a verified DOI are listed in the software cards. The version column describes the archived or intended deposit, not necessarily the current default branch.
-
-> **Only the qviewparsR identifier below was found in the public DataCite index at this review.** The other identifiers remain unverified for citation and retain their reserved status. The shinylaunchR README describes its identifier as an existing archive, but its DOI resolver returned 404 on 23 September 2026. A GitHub release and a registered DOI are separate publication records.
 
 | Repository | Description | Version | DOI | Status |
 |---|---|---|---|---|

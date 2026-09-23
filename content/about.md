@@ -27,17 +27,3 @@ to clinical registries — into transparent, reusable software and workflows.
 - **Specialised parsers and tooling.** Domain-specific parsers and lightweight
   utilities (e.g. [qviewparsR](https://github.com/CTTIR/qviewparsR) for
   Q-View chemiluminescent ELISA data).
-
-
-### Current status — 23 September 2026
-
-CTTIR currently has **38 public GitHub repositories**, including research packages,
-applications, teaching material and shared infrastructure. The
-[software catalogue](../software/) now includes the `cellspecR` and `gatekeepR`
-1.0.0 release candidates, experimental histology package `bloodspottR`, and
-classroom brainwriting application `brainwritR`. `shinylaunchR` has a published
-0.1.0 GitHub release and an unpublished 0.2.0-rc.1 candidate.
-
-The `qupflowR` and `cttir.r-universe.dev` repositories are currently empty
-placeholders. For all current projects, see the
-[public repository inventory](https://github.com/orgs/CTTIR/repositories).
