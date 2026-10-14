@@ -362,7 +362,7 @@
   status: draft
   category: R Packages
   group: Methods & Analytics
-  description: Academic simulation of patient-transfer networks under stochastic disruption,
+  description: Abstract logistics-chain simulation with time-varying item specifications and dynamic disruptions,
     with reproducible policy comparisons and a Shiny workbench.
   github: https://github.com/CTTIR/shieldR
   docs: https://github.com/CTTIR/shieldR#readme
@@ -456,4 +456,13 @@
   description: Shared research resources, references and supporting materials.
   github: https://github.com/CTTIR/ressources
   docs: https://github.com/CTTIR/ressources#readme
+  logo: ''
+
+- name: researchd
+  status: draft
+  category: Applications
+  description: Self-hosted academic literature and signal surveillance server, with an
+    R pipeline, browser dashboard, token-authenticated API and researchR client.
+  github: https://github.com/CTTIR/researchd
+  docs: https://github.com/CTTIR/researchd#readme
   logo: ''
