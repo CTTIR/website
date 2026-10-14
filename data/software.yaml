@@ -366,7 +366,7 @@
     with reproducible policy comparisons and a Shiny workbench.
   github: https://github.com/CTTIR/shieldR
   docs: https://github.com/CTTIR/shieldR#readme
-  logo: ''
+  logo: https://raw.githubusercontent.com/CTTIR/shieldR/main/man/figures/logo.svg
 
 - name: cttiR
   status: draft
@@ -387,7 +387,7 @@
     deployed researchd server; retrieves records and manages surveillance questions.
   github: https://github.com/CTTIR/researchR
   docs: https://github.com/CTTIR/researchR#readme
-  logo: ''
+  logo: https://raw.githubusercontent.com/CTTIR/researchR/main/man/figures/logo.svg
 
 - name: delphyR
   status: draft
