@@ -1,0 +1,59 @@
+{{- $repos := slice -}}
+{{- range sort site.Data.software "name" -}}
+  {{- if strings.HasPrefix .github "https://github.com/CTTIR/" -}}
+    {{- $name := .name -}}
+    {{- $projects := slice -}}
+    {{- range site.Data.projects -}}
+      {{- $project := .name -}}
+      {{- range .software -}}{{- if eq .pkg $name -}}{{- $projects = $projects | append $project -}}{{- end -}}{{- end -}}
+    {{- end -}}
+    {{- $workflows := slice -}}
+    {{- range site.Data.workflows -}}
+      {{- if in .featured_packages $name -}}
+        {{- $label := index (split .name " — ") 0 -}}
+        {{- if eq .status "Coming soon" -}}{{- $label = printf "%s (planned)" $label -}}{{- end -}}
+        {{- $workflows = $workflows | append $label -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $topics := slice (.group | default .category) -}}
+    {{- with index site.Data.repository_tags $name -}}{{- $topics = $topics | append . -}}{{- end -}}
+    {{- $repos = $repos | append (dict "id" $name "description" .description "url" .github "docs" (.docs | default "") "status" .status "tags" (dict "projects" $projects "workflows" $workflows "topics" $topics "types" (slice .category))) -}}
+  {{- end -}}
+{{- end -}}
+<section class="repo-network" aria-labelledby="repo-network-title">
+  <h3 id="repo-network-title">Explore the CTTIR network</h3>
+  <p>Follow shared tags across {{ len $repos }} public repositories. Select a repository for details, or a tag to explore its group. Connections describe shared scope, not dependencies or validated integrations. Workflow groups marked <em>planned</em> are proposals.</p>
+  <div class="rn-interactive" hidden>
+    <div class="rn-toolbar">
+      <label for="rn-search">Find a repository<input id="rn-search" type="search" placeholder="Name, topic or description…" autocomplete="off"></label>
+      <button type="button" id="rn-reset">Reset filters</button>
+    </div>
+    <fieldset class="rn-families"><legend>Connect and group by</legend>
+      <label><input type="checkbox" value="topics" checked> Topics</label>
+      <label><input type="checkbox" value="projects"> Projects</label>
+      <label><input type="checkbox" value="workflows"> Workflows</label>
+      <label><input type="checkbox" value="types"> Types</label>
+    </fieldset>
+    <div class="rn-filters" aria-label="Filter repositories by tags"></div>
+    <p class="rn-help">Filter checkboxes match any selected tag within a category, and all selected categories. Unchecked categories do not restrict results. Circles are repositories; coloured diamonds are tag groups.</p>
+    <div class="rn-map-wrap">
+      <div id="rn-map" role="img" aria-label="Interactive repository and tag network. Use the repository list below for keyboard access."></div>
+      <div class="rn-map-controls" aria-label="Network view controls">
+        <button type="button" id="rn-fit">Fit view</button>
+        <button type="button" id="rn-zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" id="rn-zoom-out" aria-label="Zoom out">−</button>
+      </div>
+    </div>
+    <p id="rn-count" role="status" aria-live="polite"></p>
+    <div id="rn-detail" class="rn-detail" aria-live="polite"><p>Select a repository or tag to see its details.</p></div>
+    <details class="rn-results" open><summary>Matching repositories</summary><ul id="rn-list"></ul></details>
+  </div>
+  <div class="rn-fallback"><p>The interactive network requires JavaScript. All repositories are also available below and in the <a href="{{ "software/" | relURL }}">software catalogue</a>.</p><ul>
+    {{ range $repos }}<li><a href="{{ .url }}">{{ .id }}</a> — {{ .description }}</li>{{ end }}
+  </ul></div>
+  <p class="rn-source">Adapted from the <a href="https://cttir.github.io/tutorials/overview.html">CTTIR tutorials network</a>. Tags draw on the public software catalogue, project themes and planned workflows; repository availability is separate from maturity.</p>
+  <script id="rn-data" type="application/json">{{ $repos | jsonify | safeJS }}</script>
+</section>
+<script defer src="{{ "js/vendor/vis-network-9.1.9.min.js" | relURL }}"></script>
+{{ $script := resources.Get "js/repository-network.js" | minify | fingerprint }}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>

@@ -60,3 +60,5 @@ work; a released CTTIR-trained model is not implied.
   practical tutorials and curated method references support the use and critical
   appraisal of these tools. Explore [Tutorials & Courses](../tutorials/) and
   [Ressources](../ressources/).
+
+{{< repository-network >}}

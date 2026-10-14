@@ -22,6 +22,32 @@ GitHub Actions workflow `.github/workflows/hugo.yml` builds and publishes the si
 - `static/images/cttir-logo.png` — 2×2 black tile with white "C T / I R" lettering. Used as landing-hero logo and favicon source.
 - `static/images/favicon.ico` (optional, generated from the logo).
 
+## Repository network
+
+The About page includes a repository/tag graph below Scope. Its Hugo shortcode
+reads `data/software.yaml` (public CTTIR repositories only), project membership
+from `data/projects.yaml`, and proposed workflow membership from
+`data/workflows.yaml`. Add cross-cutting topics in `data/repository_tags.yaml`.
+Update the catalogue when public repositories are added; private repositories
+and private project identifiers must not be included. All repositories remain
+visible by default, including those without project or workflow assignments.
+
+Checkboxes choose which tag families form graph groups. Separate facet filters
+use OR within each family and AND across families; search also matches tags and
+descriptions. The matching list provides keyboard access to repository details,
+and a server-rendered list remains available without JavaScript. Planned workflow
+membership describes editorial scope, not a tested package dependency.
+
+The graph uses a locally served copy of vis-network 9.1.9, matching the tutorials
+network, with its MIT license in `static/js/vendor/`. It makes no runtime GitHub
+API or graph CDN requests. Rendering and behaviour live in
+`layouts/shortcodes/repository-network.html`, `assets/js/repository-network.js`
+and `assets/css/custom.css`.
+
+Before publishing, build with `hugo --minify`; check the complete inventory,
+search, each grouping family, combined filters, empty results, reset, repository
+links, zoom, keyboard access, and narrow-screen layout.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
