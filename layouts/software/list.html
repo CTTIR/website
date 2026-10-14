@@ -14,7 +14,7 @@
 
     {{ $software := .Site.Data.software }}
     {{ $rGroups := slice "Imaging & Microscopy" "Spectral & Hyperspectral" "Omics & Transcriptomics" "Clinical & Molecular Pathology" "Parsers & Data I/O" "Methods & Analytics" "Reproducibility & Tooling" }}
-    {{ range $cat := slice "R Packages" "Zotero Plugins" "Applications" "Others" }}
+    {{ range $cat := slice "R Packages" "Zotero Plugins" "Applications" "Education & Resources" "Infrastructure" "Others" }}
       {{ $items := where $software "category" $cat }}
       {{ if $items }}
         <h2 class="cttir-section-title">{{ $cat }}</h2>

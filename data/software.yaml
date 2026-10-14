@@ -1,4 +1,4 @@
-# Software catalogue. Reviewed against public GitHub repositories on 2026-09-23.
+# Software catalogue. Public repository coverage reconciled on 2026-10-14.
 # Rendered by layouts/software/list.html, grouped by `category` then, for
 # R Packages, sub-grouped by `group` (see the group order in that template).
 # Cards with an empty `logo` fall back to a monochrome, name-inside outline
@@ -336,4 +336,124 @@
   description: "Repository placeholder: currently empty, with no published implementation or installation instructions."
   github: https://github.com/CTTIR/qupflowR
   docs: ""
-  logo: ""
+  logo: /website/images/hex/qupflowR.svg
+
+- name: inferguidR
+  status: draft
+  category: R Packages
+  group: Methods & Analytics
+  description: Guided inference, power analysis and diagnostic accuracy, with explicit
+    assumptions, typed results, reproducible exports and a Shiny workbench.
+  github: https://github.com/CTTIR/inferguidR
+  docs: https://github.com/CTTIR/inferguidR#readme
+  logo: https://raw.githubusercontent.com/CTTIR/inferguidR/main/man/figures/logo.svg
+
+- name: sandtablR
+  status: draft
+  category: R Packages
+  group: Methods & Analytics
+  description: Synthetic patient-flow simulation, decision-path analysis and model
+    comparison, with an interactive Shiny workbench.
+  github: https://github.com/CTTIR/sandtablR
+  docs: https://github.com/CTTIR/sandtablR#readme
+  logo: https://raw.githubusercontent.com/CTTIR/sandtablR/main/man/figures/logo.png
+
+- name: shieldR
+  status: draft
+  category: R Packages
+  group: Methods & Analytics
+  description: Academic simulation of patient-transfer networks under stochastic disruption,
+    with reproducible policy comparisons and a Shiny workbench.
+  github: https://github.com/CTTIR/shieldR
+  docs: https://github.com/CTTIR/shieldR#readme
+  logo: ''
+
+- name: cttiR
+  status: draft
+  category: R Packages
+  group: Reproducibility & Tooling
+  description: Structured research-project creation, versioned workflow selection
+    and reproducible analysis scaffolding; development software with explicit validation
+    gates.
+  github: https://github.com/CTTIR/cttiR
+  docs: https://github.com/CTTIR/cttiR#readme
+  logo: https://raw.githubusercontent.com/CTTIR/cttiR/main/man/figures/logo.png
+
+- name: researchR
+  status: draft
+  category: R Packages
+  group: Parsers & Data I/O
+  description: R client for literature and signal surveillance through a separately
+    deployed researchd server; retrieves records and manages surveillance questions.
+  github: https://github.com/CTTIR/researchR
+  docs: https://github.com/CTTIR/researchR#readme
+  logo: ''
+
+- name: delphyR
+  status: draft
+  category: Applications
+  description: Delphi-study platform with R analysis packages, a multilingual Shiny
+    interface and PostgreSQL workflows; synthetic development examples, not a production
+    deployment.
+  github: https://github.com/CTTIR/delphyR
+  docs: https://github.com/CTTIR/delphyR#readme
+  logo: https://raw.githubusercontent.com/CTTIR/delphyR/main/packages/delphyr/man/figures/logo.png
+
+- name: cttiR-model
+  status: draft
+  category: Infrastructure
+  description: Experimental CPU-first tooling for versioned research resources, local
+    services and evaluation; training and release remain deferred.
+  github: https://github.com/CTTIR/cttiR-model
+  docs: https://github.com/CTTIR/cttiR-model#readme
+  logo: ''
+
+- name: .github
+  status: usable
+  category: Infrastructure
+  description: Organisation profile, contribution guidance and shared repository workflows.
+  github: https://github.com/CTTIR/.github
+  docs: https://github.com/CTTIR/.github#readme
+  logo: ''
+
+- name: website
+  status: usable
+  category: Infrastructure
+  description: Source of the CTTIR organisation website and public software catalogue.
+  github: https://github.com/CTTIR/website
+  docs: https://github.com/CTTIR/website#readme
+  logo: ''
+
+- name: cttir.r-universe.dev
+  status: idea
+  category: Infrastructure
+  description: Empty package-registry placeholder; no package builds are currently published
+    from this repository.
+  github: https://github.com/CTTIR/cttir.r-universe.dev
+  docs: ""
+  logo: ''
+
+- name: courses
+  status: usable
+  category: Education & Resources
+  description: Biostatistics curriculum covering foundations, regression, study design
+    and machine learning.
+  github: https://github.com/CTTIR/courses
+  docs: https://github.com/CTTIR/courses#readme
+  logo: ''
+
+- name: tutorials
+  status: usable
+  category: Education & Resources
+  description: Hands-on tutorials for CTTIR software and reproducible research methods.
+  github: https://github.com/CTTIR/tutorials
+  docs: https://github.com/CTTIR/tutorials#readme
+  logo: ''
+
+- name: ressources
+  status: usable
+  category: Education & Resources
+  description: Shared research resources, references and supporting materials.
+  github: https://github.com/CTTIR/ressources
+  docs: https://github.com/CTTIR/ressources#readme
+  logo: ''

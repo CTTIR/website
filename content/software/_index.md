@@ -1,10 +1,15 @@
 +++
 title = "Software"
 description = "Open-source software from the CTTIR group"
-intro = "Open-source software developed by CTTIR. Each card links to the GitHub repository."
+intro = "Public packages, applications, learning resources and infrastructure from CTTIR. Repository coverage checked on 14 October 2026. Public availability does not imply a stable release or scientific validation."
 +++
 
-## DOI index
+## Previously catalogued DOI records
+
+The version and identifier records below are historical catalogue entries, not
+a claim that the current repository version has been released or that a reserved
+identifier has since been registered. New public projects without a verified DOI
+are listed in the cards above.
 
 | Repository | Description | Version | DOI | Status |
 |---|---|---|---|---|
