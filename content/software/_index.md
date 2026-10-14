@@ -4,27 +4,6 @@ description = "Open-source software from the CTTIR group"
 intro = "Public packages, applications, learning resources and infrastructure from CTTIR. Repository coverage checked on 14 October 2026. Public availability does not imply a stable release or scientific validation."
 +++
 
-## Latest package updates · 14 October 2026
-
-[inferguidR](https://github.com/CTTIR/inferguidR),
-[sandtablR](https://github.com/CTTIR/sandtablR) and
-[shieldR](https://github.com/CTTIR/shieldR) are public MIT packages with
-Shiny workbenches, README examples and vignettes.
-
-**shieldR 0.6.0** uses abstract logistics chains, dynamic disruptions and
-item specifications that change over time. Earlier scripts and saved objects
-require migration to the revised interface. The synthetic model assumptions
-remain explicit in the documentation.
-
-[researchd](https://github.com/CTTIR/researchd) is now a public MIT server
-project paired with [researchR](https://github.com/CTTIR/researchR).
-The client includes an introductory vignette. Live server operation and
-external-provider checks remain separate acceptance steps.
-
-The catalogue cards display the supplied inferguidR, shieldR and researchR
-hex artwork. All 46 current public CTTIR repositories are represented,
-alongside the externally maintained lstparsR companion.
-
 ## Previously catalogued DOI records
 
 The version and identifier records below are historical catalogue entries, not
