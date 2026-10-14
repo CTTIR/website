@@ -331,9 +331,10 @@
   logo: https://raw.githubusercontent.com/CTTIR/brainwritR/main/man/figures/logo.png
 
 - name: qupflowR
-  status: idea
-  category: "Others"
-  description: "Repository placeholder: currently empty, with no published implementation or installation instructions."
+  status: draft
+  category: "R Packages"
+  group: "Reproducibility & Tooling"
+  description: "Experimental R foundations for a planned QuPath interface: protocol helpers, synthetic contract fixtures and pinned external-method execution. Live bridge, interactive app and workflow engine remain planned."
   github: https://github.com/CTTIR/qupflowR
   docs: ""
   logo: /website/images/hex/qupflowR.svg
@@ -425,10 +426,9 @@
   logo: ''
 
 - name: cttir.r-universe.dev
-  status: idea
+  status: draft
   category: Infrastructure
-  description: Empty package-registry placeholder; no package builds are currently published
-    from this repository.
+  description: Package-registry configuration listing qviewparsR, cuvis.r, tivis.r and hyperspectR for r-universe builds; consult the registry for current build availability.
   github: https://github.com/CTTIR/cttir.r-universe.dev
   docs: ""
   logo: ''
