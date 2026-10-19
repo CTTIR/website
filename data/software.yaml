@@ -8,16 +8,6 @@
 #   cran = ●●● (fully functional, on CRAN)  usable = ●●○  draft = ●○○  idea = ○○○
 
 # ── R Packages · Imaging & Microscopy ──────────────────────────────────────
-- name: annotatR
-  status: usable
-  category: "R Packages"
-  group: "Imaging & Microscopy"
-  description: "Multi-layer region-of-interest annotation for whole-slide microscopy, hyperspectral cubes, and rasters — exports binary, labelled, and multi-class masks (GeoJSON, QuPath, TIFF) with a resumable Shiny/OpenSeadragon batch annotator."
-  github: https://github.com/CTTIR/annotatR
-  doi: 10.5281/zenodo.21889921
-  doi_status: reserved
-  docs: https://cttir.github.io/annotatR/
-  logo: https://raw.githubusercontent.com/CTTIR/annotatR/main/man/figures/logo.svg
 - name: cellreportR
   status: usable
   category: "R Packages"
@@ -52,7 +42,7 @@
   status: usable
   category: "R Packages"
   group: "Imaging & Microscopy"
-  description: "Cell segmentation for histology and multiplexed tissue imaging with human-in-the-loop training — classical methods plus Cellpose, StarDist, and Mesmer."
+  description: "Cell segmentation, annotation and mask correction for histology and multiplexed tissue imaging with human-in-the-loop training — classical methods plus Cellpose, StarDist, and Mesmer."
   github: https://github.com/CTTIR/segmantR
   doi: 10.5281/zenodo.21889962
   doi_status: reserved
@@ -70,6 +60,16 @@
   doi_status: reserved
   docs: https://cttir.github.io/cuvis.r/
   logo: https://raw.githubusercontent.com/CTTIR/cuvis.r/main/man/figures/logo.svg
+- name: hyperannotatR
+  status: usable
+  category: "R Packages"
+  group: "Spectral & Hyperspectral"
+  description: "Multi-layer region-of-interest annotation for hyperspectral imaging (HSI), including spectral cubes, band views, spectral extraction, and display rasters — exports binary, labelled, and multi-class masks (GeoJSON, QuPath, TIFF) with a resumable Shiny batch annotator."
+  github: https://github.com/CTTIR/hyperannotatR
+  doi: 10.5281/zenodo.21889921
+  doi_status: reserved
+  docs: https://cttir.github.io/hyperannotatR/
+  logo: https://raw.githubusercontent.com/CTTIR/hyperannotatR/main/man/figures/logo.svg
 - name: hyperspectaculR
   status: usable
   category: "R Packages"

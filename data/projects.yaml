@@ -10,8 +10,7 @@
   software:
     - { pkg: cellreportR, note: "publication-ready cell-level reports" }
     - { pkg: scimagR,     note: "single-cell imaging integration" }
-    - { pkg: segmantR,    note: "segmentation utilities" }
-    - { pkg: annotatR,    note: "region-of-interest annotation and mask export" }
+    - { pkg: segmantR,    note: "segmentation utilities, cell annotation, and mask correction" }
     - { pkg: bambamR,     note: "bulk reference profiles for calibration" }
     - { pkg: songR,       note: "interpretable embeddings" }
   workflows:
@@ -26,7 +25,7 @@
   software:
     - { pkg: hyperspectR, note: "HSI cube ingest and preprocessing" }
     - { pkg: libscanR,    note: "reference-spectrum library matching" }
-    - { pkg: annotatR,    note: "labelling regions of interest on spectral cubes" }
+    - { pkg: hyperannotatR, note: "labelling regions of interest on spectral cubes" }
     - { pkg: songR,       note: "interpretable embeddings over spectral features" }
     - { pkg: reflowR,     note: "CTTIR-styled reproducible report themes" }
   workflows:
@@ -42,8 +41,8 @@
     - { pkg: hyperspectR, note: "modality-specific ingest and processing" }
     - { pkg: cellreportR, note: "cell-level reporting" }
     - { pkg: bambamR,     note: "bulk RNA-seq processing" }
-    - { pkg: segmantR,    note: "segmentation utilities" }
-    - { pkg: annotatR,    note: "cross-modal region-of-interest annotation" }
+    - { pkg: segmantR,    note: "segmentation utilities and histology region-of-interest annotation" }
+    - { pkg: hyperannotatR, note: "HSI region-of-interest annotation" }
     - { pkg: scimagR,     note: "single-cell imaging integration" }
     - { pkg: qviewparsR,  note: "multiplex protein parsing" }
     - { pkg: pressR,      note: "cohort reporting" }

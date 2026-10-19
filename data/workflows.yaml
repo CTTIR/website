@@ -7,7 +7,7 @@
   status: "Coming soon"
   research_question: "Which cell populations and states characterize injured vs. healthy tissue, and how do they relate to spatial context?"
   description: "End-to-end single-cell workflow on a synthetic injured-tissue dataset: QC, normalization, clustering, annotation, segmentation-derived spatial context, and a publication-ready cell-level report. Demonstrates the CTTIR single-cell stack composed end-to-end."
-  featured_packages: [cellreportR, scimagR, segmantR, annotatR, bambamR, songR]
+  featured_packages: [cellreportR, scimagR, segmantR, bambamR, songR]
   learn:
     - "Scaffolding a reproducible single-cell project with workflowr"
     - "QC, normalization, and SONG-based embeddings (songR) for interpretable structure"
@@ -24,7 +24,7 @@
   status: "Coming soon"
   research_question: "Can tissue regions in injured tissue be classified from hyperspectral signatures alone, and how interpretable is the resulting embedding?"
   description: "End-to-end HSI workflow: raw cube ingest, preprocessing, spectral library matching, dimensionality reduction, and tissue-region classification on a synthetic hyperspectral dataset. Composed from CTTIR's HSI and dimensionality-reduction packages."
-  featured_packages: [hyperspectR, libscanR, annotatR, songR, reflowR]
+  featured_packages: [hyperspectR, libscanR, hyperannotatR, songR, reflowR]
   learn:
     - "Ingesting and preprocessing HSI cubes with hyperspectR"
     - "Reference-spectrum matching via libscanR"

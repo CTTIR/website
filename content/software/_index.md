@@ -13,7 +13,6 @@ are listed in the cards above.
 
 | Repository | Description | Version | DOI | Status |
 |---|---|---|---|---|
-| [annotatR](https://github.com/CTTIR/annotatR) | Multi-layer region-of-interest annotation for images and spectral cubes | 0.1.0 | [10.5281/zenodo.21889921](https://doi.org/10.5281/zenodo.21889921) | **DOI reserved — pending publication** |
 | [argus-one](https://github.com/CTTIR/argus-one) | DOI-based duplicate merger for Zotero | 0.1.0 | [10.5281/zenodo.21889976](https://doi.org/10.5281/zenodo.21889976) | **DOI reserved — pending publication** |
 | [attaclone-dedup](https://github.com/CTTIR/attaclone-dedup) | Detecting and managing duplicate file attachments in Zotero | 0.1.0 | [10.5281/zenodo.21889978](https://doi.org/10.5281/zenodo.21889978) | **DOI reserved — pending publication** |
 | [bambamR](https://github.com/CTTIR/bambamR) | End-to-end RNA-seq processing from FASTQ to publication-ready plots | 0.1.0 | [10.5281/zenodo.21889924](https://doi.org/10.5281/zenodo.21889924) | **DOI reserved — pending publication** |
@@ -22,6 +21,7 @@ are listed in the cards above.
 | [dynasimR](https://github.com/CTTIR/dynasimR) | Analysis and visualisation of agent-based and discrete-event simulation output | 0.1.0 | [10.5281/zenodo.21889932](https://doi.org/10.5281/zenodo.21889932) | **DOI reserved — pending publication** |
 | [harbouR](https://github.com/CTTIR/harbouR) | R client for self-hosted SeaTable servers and data files | 0.1.0 | [10.5281/zenodo.21889936](https://doi.org/10.5281/zenodo.21889936) | **DOI reserved — pending publication** |
 | [hexmakR](https://github.com/CTTIR/hexmakR) | Interactive hex sticker generator for R packages | 0.1.0 | [10.5281/zenodo.21889938](https://doi.org/10.5281/zenodo.21889938) | **DOI reserved — pending publication** |
+| [hyperannotatR](https://github.com/CTTIR/hyperannotatR) (formerly annotatR) | Multi-layer region-of-interest annotation for images and spectral cubes | 0.1.0 | [10.5281/zenodo.21889921](https://doi.org/10.5281/zenodo.21889921) | **DOI reserved — pending publication** |
 | [hyperspectaculR](https://github.com/CTTIR/hyperspectaculR) | Artistic visualisation of hyperspectral imaging data | 0.1.0 | [10.5281/zenodo.21889974](https://doi.org/10.5281/zenodo.21889974) | **DOI reserved — pending publication** |
 | [hyperspectR](https://github.com/CTTIR/hyperspectR) | Hyperspectral imaging analysis for biomedical applications | 0.1.0 | [10.5281/zenodo.21889940](https://doi.org/10.5281/zenodo.21889940) | **DOI reserved — pending publication** |
 | [libscanR](https://github.com/CTTIR/libscanR) | Analysis and visualisation of laser-induced breakdown spectroscopy data | 0.1.0 | [10.5281/zenodo.21889942](https://doi.org/10.5281/zenodo.21889942) | **DOI reserved — pending publication** |
