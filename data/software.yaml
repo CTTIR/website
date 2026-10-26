@@ -257,7 +257,7 @@
   doi: 10.5281/zenodo.21889976
   doi_status: reserved
   docs: ""
-  logo: ""
+  logo: https://raw.githubusercontent.com/CTTIR/argus-one/main/assets/branding/logo.svg
 - name: attaclone-dedup
   status: usable
   category: "Zotero Plugins"
@@ -266,7 +266,7 @@
   doi: 10.5281/zenodo.21889978
   doi_status: reserved
   docs: ""
-  logo: ""
+  logo: https://raw.githubusercontent.com/CTTIR/attaclone-dedup/main/assets/branding/logo.svg
 - name: metadata-mender
   status: usable
   category: "Zotero Plugins"
@@ -275,7 +275,7 @@
   doi: 10.5281/zenodo.21889980
   doi_status: reserved
   docs: ""
-  logo: ""
+  logo: https://raw.githubusercontent.com/CTTIR/metadata-mender/main/assets/branding/logo.svg
 
 # ── Applications (square placeholder) ──────────────────────────────────────
 - name: pwa-quest
@@ -284,7 +284,7 @@
   description: "Offline-first Progressive Web App for collecting questionnaire responses in research and field settings — exports sessions as QR codes or CSV / XLSX / TXT / XML."
   github: https://github.com/CTTIR/pwa-quest
   docs: ""
-  logo: ""
+  logo: https://raw.githubusercontent.com/CTTIR/pwa-quest/main/assets/branding/logo.svg
 - name: shinylaunchR
   status: usable
   category: "Applications"
@@ -293,7 +293,7 @@
   doi: 10.5281/zenodo.21889984
   doi_status: reserved
   docs: ""
-  logo: ""
+  logo: https://raw.githubusercontent.com/CTTIR/shinylaunchR/main/assets/branding/logo.svg
 
 - name: bloodspottR
   status: draft
@@ -302,7 +302,7 @@
   description: "Experimental package for calibrated histology burden measurements, traceable review, reporting and Shiny exploration of saved results; native whole-slide inference and portable DNN training are not yet qualified end to end."
   github: https://github.com/CTTIR/bloodspottR
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/bloodspottR/main/inst/figures/bloodspottR_icon_600dpi.png
+  logo: https://raw.githubusercontent.com/CTTIR/bloodspottR/main/man/figures/logo.svg
 
 - name: cellspecR
   status: usable
@@ -415,7 +415,7 @@
   description: Organisation profile, contribution guidance and shared repository workflows.
   github: https://github.com/CTTIR/.github
   docs: https://github.com/CTTIR/.github#readme
-  logo: ''
+  logo: https://raw.githubusercontent.com/CTTIR/.github/main/assets/branding/logo.svg
 
 - name: website
   status: usable
@@ -423,7 +423,7 @@
   description: Source of the CTTIR organisation website and public software catalogue.
   github: https://github.com/CTTIR/website
   docs: https://github.com/CTTIR/website#readme
-  logo: ''
+  logo: https://raw.githubusercontent.com/CTTIR/.github/main/assets/branding/logo.svg
 
 - name: cttir.r-universe.dev
   status: draft

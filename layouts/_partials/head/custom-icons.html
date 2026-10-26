@@ -1,0 +1,15 @@
+{{ with .Site.Params.faviconSVG }}
+<link rel="icon" type="image/svg+xml" href="{{ . | relURL }}" sizes="any">
+{{ end }}
+{{ with .Site.Params.favicon_32 }}
+<link rel="icon" type="image/png" href="{{ . | relURL }}" sizes="32x32">
+{{ end }}
+{{ with .Site.Params.favicon_16 }}
+<link rel="icon" type="image/png" href="{{ . | relURL }}" sizes="16x16">
+{{ end }}
+{{ with .Site.Params.touchicon }}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ . | relURL }}">
+{{ end }}
+{{ with .Site.Params.manifest }}
+<link rel="manifest" href="{{ . | relURL }}">
+{{ end }}

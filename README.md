@@ -17,10 +17,16 @@ Then open <http://localhost:1313/website/>.
 
 GitHub Actions workflow `.github/workflows/hugo.yml` builds and publishes the site. After first push to `main`, in the GitHub repository: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
-## Assets to add
+## Branding assets
 
-- `static/images/cttir-logo.png` — 2×2 black tile with white "C T / I R" lettering. Used as landing-hero logo and favicon source.
-- `static/images/favicon.ico` (optional, generated from the logo).
+- `static/images/cttir-logo.png` — CTTIR v5 artwork-only hex for the landing page.
+- `static/images/favicon-16.png` and `favicon-32.png` — native-size CTTIR v5 favicon exports.
+- `static/images/favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, and `icon-512.png` — CTTIR v5 browser and device icons, referenced by the icon configuration and `static/site.webmanifest`.
+- `static/images/hex/qupflowR.svg` — CTTIR v5 qupflowR artwork for its software card.
+
+Software-card artwork is configured in `data/software.yaml`. The CTTIR identity
+and its reproducible R source are maintained in
+[CTTIR/.github](https://github.com/CTTIR/.github/tree/main/tools/branding).
 
 ## Repository network
 
