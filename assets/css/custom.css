@@ -288,3 +288,14 @@ body.colorscheme-dark .cttir-card__logo--placeholder { color: #9a9a9a; }
   .rn-filters { grid-template-columns: 1fr; }
   #rn-map { height: 42rem; }
 }
+
+/* Named v5 artwork follows the site's explicit theme selection. */
+.cttir-brand-images .cttir-brand-dark { display: none; }
+body.colorscheme-dark .cttir-brand-light { display: none; }
+body.colorscheme-dark .cttir-brand-images .cttir-brand-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .cttir-brand-light { display: none; }
+  body.colorscheme-auto .cttir-brand-images .cttir-brand-dark { display: block; }
+}
+
+.cttir-brand-images { display: flex; justify-content: center; align-self: center; }

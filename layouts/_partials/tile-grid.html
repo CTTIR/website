@@ -10,7 +10,12 @@
   <article class="cttir-card cttir-card--tile">
     <div class="cttir-tile__icon">
       {{ if $it.logo }}
-        <img class="cttir-card__logo" src="{{ $it.logo }}" alt="{{ $it.name }} logo" loading="lazy" />
+        {{ if $it.logo_dark }}
+      <span class="cttir-brand-images">
+        <img class="cttir-card__logo cttir-brand-light" src="{{ $it.logo }}" alt="{{ $it.name }} logo" loading="lazy" />
+        <img class="cttir-card__logo cttir-brand-dark" src="{{ $it.logo_dark }}" alt="{{ $it.name }} logo" loading="lazy" />
+      </span>
+    {{ else }}<img class="cttir-card__logo" src="{{ $it.logo }}" alt="{{ $it.name }} logo" loading="lazy" />{{ end }}
       {{ else }}
         <svg class="cttir-card__logo cttir-card__logo--placeholder" viewBox="0 0 200 230" role="img" aria-label="{{ $it.name }}">
           <polygon points="100,4 196,59 196,171 100,226 4,171 4,59" fill="none" stroke="currentColor" stroke-width="3" />

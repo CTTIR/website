@@ -17,7 +17,8 @@
   doi: 10.5281/zenodo.21889928
   doi_status: reserved
   docs: https://cttir.github.io/cellreportR/
-  logo: https://raw.githubusercontent.com/CTTIR/cellreportR/main/man/figures/logo.svg
+  logo: /website/images/hex/cellreportR.svg
+  logo_dark: /website/images/hex/cellreportR-dark.svg
 - name: phenoscapR
   status: usable
   category: "R Packages"
@@ -27,7 +28,8 @@
   doi: 10.5281/zenodo.21889952
   doi_status: reserved
   docs: https://cttir.github.io/phenoscapR/
-  logo: https://raw.githubusercontent.com/CTTIR/phenoscapR/main/man/figures/logo.svg
+  logo: /website/images/hex/phenoscapR.svg
+  logo_dark: /website/images/hex/phenoscapR-dark.svg
 - name: scimagR
   status: usable
   category: "R Packages"
@@ -37,7 +39,8 @@
   doi: 10.5281/zenodo.21889958
   doi_status: reserved
   docs: https://cttir.github.io/scimagR/
-  logo: https://raw.githubusercontent.com/CTTIR/scimagR/main/man/figures/logo.svg
+  logo: /website/images/hex/scimagR.svg
+  logo_dark: /website/images/hex/scimagR-dark.svg
 - name: segmantR
   status: usable
   category: "R Packages"
@@ -47,7 +50,8 @@
   doi: 10.5281/zenodo.21889962
   doi_status: reserved
   docs: https://cttir.github.io/segmantR/
-  logo: https://raw.githubusercontent.com/CTTIR/segmantR/main/man/figures/logo.svg
+  logo: /website/images/hex/segmantR.svg
+  logo_dark: /website/images/hex/segmantR-dark.svg
 
 # ── R Packages · Spectral & Hyperspectral ──────────────────────────────────
 - name: cuvis.r
@@ -59,7 +63,8 @@
   doi: 10.5281/zenodo.21889930
   doi_status: reserved
   docs: https://cttir.github.io/cuvis.r/
-  logo: https://raw.githubusercontent.com/CTTIR/cuvis.r/main/man/figures/logo.svg
+  logo: /website/images/hex/cuvis.r.svg
+  logo_dark: /website/images/hex/cuvis.r-dark.svg
 - name: hyperannotatR
   status: usable
   category: "R Packages"
@@ -69,7 +74,8 @@
   doi: 10.5281/zenodo.21889921
   doi_status: reserved
   docs: https://cttir.github.io/hyperannotatR/
-  logo: https://raw.githubusercontent.com/CTTIR/hyperannotatR/main/man/figures/logo.svg
+  logo: /website/images/hex/hyperannotatR.svg
+  logo_dark: /website/images/hex/hyperannotatR-dark.svg
 - name: hyperspectaculR
   status: usable
   category: "R Packages"
@@ -79,7 +85,8 @@
   doi: 10.5281/zenodo.21889974
   doi_status: reserved
   docs: https://cttir.github.io/hyperspectaculR/
-  logo: https://raw.githubusercontent.com/CTTIR/hyperspectaculR/main/man/figures/logo.svg
+  logo: /website/images/hex/hyperspectaculR.svg
+  logo_dark: /website/images/hex/hyperspectaculR-dark.svg
 - name: hyperspectR
   status: usable
   category: "R Packages"
@@ -89,7 +96,8 @@
   doi: 10.5281/zenodo.21889940
   doi_status: reserved
   docs: https://cttir.github.io/hyperspectR/
-  logo: https://raw.githubusercontent.com/CTTIR/hyperspectR/main/man/figures/logo.svg
+  logo: /website/images/hex/hyperspectR.svg
+  logo_dark: /website/images/hex/hyperspectR-dark.svg
 - name: libscanR
   status: usable
   category: "R Packages"
@@ -99,7 +107,8 @@
   doi: 10.5281/zenodo.21889942
   doi_status: reserved
   docs: https://cttir.github.io/libscanR/
-  logo: https://raw.githubusercontent.com/CTTIR/libscanR/main/man/figures/logo.svg
+  logo: /website/images/hex/libscanR.svg
+  logo_dark: /website/images/hex/libscanR-dark.svg
 - name: tivis.r
   status: usable
   category: "R Packages"
@@ -109,7 +118,8 @@
   doi: 10.5281/zenodo.21889970
   doi_status: reserved
   docs: https://cttir.github.io/tivis.r/
-  logo: https://raw.githubusercontent.com/CTTIR/tivis.r/main/man/figures/logo.svg
+  logo: /website/images/hex/tivis.r.svg
+  logo_dark: /website/images/hex/tivis.r-dark.svg
 
 # ── R Packages · Omics & Transcriptomics ───────────────────────────────────
 - name: bambamR
@@ -121,7 +131,8 @@
   doi: 10.5281/zenodo.21889924
   doi_status: reserved
   docs: https://cttir.github.io/bambamR/
-  logo: https://raw.githubusercontent.com/CTTIR/bambamR/main/man/figures/logo.svg
+  logo: /website/images/hex/bambamR.svg
+  logo_dark: /website/images/hex/bambamR-dark.svg
 
 # ── R Packages · Clinical & Molecular Pathology ────────────────────────────
 - name: molpathR
@@ -133,7 +144,8 @@
   doi: 10.5281/zenodo.21889946
   doi_status: reserved
   docs: https://cttir.github.io/molpathR/
-  logo: https://raw.githubusercontent.com/CTTIR/molpathR/main/man/figures/logo.svg
+  logo: /website/images/hex/molpathR.svg
+  logo_dark: /website/images/hex/molpathR-dark.svg
 - name: zhncommandR
   status: usable
   category: "R Packages"
@@ -141,7 +153,8 @@
   description: "Auditor live-evaluation dashboard for haematological oncology cohorts — quality and coverage indicators, OPS-coded complex-therapy and diagnostics counts, Kaplan–Meier, oncoprint, and cytogenetics summaries in an interactive Shiny app."
   github: https://github.com/CTTIR/zhncommandR
   docs: https://cttir.github.io/zhncommandR/
-  logo: https://raw.githubusercontent.com/CTTIR/zhncommandR/main/man/figures/logo.svg
+  logo: /website/images/hex/zhncommandR.svg
+  logo_dark: /website/images/hex/zhncommandR-dark.svg
 
 # ── R Packages · Parsers & Data I/O ────────────────────────────────────────
 - name: harbouR
@@ -153,7 +166,8 @@
   doi: 10.5281/zenodo.21889936
   doi_status: reserved
   docs: https://cttir.github.io/harbouR/
-  logo: https://raw.githubusercontent.com/CTTIR/harbouR/main/man/figures/logo.svg
+  logo: /website/images/hex/harbouR.svg
+  logo_dark: /website/images/hex/harbouR-dark.svg
 - name: lstparsR
   status: usable
   category: "R Packages"
@@ -171,7 +185,8 @@
   doi: 10.5281/zenodo.21889954
   doi_status: reserved
   docs: https://cttir.github.io/pressR/
-  logo: https://raw.githubusercontent.com/CTTIR/pressR/main/man/figures/logo.svg
+  logo: /website/images/hex/pressR.svg
+  logo_dark: /website/images/hex/pressR-dark.svg
 - name: qviewparsR
   status: cran
   category: "R Packages"
@@ -182,7 +197,8 @@
   doi_status: registered
   docs: https://cttir.github.io/qviewparsR/
   zenodo: https://doi.org/10.5281/zenodo.21395352
-  logo: https://raw.githubusercontent.com/CTTIR/qviewparsR/main/man/figures/logo.svg
+  logo: /website/images/hex/qviewparsR.svg
+  logo_dark: /website/images/hex/qviewparsR-dark.svg
 
 # ── R Packages · Methods & Analytics ───────────────────────────────────────
 - name: dynasimR
@@ -194,7 +210,8 @@
   doi: 10.5281/zenodo.21889932
   doi_status: reserved
   docs: https://cttir.github.io/dynasimR/
-  logo: https://raw.githubusercontent.com/CTTIR/dynasimR/main/man/figures/logo.svg
+  logo: /website/images/hex/dynasimR.svg
+  logo_dark: /website/images/hex/dynasimR-dark.svg
 - name: scimapR
   status: usable
   category: "R Packages"
@@ -204,7 +221,8 @@
   doi: 10.5281/zenodo.21889960
   doi_status: reserved
   docs: https://cttir.github.io/scimapR/
-  logo: https://raw.githubusercontent.com/CTTIR/scimapR/main/man/figures/logo.svg
+  logo: /website/images/hex/scimapR.svg
+  logo_dark: /website/images/hex/scimapR-dark.svg
 - name: songR
   status: usable
   category: "R Packages"
@@ -214,7 +232,8 @@
   doi: 10.5281/zenodo.21889964
   doi_status: reserved
   docs: https://cttir.github.io/songR/
-  logo: https://raw.githubusercontent.com/CTTIR/songR/main/man/figures/logo.svg
+  logo: /website/images/hex/songR.svg
+  logo_dark: /website/images/hex/songR-dark.svg
 
 # ── R Packages · Reproducibility & Tooling ─────────────────────────────────
 - name: hexmakR
@@ -226,7 +245,8 @@
   doi: 10.5281/zenodo.21889938
   doi_status: reserved
   docs: https://cttir.github.io/hexmakR/
-  logo: https://raw.githubusercontent.com/CTTIR/hexmakR/main/man/figures/logo.svg
+  logo: /website/images/hex/hexmakR.svg
+  logo_dark: /website/images/hex/hexmakR-dark.svg
 - name: reflowR
   status: usable
   category: "R Packages"
@@ -236,7 +256,8 @@
   doi: 10.5281/zenodo.21889956
   doi_status: reserved
   docs: https://cttir.github.io/reflowR/
-  logo: https://raw.githubusercontent.com/CTTIR/reflowR/main/man/figures/logo.svg
+  logo: /website/images/hex/reflowR.svg
+  logo_dark: /website/images/hex/reflowR-dark.svg
 - name: themakR
   status: usable
   category: "R Packages"
@@ -246,7 +267,8 @@
   doi: 10.5281/zenodo.21889968
   doi_status: reserved
   docs: https://cttir.github.io/themakR/
-  logo: https://raw.githubusercontent.com/CTTIR/themakR/main/man/figures/logo.svg
+  logo: /website/images/hex/themakR.svg
+  logo_dark: /website/images/hex/themakR-dark.svg
 
 # ── Zotero Plugins (pentagon placeholder) ──────────────────────────────────
 - name: argus-one
@@ -257,7 +279,8 @@
   doi: 10.5281/zenodo.21889976
   doi_status: reserved
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/argus-one/main/assets/branding/logo.svg
+  logo: /website/images/hex/argus-one.svg
+  logo_dark: /website/images/hex/argus-one-dark.svg
 - name: attaclone-dedup
   status: usable
   category: "Zotero Plugins"
@@ -266,7 +289,8 @@
   doi: 10.5281/zenodo.21889978
   doi_status: reserved
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/attaclone-dedup/main/assets/branding/logo.svg
+  logo: /website/images/hex/attaclone-dedup.svg
+  logo_dark: /website/images/hex/attaclone-dedup-dark.svg
 - name: metadata-mender
   status: usable
   category: "Zotero Plugins"
@@ -275,7 +299,8 @@
   doi: 10.5281/zenodo.21889980
   doi_status: reserved
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/metadata-mender/main/assets/branding/logo.svg
+  logo: /website/images/hex/metadata-mender.svg
+  logo_dark: /website/images/hex/metadata-mender-dark.svg
 
 # ── Applications (square placeholder) ──────────────────────────────────────
 - name: pwa-quest
@@ -284,7 +309,8 @@
   description: "Offline-first Progressive Web App for collecting questionnaire responses in research and field settings — exports sessions as QR codes or CSV / XLSX / TXT / XML."
   github: https://github.com/CTTIR/pwa-quest
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/pwa-quest/main/assets/branding/logo.svg
+  logo: /website/images/hex/pwa-quest.svg
+  logo_dark: /website/images/hex/pwa-quest-dark.svg
 - name: shinylaunchR
   status: usable
   category: "Applications"
@@ -293,7 +319,8 @@
   doi: 10.5281/zenodo.21889984
   doi_status: reserved
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/shinylaunchR/main/assets/branding/logo.svg
+  logo: /website/images/hex/shinylaunchR.svg
+  logo_dark: /website/images/hex/shinylaunchR-dark.svg
 
 - name: bloodspottR
   status: draft
@@ -302,7 +329,8 @@
   description: "Experimental package for calibrated histology burden measurements, traceable review, reporting and Shiny exploration of saved results; native whole-slide inference and portable DNN training are not yet qualified end to end."
   github: https://github.com/CTTIR/bloodspottR
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/bloodspottR/main/man/figures/logo.svg
+  logo: /website/images/hex/bloodspottR.svg
+  logo_dark: /website/images/hex/bloodspottR-dark.svg
 
 - name: cellspecR
   status: usable
@@ -311,7 +339,8 @@
   description: "1.0.0 release candidate defining the cellspec table contract for segmented cells: import, validation, signal policies and integrity-checked exchange. External fixture comparisons and CRAN submission remain pending."
   github: https://github.com/CTTIR/cellspecR
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/cellspecR/main/man/figures/logo.svg
+  logo: /website/images/hex/cellspecR.svg
+  logo_dark: /website/images/hex/cellspecR-dark.svg
 
 - name: gatekeepR
   status: usable
@@ -320,7 +349,8 @@
   description: "1.0.0 release candidate for marker callability, thresholds, phenotype classification and Shiny review, with immutable snapshots and verifiable exports; preparation for first CRAN submission is ongoing."
   github: https://github.com/CTTIR/gatekeepR
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/gatekeepR/main/man/figures/logo.svg
+  logo: /website/images/hex/gatekeepR.svg
+  logo_dark: /website/images/hex/gatekeepR-dark.svg
 
 - name: brainwritR
   status: usable
@@ -328,7 +358,8 @@
   description: "Development R/Shiny application for classroom brainwriting, with timed rounds, QR-code participation, SQLite persistence, mobile reconnect support and German, English and French interfaces."
   github: https://github.com/CTTIR/brainwritR
   docs: ""
-  logo: https://raw.githubusercontent.com/CTTIR/brainwritR/main/man/figures/logo.png
+  logo: /website/images/hex/brainwritR.svg
+  logo_dark: /website/images/hex/brainwritR-dark.svg
 
 - name: qupflowR
   status: draft
@@ -338,6 +369,7 @@
   github: https://github.com/CTTIR/qupflowR
   docs: ""
   logo: /website/images/hex/qupflowR.svg
+  logo_dark: /website/images/hex/qupflowR-dark.svg
 
 - name: inferguidR
   status: draft
@@ -347,7 +379,8 @@
     assumptions, typed results, reproducible exports and a Shiny workbench.
   github: https://github.com/CTTIR/inferguidR
   docs: https://github.com/CTTIR/inferguidR#readme
-  logo: https://raw.githubusercontent.com/CTTIR/inferguidR/main/man/figures/logo.svg
+  logo: /website/images/hex/inferguidR.svg
+  logo_dark: /website/images/hex/inferguidR-dark.svg
 
 - name: sandtablR
   status: draft
@@ -357,7 +390,8 @@
     comparison, with an interactive Shiny workbench.
   github: https://github.com/CTTIR/sandtablR
   docs: https://github.com/CTTIR/sandtablR#readme
-  logo: https://raw.githubusercontent.com/CTTIR/sandtablR/main/man/figures/logo.png
+  logo: /website/images/hex/sandtablR.svg
+  logo_dark: /website/images/hex/sandtablR-dark.svg
 
 - name: shieldR
   status: draft
@@ -367,7 +401,8 @@
     with reproducible policy comparisons and a Shiny workbench.
   github: https://github.com/CTTIR/shieldR
   docs: https://github.com/CTTIR/shieldR#readme
-  logo: https://raw.githubusercontent.com/CTTIR/shieldR/main/man/figures/logo.svg
+  logo: /website/images/hex/shieldR.svg
+  logo_dark: /website/images/hex/shieldR-dark.svg
 
 - name: cttiR
   status: draft
@@ -378,7 +413,8 @@
     gates.
   github: https://github.com/CTTIR/cttiR
   docs: https://github.com/CTTIR/cttiR#readme
-  logo: https://raw.githubusercontent.com/CTTIR/cttiR/main/man/figures/logo.png
+  logo: /website/images/hex/cttiR.svg
+  logo_dark: /website/images/hex/cttiR-dark.svg
 
 - name: researchR
   status: draft
@@ -388,7 +424,8 @@
     deployed researchd server; retrieves records and manages surveillance questions.
   github: https://github.com/CTTIR/researchR
   docs: https://github.com/CTTIR/researchR#readme
-  logo: https://raw.githubusercontent.com/CTTIR/researchR/main/man/figures/logo.svg
+  logo: /website/images/hex/researchR.svg
+  logo_dark: /website/images/hex/researchR-dark.svg
 
 - name: delphyR
   status: draft
@@ -398,7 +435,8 @@
     deployment.
   github: https://github.com/CTTIR/delphyR
   docs: https://github.com/CTTIR/delphyR#readme
-  logo: https://raw.githubusercontent.com/CTTIR/delphyR/main/packages/delphyr/man/figures/logo.png
+  logo: /website/images/hex/delphyr.svg
+  logo_dark: /website/images/hex/delphyr-dark.svg
 
 - name: cttiR-model
   status: draft
