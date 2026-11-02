@@ -7,11 +7,10 @@
 # `status` sets the three-dot maturity indicator on each card:
 #   cran = ●●● (fully functional, on CRAN)  usable = ●●○  draft = ●○○  idea = ○○○
 
-# ── R Packages · Imaging & Microscopy ──────────────────────────────────────
 - name: cellreportR
   status: usable
   category: "R Packages"
-  group: "Imaging & Microscopy"
+  group: "Spatial biology"
   description: "Statistical analysis and audit-ready reporting pipeline for routine cell-culture diagnostics with microscopic evaluation."
   github: https://github.com/CTTIR/cellreportR
   doi: 10.5281/zenodo.21889928
@@ -22,7 +21,7 @@
 - name: phenoscapR
   status: usable
   category: "R Packages"
-  group: "Imaging & Microscopy"
+  group: "Spatial biology"
   description: "Reading, QC, phenotyping, spatial statistics, and visualisation of single-cell spatial biology data from multiplexed imaging platforms."
   github: https://github.com/CTTIR/phenoscapR
   doi: 10.5281/zenodo.21889952
@@ -33,7 +32,7 @@
 - name: scimagR
   status: usable
   category: "R Packages"
-  group: "Imaging & Microscopy"
+  group: "Clinical science"
   description: "End-to-end R pipeline for longitudinal MRI and CT analysis in spinal-cord injury research (wraps Spinal Cord Toolbox, dcm2niix, pydicom)."
   github: https://github.com/CTTIR/scimagR
   doi: 10.5281/zenodo.21889958
@@ -44,7 +43,7 @@
 - name: segmantR
   status: usable
   category: "R Packages"
-  group: "Imaging & Microscopy"
+  group: "Spatial biology"
   description: "Cell segmentation, annotation and mask correction for histology and multiplexed tissue imaging with human-in-the-loop training — classical methods plus Cellpose, StarDist, and Mesmer."
   github: https://github.com/CTTIR/segmantR
   doi: 10.5281/zenodo.21889962
@@ -53,11 +52,10 @@
   logo: /website/images/hex/segmantR.svg
   logo_dark: /website/images/hex/segmantR-dark.svg
 
-# ── R Packages · Spectral & Hyperspectral ──────────────────────────────────
 - name: cuvis.r
   status: usable
   category: "R Packages"
-  group: "Spectral & Hyperspectral"
+  group: "Spectral imaging"
   description: "R bindings to the Cubert CUVIS SDK for reading, calibrating, and exporting hyperspectral camera data."
   github: https://github.com/CTTIR/cuvis.r
   doi: 10.5281/zenodo.21889930
@@ -68,7 +66,7 @@
 - name: hyperannotatR
   status: usable
   category: "R Packages"
-  group: "Spectral & Hyperspectral"
+  group: "Spectral imaging"
   description: "Multi-layer region-of-interest annotation for hyperspectral imaging (HSI), including spectral cubes, band views, spectral extraction, and display rasters — exports binary, labelled, and multi-class masks (GeoJSON, QuPath, TIFF) with a resumable Shiny batch annotator."
   github: https://github.com/CTTIR/hyperannotatR
   doi: 10.5281/zenodo.21889921
@@ -79,7 +77,7 @@
 - name: hyperspectaculR
   status: usable
   category: "R Packages"
-  group: "Spectral & Hyperspectral"
+  group: "Spectral imaging"
   description: "Publication-grade artistic visualisation of hyperspectral imagery, built on the hyperspectR cube class."
   github: https://github.com/CTTIR/hyperspectaculR
   doi: 10.5281/zenodo.21889974
@@ -90,7 +88,7 @@
 - name: hyperspectR
   status: usable
   category: "R Packages"
-  group: "Spectral & Hyperspectral"
+  group: "Spectral imaging"
   description: "Complete R pipeline for biomedical hyperspectral imaging — from raw camera data to clinical tissue oxygenation maps."
   github: https://github.com/CTTIR/hyperspectR
   doi: 10.5281/zenodo.21889940
@@ -101,7 +99,7 @@
 - name: libscanR
   status: usable
   category: "R Packages"
-  group: "Spectral & Hyperspectral"
+  group: "Spectral imaging"
   description: "Vendor-agnostic analysis and visualisation of Laser-Induced Breakdown Spectroscopy (LIBS) data, with a focus on biomedical tissue applications."
   github: https://github.com/CTTIR/libscanR
   doi: 10.5281/zenodo.21889942
@@ -112,7 +110,7 @@
 - name: tivis.r
   status: usable
   category: "R Packages"
-  group: "Spectral & Hyperspectral"
+  group: "Spectral imaging"
   description: "Pure-R reader for Diaspective Vision TIVITA hyperspectral recordings — parses the SpecCube container, acquisition metadata and exported parameter images, with no vendor SDK required."
   github: https://github.com/CTTIR/tivis.r
   doi: 10.5281/zenodo.21889970
@@ -121,11 +119,10 @@
   logo: /website/images/hex/tivis.r.svg
   logo_dark: /website/images/hex/tivis.r-dark.svg
 
-# ── R Packages · Omics & Transcriptomics ───────────────────────────────────
 - name: bambamR
   status: usable
   category: "R Packages"
-  group: "Omics & Transcriptomics"
+  group: "Molecular data"
   description: "Streamlined RNA-seq analysis pipelines — from count matrices to publication-ready results."
   github: https://github.com/CTTIR/bambamR
   doi: 10.5281/zenodo.21889924
@@ -134,11 +131,10 @@
   logo: /website/images/hex/bambamR.svg
   logo_dark: /website/images/hex/bambamR-dark.svg
 
-# ── R Packages · Clinical & Molecular Pathology ────────────────────────────
 - name: molpathR
   status: usable
   category: "R Packages"
-  group: "Clinical & Molecular Pathology"
+  group: "Clinical science"
   description: "Unified R platform for molecular pathology data — parses NGS files (VCF, BAM, FASTQ), XML/PDF reports, and clinical data into a queryable database with an interactive Shiny app."
   github: https://github.com/CTTIR/molpathR
   doi: 10.5281/zenodo.21889946
@@ -149,18 +145,17 @@
 - name: zhncommandR
   status: usable
   category: "R Packages"
-  group: "Clinical & Molecular Pathology"
+  group: "Clinical science"
   description: "Auditor live-evaluation dashboard for haematological oncology cohorts — quality and coverage indicators, OPS-coded complex-therapy and diagnostics counts, Kaplan–Meier, oncoprint, and cytogenetics summaries in an interactive Shiny app."
   github: https://github.com/CTTIR/zhncommandR
   docs: https://cttir.github.io/zhncommandR/
   logo: /website/images/hex/zhncommandR.svg
   logo_dark: /website/images/hex/zhncommandR-dark.svg
 
-# ── R Packages · Parsers & Data I/O ────────────────────────────────────────
 - name: harbouR
   status: usable
   category: "R Packages"
-  group: "Parsers & Data I/O"
+  group: "Research infrastructure"
   description: "Unofficial R client for the SeaTable REST API — read, write, and sync collaborative cloud databases from R."
   github: https://github.com/CTTIR/harbouR
   doi: 10.5281/zenodo.21889936
@@ -171,7 +166,7 @@
 - name: lstparsR
   status: usable
   category: "R Packages"
-  group: "Parsers & Data I/O"
+  group: "Clinical science"
   description: "Parser for NONMEM .lst output files — extracts THETA / OMEGA / SIGMA estimates into tidy data frames for population PK/PD analysis."
   github: https://github.com/Clinical-Pharmacy-Saarland-University/lstparsR
   docs: https://clinical-pharmacy-saarland-university.github.io/lstparsR/
@@ -179,7 +174,7 @@
 - name: pressR
   status: usable
   category: "R Packages"
-  group: "Parsers & Data I/O"
+  group: "Clinical science"
   description: "Parsing, analysis, and visualisation of capacitive pressure-distribution data — insoles, saddles (equine and bicycle), seating, and barefoot pedography."
   github: https://github.com/CTTIR/pressR
   doi: 10.5281/zenodo.21889954
@@ -190,7 +185,7 @@
 - name: qviewparsR
   status: cran
   category: "R Packages"
-  group: "Parsers & Data I/O"
+  group: "Molecular data"
   description: "Pure-R parser for the binary .Q-View project file format used in chemiluminescent multiplex ELISA plate imaging and quantification."
   github: https://github.com/CTTIR/qviewparsR
   doi: 10.5281/zenodo.21395352
@@ -200,11 +195,10 @@
   logo: /website/images/hex/qviewparsR.svg
   logo_dark: /website/images/hex/qviewparsR-dark.svg
 
-# ── R Packages · Methods & Analytics ───────────────────────────────────────
 - name: dynasimR
   status: usable
   category: "R Packages"
-  group: "Methods & Analytics"
+  group: "Systems & simulation"
   description: "Domain-neutral analysis and visualisation layer for discrete-event, agent-based, and node-actor simulation outputs."
   github: https://github.com/CTTIR/dynasimR
   doi: 10.5281/zenodo.21889932
@@ -215,7 +209,7 @@
 - name: scimapR
   status: usable
   category: "R Packages"
-  group: "Methods & Analytics"
+  group: "Evidence & discovery"
   description: "Reproducible, question-driven, embedding-aware science mapping — a toolkit for bibliometric and scientometric analysis."
   github: https://github.com/CTTIR/scimapR
   doi: 10.5281/zenodo.21889960
@@ -226,7 +220,7 @@
 - name: songR
   status: usable
   category: "R Packages"
-  group: "Methods & Analytics"
+  group: "Learning & inference"
   description: "Native R/C++ implementation of SONG (Self-Organizing Nebulous Growths) for nonlinear dimensionality reduction and visualisation."
   github: https://github.com/CTTIR/songR
   doi: 10.5281/zenodo.21889964
@@ -235,11 +229,10 @@
   logo: /website/images/hex/songR.svg
   logo_dark: /website/images/hex/songR-dark.svg
 
-# ── R Packages · Reproducibility & Tooling ─────────────────────────────────
 - name: hexmakR
   status: usable
   category: "R Packages"
-  group: "Reproducibility & Tooling"
+  group: "Research infrastructure"
   description: "Generate polished hex sticker logos for R packages using customizable templates."
   github: https://github.com/CTTIR/hexmakR
   doi: 10.5281/zenodo.21889938
@@ -250,7 +243,7 @@
 - name: reflowR
   status: usable
   category: "R Packages"
-  group: "Reproducibility & Tooling"
+  group: "Research infrastructure"
   description: "Custom workflowr themes and templates for reproducible research websites in R."
   github: https://github.com/CTTIR/reflowR
   doi: 10.5281/zenodo.21889956
@@ -261,7 +254,7 @@
 - name: themakR
   status: usable
   category: "R Packages"
-  group: "Reproducibility & Tooling"
+  group: "Research infrastructure"
   description: "Shared pkgdown template giving the CTTIR package suite a unified look — Hugo Coder palette with a light/dark toggle."
   github: https://github.com/CTTIR/themakR
   doi: 10.5281/zenodo.21889968
@@ -325,7 +318,7 @@
 - name: bloodspottR
   status: draft
   category: "R Packages"
-  group: "Imaging & Microscopy"
+  group: "Spatial biology"
   description: "Experimental package for calibrated histology burden measurements, traceable review, reporting and Shiny exploration of saved results; native whole-slide inference and portable DNN training are not yet qualified end to end."
   github: https://github.com/CTTIR/bloodspottR
   docs: ""
@@ -335,7 +328,7 @@
 - name: cellspecR
   status: usable
   category: "R Packages"
-  group: "Imaging & Microscopy"
+  group: "Spatial biology"
   description: "1.0.0 release candidate defining the cellspec table contract for segmented cells: import, validation, signal policies and integrity-checked exchange. External fixture comparisons and CRAN submission remain pending."
   github: https://github.com/CTTIR/cellspecR
   docs: ""
@@ -345,7 +338,7 @@
 - name: gatekeepR
   status: usable
   category: "R Packages"
-  group: "Imaging & Microscopy"
+  group: "Spatial biology"
   description: "1.0.0 release candidate for marker callability, thresholds, phenotype classification and Shiny review, with immutable snapshots and verifiable exports; preparation for first CRAN submission is ongoing."
   github: https://github.com/CTTIR/gatekeepR
   docs: ""
@@ -364,7 +357,7 @@
 - name: qupflowR
   status: draft
   category: "R Packages"
-  group: "Reproducibility & Tooling"
+  group: "Spatial biology"
   description: "Experimental R foundations for a planned QuPath interface: protocol helpers, synthetic contract fixtures and pinned external-method execution. Live bridge, interactive app and workflow engine remain planned."
   github: https://github.com/CTTIR/qupflowR
   docs: ""
@@ -374,7 +367,7 @@
 - name: inferguidR
   status: draft
   category: R Packages
-  group: Methods & Analytics
+  group: "Learning & inference"
   description: Guided inference, power analysis and diagnostic accuracy, with explicit
     assumptions, typed results, reproducible exports and a Shiny workbench.
   github: https://github.com/CTTIR/inferguidR
@@ -385,7 +378,7 @@
 - name: sandtablR
   status: draft
   category: R Packages
-  group: Methods & Analytics
+  group: "Systems & simulation"
   description: Synthetic patient-flow simulation, decision-path analysis and model
     comparison, with an interactive Shiny workbench.
   github: https://github.com/CTTIR/sandtablR
@@ -396,7 +389,7 @@
 - name: shieldR
   status: draft
   category: R Packages
-  group: Methods & Analytics
+  group: "Systems & simulation"
   description: Abstract logistics-chain simulation with time-varying item specifications and dynamic disruptions,
     with reproducible policy comparisons and a Shiny workbench.
   github: https://github.com/CTTIR/shieldR
@@ -407,7 +400,7 @@
 - name: cttiR
   status: draft
   category: R Packages
-  group: Reproducibility & Tooling
+  group: "CTTIR core"
   description: Structured research-project creation, versioned workflow selection
     and reproducible analysis scaffolding; development software with explicit validation
     gates.
@@ -419,7 +412,7 @@
 - name: researchR
   status: draft
   category: R Packages
-  group: Parsers & Data I/O
+  group: "Evidence & discovery"
   description: R client for literature and signal surveillance through a separately
     deployed server; retrieves records and manages surveillance questions.
   github: https://github.com/CTTIR/researchR
