@@ -70,8 +70,11 @@
 
       {{ with $it.outlook }}<p class="cttir-card__outlook"><em>{{ . }}</em></p>{{ end }}
 
-      {{ if or $it.workflow_url $it.repo_url $it.github $it.docs }}
+      {{ $page := site.GetPage (printf "/projects/%s" ($it.slug | default "")) }}
+      {{ $walk := and $it.slug $page (ne $page.Kind "section") }}
+      {{ if or $walk $it.workflow_url $it.repo_url $it.github $it.docs }}
       <footer class="cttir-card__links">
+        {{ if $walk }}<a href="{{ $page.RelPermalink }}">{{ if eq $kind "project" }}Overview{{ else }}Walkthrough{{ end }}</a>{{ end }}
         {{ with $it.workflow_url }}<a href="{{ . }}" rel="noopener">Workflow</a>{{ end }}
         {{ with $it.repo_url }}<a href="{{ . }}" rel="noopener">Source</a>{{ end }}
         {{ with $it.github }}<a href="{{ . }}" rel="noopener">GitHub</a>{{ end }}

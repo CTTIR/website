@@ -3,12 +3,12 @@
   {{- if strings.HasPrefix .github "https://github.com/CTTIR/" -}}
     {{- $name := .name -}}
     {{- $projects := slice -}}
-    {{- range site.Data.projects -}}
+    {{- range where site.Data.projects "hidden" "!=" true -}}
       {{- $project := .name -}}
       {{- range .software -}}{{- if eq .pkg $name -}}{{- $projects = $projects | append $project -}}{{- end -}}{{- end -}}
     {{- end -}}
     {{- $workflows := slice -}}
-    {{- range site.Data.workflows -}}
+    {{- range where site.Data.workflows "hidden" "!=" true -}}
       {{- if in .featured_packages $name -}}
         {{- $label := index (split .name " — ") 0 -}}
         {{- if eq .status "Coming soon" -}}{{- $label = printf "%s (planned)" $label -}}{{- end -}}

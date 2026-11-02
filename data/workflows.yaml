@@ -1,8 +1,9 @@
-# TODO: Replace placeholder workflow_url and repo_url for each entry once the workflowr site is published.
+# Workflow tiles on Projects & Workflows. A tile links to its executed walkthrough at
+# content/projects/<slug>/ (rendered by tools/walkthroughs/render.R) when one exists.
 
-# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
 - name: "Single-Cell Tissue Atlas — From Raw Counts to Annotated Atlas"
   slug: single-cell-tissue-atlas
+  hidden: true
   weight: 10
   status: "Coming soon"
   research_question: "Which cell populations and states characterize injured vs. healthy tissue, and how do they relate to spatial context?"
@@ -14,29 +15,24 @@
     - "Linking segmentation (segmantR) and cell imaging (scimagR) outputs to expression data"
     - "Producing publication-ready cell-level reports with cellreportR"
     - "Cross-referencing bulk reference profiles via bambamR for population calibration"
-  workflow_url: https://example.com/TODO-workflowr-single-cell-tissue-atlas
-  repo_url: https://github.com/CTTIR/TODO-single-cell-tissue-atlas-workflow
 
-# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
 - name: "Hyperspectral Tissue Characterization — Imaging to Tissue Class Maps"
   slug: hsi-tissue-characterization
-  weight: 20
+  weight: 10
   status: "Coming soon"
   research_question: "Can tissue regions in injured tissue be classified from hyperspectral signatures alone, and how interpretable is the resulting embedding?"
   description: "End-to-end HSI workflow: raw cube ingest, preprocessing, spectral library matching, dimensionality reduction, and tissue-region classification on a synthetic hyperspectral dataset. Composed from CTTIR's HSI and dimensionality-reduction packages."
-  featured_packages: [hyperspectR, libscanR, hyperannotatR, songR, reflowR]
+  featured_packages: [hyperloom, cuvis.r, tivis.r, hyperspectR, hyperspectaculR]
   learn:
     - "Ingesting and preprocessing HSI cubes with hyperspectR"
     - "Reference-spectrum matching via libscanR"
     - "SONG-based interpretable embeddings (songR) over spectral features"
     - "Tissue-region classification and map generation"
     - "Building a CTTIR-styled reproducible report site with reflowR"
-  workflow_url: https://example.com/TODO-workflowr-hsi-tissue-characterization
-  repo_url: https://github.com/CTTIR/TODO-hsi-tissue-characterization-workflow
 
-# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
 - name: "Multiplex Protein Quantification — From Plate Images to Cohort Inference"
   slug: multiplex-protein-cohort
+  hidden: true
   weight: 30
   status: "Coming soon"
   research_question: "How do circulating protein biomarker panels stratify outcome groups in a synthetic trauma-like cohort?"
@@ -48,12 +44,10 @@
     - "Per-plate and cohort-level reporting with pressR"
     - "Cohort stratification and exploratory embeddings with songR"
     - "Building a reproducible analysis trail from raw plate to inference"
-  workflow_url: https://example.com/TODO-workflowr-multiplex-protein-cohort
-  repo_url: https://github.com/CTTIR/TODO-multiplex-protein-cohort-workflow
 
-# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
 - name: "Bulk Transcriptomic Response — DE, Pathways, and Signature Discovery"
   slug: bulk-transcriptomic-response
+  hidden: true
   weight: 40
   status: "Coming soon"
   research_question: "Which transcriptional programs separate injury severity groups, and which signatures are robust across subcohorts?"
@@ -64,12 +58,10 @@
     - "Exploratory and signature-level embeddings with songR"
     - "Subcohort robustness checks and sensitivity analyses"
     - "Producing publication-ready figures, tables, and a reproducible report"
-  workflow_url: https://example.com/TODO-workflowr-bulk-transcriptomic-response
-  repo_url: https://github.com/CTTIR/TODO-bulk-transcriptomic-response-workflow
 
-# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
 - name: "Molecular Pathology Cohort — From Heterogeneous Reports to Queryable Cohort"
   slug: molecular-pathology-cohort
+  hidden: true
   weight: 50
   status: "Coming soon"
   research_question: "How can heterogeneous molecular pathology data (NGS files, structured reports, free-text PDFs, clinical metadata) be unified into a queryable cohort and explored interactively?"
@@ -81,12 +73,10 @@
     - "Cohort-level descriptive statistics and embeddings via songR"
     - "Standardized cohort reports with pressR"
     - "Launching the interactive Shiny exploration app"
-  workflow_url: https://example.com/TODO-workflowr-molecular-pathology-cohort
-  repo_url: https://github.com/CTTIR/TODO-molecular-pathology-cohort-workflow
 
-# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
 - name: "Multi-Modal Tissue Integration — HSI x Single-Cell x Bulk"
   slug: multimodal-tissue-integration
+  hidden: true
   weight: 60
   status: "Coming soon"
   research_question: "Can hyperspectral tissue maps, single-cell composition, and bulk transcriptomic signatures be jointly aligned to produce a coherent multi-modal view of injured tissue?"
@@ -98,12 +88,10 @@
     - "Cross-modality consistency and disagreement diagnostics"
     - "Composite reporting that surfaces concordance and conflict"
     - "Limits and pitfalls of multi-modal alignment with synthetic data"
-  workflow_url: https://example.com/TODO-workflowr-multimodal-tissue-integration
-  repo_url: https://github.com/CTTIR/TODO-multimodal-tissue-integration-workflow
 
-# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
 - name: "Method Benchmarking — Synthetic Ground Truth and Recovery"
   slug: method-benchmarking
+  hidden: true
   weight: 70
   status: "Coming soon"
   research_question: "Under what conditions do CTTIR analysis methods recover known signal, and how do they compare to standard alternatives?"
@@ -115,12 +103,10 @@
     - "Quantifying recovery, calibration, and false-discovery behavior"
     - "Producing a benchmark report site with reflowR themes"
     - "Reusing the template for new methods papers"
-  workflow_url: https://example.com/TODO-workflowr-method-benchmarking
-  repo_url: https://github.com/CTTIR/TODO-method-benchmarking-workflow
 
-# TODO: Replace placeholder workflow URL and source repo once the workflowr site is published.
 - name: "Templating a CTTIR-Styled Reproducible Site"
   slug: cttir-site-template
+  hidden: true
   weight: 80
   status: "Coming soon"
   research_question: "How do I scaffold a new CTTIR-styled reproducible analysis site from scratch, with consistent theming and branding?"
@@ -131,5 +117,60 @@
     - "Generating a hex-sticker logo with hexmakR"
     - "Structuring analysis pages, navigation, and reproducibility checks"
     - "Publishing to GitHub Pages with consistent CTTIR branding"
-  workflow_url: https://example.com/TODO-workflowr-cttir-site-template
-  repo_url: https://github.com/CTTIR/TODO-cttir-site-template-workflow
+
+- name: "Statistical Method Selection — From Study Design to Analysis and Figures"
+  slug: method-selection
+  hidden: true
+  weight: 90
+  status: "Coming soon"
+  research_question: "Which statistical method fits a given study design and outcome, and how is it applied and shown correctly?"
+  description: "Guided method selection with inferguidR on synthetic study data: describing the design and outcome, choosing a suitable test or model with its assumptions, running it and visualising the result."
+  featured_packages:
+    - inferguidR
+
+- name: "Research Data Management — Structured Study Tables with harbouR"
+  slug: data-management
+  hidden: true
+  weight: 100
+  status: "Coming soon"
+  research_question: "How can study data be kept structured, validated and queryable in a shared table base from R?"
+  description: "Managing a synthetic study in a SeaTable base with harbouR: defining tables, writing and validating records, querying them back into R and summarising the result."
+  featured_packages:
+    - harbouR
+
+- name: "Reproducible Projects and Reports — cttiR, reflowR and themakR"
+  slug: reproducible-reporting
+  hidden: true
+  weight: 110
+  status: "Coming soon"
+  research_question: "How is a study set up so that its analysis and report can be rebuilt from scratch?"
+  description: "Creating a structured research project with cttiR, running its versioned analysis, and rendering a styled, reproducible report with reflowR and themakR."
+  featured_packages:
+    - cttiR
+    - reflowR
+    - themakR
+
+- name: "Systems and Simulation — dynasimR, sandtablR and shieldR"
+  slug: systems-simulation
+  hidden: true
+  weight: 120
+  status: "Coming soon"
+  research_question: "How can dynamic models and simulated scenarios be explored before real data exist?"
+  description: "Dynamic state models with dynasimR, synthetic patient flows with sandtablR and disrupted logistics chains with shieldR, each run on synthetic scenarios and visualised."
+  featured_packages:
+    - dynasimR
+    - sandtablR
+    - shieldR
+
+- name: "Spatial Tissue Phenotyping — From Images to Cell Neighbourhoods"
+  slug: spatial-tissue-phenotyping
+  weight: 20
+  status: "Coming soon"
+  research_question: "Which cell populations are present in a tissue section, and how are they arranged relative to each other?"
+  description: "End-to-end spatial biology workflow with the phenoloom suite: cell segmentation, single-cell profiles, gating of cell populations and spatial neighbourhood analysis."
+  featured_packages:
+    - phenoloom
+    - segmantR
+    - cellspecR
+    - gatekeepR
+    - phenoscapR

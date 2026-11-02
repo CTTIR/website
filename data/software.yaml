@@ -7,6 +7,16 @@
 # `status` sets the three-dot maturity indicator on each card:
 #   cran = ●●● (fully functional, on CRAN)  usable = ●●○  draft = ●○○  idea = ○○○
 
+- name: phenoloom
+  status: usable
+  category: "R Packages"
+  group: "Spatial biology"
+  description: "Suite package for CTTIR spatial biology, bringing together segmantR, cellspecR, gatekeepR and phenoscapR."
+  github: https://github.com/CTTIR/phenoloom
+  docs: https://github.com/CTTIR/phenoloom#readme
+  logo: /website/images/hex/phenoloom.svg
+  logo_dark: /website/images/hex/phenoloom-dark.svg
+
 - name: cellreportR
   status: usable
   category: "R Packages"
@@ -51,6 +61,16 @@
   docs: https://cttir.github.io/segmantR/
   logo: /website/images/hex/segmantR.svg
   logo_dark: /website/images/hex/segmantR-dark.svg
+
+- name: hyperloom
+  status: usable
+  category: "R Packages"
+  group: "Spectral imaging"
+  description: "Suite package for CTTIR hyperspectral imaging, bringing together hyperspectR, hyperspectaculR, cuvis.r and tivis.r."
+  github: https://github.com/CTTIR/hyperloom
+  docs: https://github.com/CTTIR/hyperloom#readme
+  logo: /website/images/hex/hyperloom.svg
+  logo_dark: /website/images/hex/hyperloom-dark.svg
 
 - name: cuvis.r
   status: usable
@@ -118,16 +138,6 @@
   docs: https://cttir.github.io/tivis.r/
   logo: /website/images/hex/tivis.r.svg
   logo_dark: /website/images/hex/tivis.r-dark.svg
-
-- name: hyperloom
-  status: usable
-  category: "R Packages"
-  group: "Spectral imaging"
-  description: "Suite package for CTTIR hyperspectral imaging, bringing together hyperspectR, hyperspectaculR, cuvis.r and tivis.r."
-  github: https://github.com/CTTIR/hyperloom
-  docs: https://github.com/CTTIR/hyperloom#readme
-  logo: /website/images/hex/hyperloom.svg
-  logo_dark: /website/images/hex/hyperloom-dark.svg
 
 - name: hypermodR
   status: draft
@@ -375,16 +385,6 @@
   docs: https://cttir.github.io/mssrscopR/
   logo: /website/images/hex/mssrscopR.svg
   logo_dark: /website/images/hex/mssrscopR-dark.svg
-
-- name: phenoloom
-  status: usable
-  category: "R Packages"
-  group: "Spatial biology"
-  description: "Suite package for CTTIR spatial biology, bringing together segmantR, cellspecR, gatekeepR and phenoscapR."
-  github: https://github.com/CTTIR/phenoloom
-  docs: https://github.com/CTTIR/phenoloom#readme
-  logo: /website/images/hex/phenoloom.svg
-  logo_dark: /website/images/hex/phenoloom-dark.svg
 
 - name: brainwritR
   status: usable

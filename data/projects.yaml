@@ -5,6 +5,7 @@
 # TODO: Add a project hero image / illustration once available.
 - name: "Single-Cell Analysis"
   slug: single-cell-analysis
+  hidden: true
   weight: 10
   description: "<em>Cellular composition and state in injured and healthy tissue.</em> CTTIR develops methods and software for end-to-end single-cell analysis — from raw counts through QC, embedding, segmentation-aware spatial context, and publication-ready cell-level reporting."
   software:
@@ -20,21 +21,26 @@
 # TODO: Add a project hero image / illustration once available.
 - name: "Hyperspectral Imaging"
   slug: hsi
-  weight: 20
-  description: "<em>Label-free tissue characterization from spectral signatures.</em> CTTIR develops HSI ingest, preprocessing, library matching, and interpretable embedding methods for tissue-region classification, with reproducible reporting baked in."
+  weight: 10
+  description: "<em>Label-free tissue characterization from spectral signatures.</em> The hyperloom suite brings together CTTIR's hyperspectral packages: camera-specific readers for Cubert and TIVITA data, a common spectral cube with preprocessing and analysis, and spectral visualisation."
   software:
-    - { pkg: hyperspectR, note: "HSI cube ingest and preprocessing" }
-    - { pkg: libscanR,    note: "reference-spectrum library matching" }
-    - { pkg: hyperannotatR, note: "labelling regions of interest on spectral cubes" }
-    - { pkg: songR,       note: "interpretable embeddings over spectral features" }
-    - { pkg: reflowR,     note: "CTTIR-styled reproducible report themes" }
+    - pkg: hyperloom
+      note: "suite package for CTTIR hyperspectral imaging"
+    - pkg: cuvis.r
+      note: "reading Cubert hyperspectral measurements"
+    - pkg: tivis.r
+      note: "reading TIVITA hyperspectral recordings"
+    - pkg: hyperspectR
+      note: "spectral cubes, preprocessing and analysis"
+    - pkg: hyperspectaculR
+      note: "spectral visualisation"
   workflows:
-    - { slug: hsi-tissue-characterization,   title: "Hyperspectral Tissue Characterization" }
-    - { slug: multimodal-tissue-integration, title: "Multi-Modal Tissue Integration", note: "(includes HSI)" }
+    - slug: hsi-tissue-characterization
+      title: "Hyperspectral Tissue Characterization"
 
-# TODO: Add a project hero image / illustration once available.
 - name: "Cross-Modal Integration"
   slug: cross-modal-integration
+  hidden: true
   weight: 30
   description: "<em>Aligning high-dimensional modalities — imaging, single-cell, bulk omics, multiplex protein, molecular pathology — into a coherent translational view.</em> CTTIR's flagship integration theme: methods and software for harmonizing heterogeneous data into shared representations, with cohort-level inference and interactive exploration. Connects assay-level processing to translational inference end-to-end."
   software:
@@ -59,6 +65,7 @@
 # TODO: Add a project hero image / illustration once available.
 - name: "Basic Bioinformatics"
   slug: basic-bioinformatics
+  hidden: true
   weight: 40
   description: "<em>Foundational methods, benchmarking, and reproducibility infrastructure.</em> The methodological backbone of CTTIR's applied work: interpretable dimensionality reduction, RNA-seq fundamentals, simulation-based benchmarking, and reproducible reporting templates that the applied projects build on."
   software:
@@ -71,3 +78,21 @@
     - { slug: bulk-transcriptomic-response, title: "Bulk Transcriptomic Response" }
     - { slug: method-benchmarking,          title: "Method Benchmarking on Synthetic Ground Truth" }
     - { slug: cttir-site-template,           title: "Templating a CTTIR-Styled Reproducible Site" }
+- name: "Spatial Biology"
+  slug: spatial-biology
+  weight: 20
+  description: "<em>Cells in their tissue context.</em> The phenoloom suite brings together CTTIR's spatial biology packages: cell segmentation, single-cell profiles, gating of cell populations and spatial neighbourhood analysis."
+  software:
+    - pkg: phenoloom
+      note: "suite package for CTTIR spatial biology"
+    - pkg: segmantR
+      note: "cell segmentation and mask correction"
+    - pkg: cellspecR
+      note: "single-cell profiles"
+    - pkg: gatekeepR
+      note: "gating cell populations"
+    - pkg: phenoscapR
+      note: "spatial neighbourhoods"
+  workflows:
+    - slug: spatial-tissue-phenotyping
+      title: "Spatial Tissue Phenotyping"
