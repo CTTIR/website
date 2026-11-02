@@ -46,17 +46,13 @@ enableEmoji = true
     weight = 1
     url = "about/"
   [[menu.main]]
-    name = "Projects"
+    name = "Projects & Workflows"
     weight = 2
     url = "projects/"
   [[menu.main]]
     name = "Software"
     weight = 3
     url = "software/"
-  [[menu.main]]
-    name = "Workflows"
-    weight = 4
-    url = "workflows/"
   [[menu.main]]
     name = "Tutorials & Courses"
     weight = 5
