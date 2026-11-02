@@ -190,7 +190,8 @@
   description: "Parser for NONMEM .lst output files — extracts THETA / OMEGA / SIGMA estimates into tidy data frames for population PK/PD analysis."
   github: https://github.com/Clinical-Pharmacy-Saarland-University/lstparsR
   docs: https://clinical-pharmacy-saarland-university.github.io/lstparsR/
-  logo: https://raw.githubusercontent.com/Clinical-Pharmacy-Saarland-University/lstparsR/main/man/figures/logo.svg
+  logo: /website/images/hex/lstparsR.svg
+  logo_dark: /website/images/hex/lstparsR-dark.svg
 - name: pressR
   status: usable
   category: "R Packages"
