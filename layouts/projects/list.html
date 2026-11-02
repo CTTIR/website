@@ -4,7 +4,13 @@
     <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
     {{ .Content }}
 
+    <h2 class="cttir-section-title" id="projects">Projects</h2>
     {{ partial "tile-grid.html" (dict "items" (sort .Site.Data.projects "weight" "asc") "kind" "project") }}
+
+    <h2 class="cttir-section-title" id="workflows">Workflows</h2>
+    <p>Topic-driven worked examples showing the CTTIR R packages in real use — each workflow tackles a concrete biomedical question end-to-end, with multiple CTTIR packages composed into a single reproducible pipeline.</p>
+    <p>Each workflow is a standalone <a href="https://workflowr.github.io/workflowr/">workflowr</a> project — fully versioned and reproducible, rendered as a static site with code, results, and narrative side by side. Curated demonstrations, not exhaustive documentation. Clone, adapt, extend.</p>
+    {{ partial "tile-grid.html" (dict "items" (sort .Site.Data.workflows "weight" "asc") "kind" "workflow") }}
   </article>
 </section>
 {{ end }}
