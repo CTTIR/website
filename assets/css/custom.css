@@ -245,6 +245,12 @@ body.colorscheme-dark .cttir-pipeline .cttir-brand-images .cttir-brand-dark { di
 .cttir-walkthrough img { max-width: 100%; height: auto; }
 .cttir-walkthrough__data { font-size: 0.95rem; }
 .cttir-walkthrough__back { margin-top: 2.5rem; }
+.cttir-walkthrough .caption {
+  margin: -0.4rem 0 1.6rem;
+  font-size: 0.85rem;
+  color: var(--cttir-card-muted);
+  text-align: center;
+}
 /* Three-dot maturity indicator */
 .cttir-status {
   display: inline-flex;

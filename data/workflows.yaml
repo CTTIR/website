@@ -16,19 +16,19 @@
     - "Producing publication-ready cell-level reports with cellreportR"
     - "Cross-referencing bulk reference profiles via bambamR for population calibration"
 
-- name: "Hyperspectral Tissue Characterization — Imaging to Tissue Class Maps"
+- name: "Hyperspectral Tissue Characterization — From Spectral Cube to Tissue Class Map"
   slug: hsi-tissue-characterization
   weight: 10
-  status: "Coming soon"
-  research_question: "Can tissue regions in injured tissue be classified from hyperspectral signatures alone, and how interpretable is the resulting embedding?"
-  description: "End-to-end HSI workflow: raw cube ingest, preprocessing, spectral library matching, dimensionality reduction, and tissue-region classification on a synthetic hyperspectral dataset. Composed from CTTIR's HSI and dimensionality-reduction packages."
-  featured_packages: [hyperloom, cuvis.r, tivis.r, hyperspectR, hyperspectaculR]
+  status: "Walkthrough"
+  research_question: "Can tissue regions be told apart by their reflectance spectra alone, and which spectral features separate them?"
+  description: "Executed walkthrough of the hyperloom suite: read a TIVITA recording with tivis.r and check the Cubert SDK through cuvis.r, then preprocess, fit hemoglobin, embed and classify simulated tissue scenes with hyperspectR, holding out whole scenes, and summarise the cube with hyperspectaculR. The data are synthetic with a known answer, so every step can be checked."
+  featured_packages: [hyperloom, tivis.r, cuvis.r, hyperspectR, hyperspectaculR]
   learn:
-    - "Ingesting and preprocessing HSI cubes with hyperspectR"
-    - "Reference-spectrum matching via libscanR"
-    - "SONG-based interpretable embeddings (songR) over spectral features"
-    - "Tissue-region classification and map generation"
-    - "Building a CTTIR-styled reproducible report site with reflowR"
+    - "Reading TIVITA recordings and metadata into an hsi_cube with tivis.r"
+    - "Reusable preprocessing recipes (Savitzky–Golay and SNV) with hyperspectR"
+    - "Hemoglobin fitting and band ratios, checked against known simulated values"
+    - "PCA embeddings whose loadings read as spectra, and unsupervised region recovery"
+    - "SVM classification evaluated with whole scenes held out"
 
 - name: "Multiplex Protein Quantification — From Plate Images to Cohort Inference"
   slug: multiplex-protein-cohort
@@ -165,12 +165,13 @@
 - name: "Spatial Tissue Phenotyping — From Images to Cell Neighbourhoods"
   slug: spatial-tissue-phenotyping
   weight: 20
-  status: "Coming soon"
+  status: "Walkthrough"
   research_question: "Which cell populations are present in a tissue section, and how are they arranged relative to each other?"
-  description: "End-to-end spatial biology workflow with the phenoloom suite: cell segmentation, single-cell profiles, gating of cell populations and spatial neighbourhood analysis."
-  featured_packages:
-    - phenoloom
-    - segmantR
-    - cellspecR
-    - gatekeepR
-    - phenoscapR
+  description: "Executed walkthrough of the phenoloom suite on a synthetic seven-channel immunofluorescence section: segmantR segments nuclei and cells, cellspecR turns the measurements into a validated, checksummed cell table, gatekeepR estimates marker cut-offs and assigns cell types, and phenoscapR maps neighbour enrichment, distances and cellular neighbourhoods. Each step is checked against the drawn ground truth."
+  featured_packages: [phenoloom, segmantR, cellspecR, gatekeepR, phenoscapR]
+  learn:
+    - "Segmenting nuclei by watershed and growing them into cells with segmantR, scored against known nuclei"
+    - "Reading segmantR features into a validated, checksummed cell table with cellspecR"
+    - "Declaring a marker panel and phenotype hierarchy in gatekeepR, with an unstained marker reported as not callable"
+    - "Testing which cell types sit together and finding cellular neighbourhoods with phenoscapR"
+    - "Checking every step against the ground truth of a synthetic image"

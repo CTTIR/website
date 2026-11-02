@@ -1,0 +1,459 @@
+---
+title: "Spatial Tissue Phenotyping"
+date: 2026-11-02
+question: "Which cell populations are present in a tissue section, and how are they arranged relative to each other?"
+data: "A synthetic seven-channel immunofluorescence image (DAPI, PanCK, CD45, CD3e, CD8, CD20, CD68; 480 × 480 pixels at 1 µm per pixel), drawn in this walkthrough with a fixed seed. It shows two tumour nests, a lymphoid follicle and stroma with about 1,000 cells, and every cell's true type is known. No patient, cohort or project data are used."
+pipeline:
+  - label: "Install the suite"
+    pkg: phenoloom
+  - label: "Synthetic multiplex image"
+  - label: "Segment nuclei and cells"
+    pkg: segmantR
+  - label: "Validated cell table"
+    pkg: cellspecR
+  - label: "Gate cell populations"
+    pkg: gatekeepR
+  - label: "Spatial neighbourhoods"
+    pkg: phenoscapR
+packages: [phenoloom, segmantR, cellspecR, gatekeepR, phenoscapR]
+---
+
+```{r setup, include = FALSE}
+options(width = 80)
+```
+
+This walkthrough takes one multiplexed immunofluorescence image from pixels to
+cell neighbourhoods with the packages of the phenoloom suite. segmantR finds
+nuclei and cells, cellspecR turns the per-cell measurements into a validated
+cell table, gatekeepR sets marker thresholds and assigns cell types, and
+phenoscapR asks how those cell types are arranged. The image is synthetic, so
+each step can be checked against the cells that were drawn.
+
+## The suite
+
+phenoloom exports no functions. Installing it installs its four member
+packages, which are then loaded directly.
+
+```{r suite}
+# install.packages("pak"); pak::pak("CTTIR/phenoloom")
+suite <- trimws(strsplit(packageDescription("phenoloom")$Imports, ",")[[1]])
+suite
+for (p in suite) library(p, character.only = TRUE)
+library(ggplot2)
+```
+
+## A synthetic section
+
+The section is 480 × 480 µm. It holds a large and a small tumour nest of
+PanCK-positive cells, a B-cell follicle (CD20) with a rim of T cells, and
+sparse stroma. CD8 T cells gather at the tumour margin. Stromal cells carry
+none of the markers, and myeloid cells carry only CD45: the CD68 channel was
+acquired but holds no stain, as when an antibody fails. The code below draws
+the cells, blurs the channels and adds background and noise. The matrix
+`truth` keeps the drawn nuclei for later checks.
+
+<details>
+<summary>Code that draws the section</summary>
+
+```{r draw}
+set.seed(2026)
+side <- 480L                                         # pixels, 1 µm each
+channels <- c("DAPI", "PanCK", "CD45", "CD3e", "CD8", "CD20", "CD68")
+
+# Tissue compartment at pixel position (x to the right, y downwards)
+compartment <- function(x, y) {
+  outline <- function(cx, cy, r, wave, k, phase) {   # distance to a wavy edge
+    sqrt((x - cx)^2 + (y - cy)^2) -
+      r * (1 + wave * sin(k * atan2(y - cy, x - cx) + phase))
+  }
+  tumour <- pmin(outline(160, 190, 125, 0.12, 5, 0.7),
+                 outline(375, 385, 70, 0.15, 4, 2))
+  follicle <- sqrt((x - 365)^2 + (y - 110)^2) - 65
+  out <- rep("stroma", length(x))
+  out[follicle < 30] <- "T-cell zone"
+  out[follicle < 0] <- "follicle"
+  out[tumour >= 0 & tumour < 30] <- "margin"
+  out[tumour < 0] <- "tumour"
+  out
+}
+crowding <- c(tumour = 1, margin = 0.6, follicle = 1, "T-cell zone" = 0.6,
+              stroma = 0.12)
+mix <- list(
+  tumour        = c(Tumour = .93, CD8T = .04, CD4T = .03),
+  margin        = c(CD8T = .35, CD4T = .20, Stromal = .40, B = .05),
+  follicle      = c(B = .82, CD4T = .14, CD8T = .04),
+  "T-cell zone" = c(CD4T = .55, CD8T = .15, B = .15, Stromal = .15),
+  stroma        = c(Stromal = .70, CD4T = .10, CD8T = .07, Myeloid = .13)
+)
+carries <- list(Tumour = "PanCK", CD8T = c("CD45", "CD3e", "CD8"),
+                CD4T = c("CD45", "CD3e"), B = c("CD45", "CD20"),
+                Myeloid = "CD45", Stromal = character())
+
+# Cell centres: random candidates, thinned by compartment, >= 10 µm apart
+cand <- matrix(runif(2 * 12000, 5, side - 5), ncol = 2)
+cand <- cand[runif(nrow(cand)) < crowding[compartment(cand[, 1], cand[, 2])], ]
+keep <- rep(FALSE, nrow(cand))
+for (i in seq_len(nrow(cand))) {
+  kept <- cand[keep, , drop = FALSE]
+  keep[i] <- !any((kept[, 1] - cand[i, 1])^2 + (kept[, 2] - cand[i, 2])^2 < 100)
+}
+drawn <- data.frame(x = cand[keep, 1], y = cand[keep, 2])
+drawn$compartment <- compartment(drawn$x, drawn$y)
+drawn$type <- vapply(drawn$compartment,
+                     function(r) sample(names(mix[[r]]), 1, prob = mix[[r]]), "")
+
+# Paint nuclei (DAPI) and marker signal into a rows x columns x channels array
+pixels <- array(0, c(side, side, length(channels)),
+                dimnames = list(NULL, NULL, channels))
+truth <- matrix(0L, side, side)                      # drawn nuclei by cell
+for (k in seq_len(nrow(drawn))) {
+  rn <- runif(1, 3, 4.2); rb <- rn + runif(1, 2, 3)  # nucleus, cell radius
+  rows <- max(1, floor(drawn$y[k] - rb)):min(side, ceiling(drawn$y[k] + rb))
+  cols <- max(1, floor(drawn$x[k] - rb)):min(side, ceiling(drawn$x[k] + rb))
+  r <- sqrt(outer((rows - drawn$y[k])^2, (cols - drawn$x[k])^2, "+"))
+  nucleus <- pmax(0, 1 - (r / rn)^4)
+  body <- pmax(0, 1 - (r / rb)^6)
+  pixels[rows, cols, "DAPI"] <- pmax(pixels[rows, cols, "DAPI"],
+                                     runif(1, 0.55, 0.9) * nucleus)
+  for (m in carries[[drawn$type[k]]]) {
+    shape <- if (m == "PanCK") body * (1 - 0.6 * nucleus)  # cytoplasm
+             else body * (0.5 + 0.5 * r / rb)                # membrane
+    pixels[rows, cols, m] <- pmax(pixels[rows, cols, m],
+                                  rlnorm(1, log(0.45), 0.35) * shape)
+  }
+  t_k <- truth[rows, cols]; t_k[r < rn & t_k == 0L] <- k; truth[rows, cols] <- t_k
+}
+
+# Blur (Gaussian, sigma 1 px), then add background and noise
+smooth <- function(m) {
+  w <- dnorm(-3:3); w <- w / sum(w)
+  m <- apply(m, 2, stats::filter, filter = w, circular = TRUE)
+  t(apply(m, 1, stats::filter, filter = w, circular = TRUE))
+}
+for (m in channels) {
+  pixels[, , m] <- pmin(1, pmax(0, smooth(pixels[, , m]) + 0.04 +
+                                   rnorm(side^2, 0, 0.02)))
+}
+```
+
+</details>
+
+The array becomes a segmantR image with its pixel size:
+
+```{r image, message = TRUE, collapse = TRUE}
+img <- new_sg_image(pixels, channels = channels,
+                    resolution = list(x_um = 1, y_um = 1),
+                    id = "synthetic-section", value_semantics = "intensity")
+img
+table(drawn$type)
+```
+
+```{r channels, fig.height = 7.6, fig.alt = "Four channels of the synthetic section: DAPI, PanCK, CD3e and CD20", fig.cap = "Four of the seven channels: nuclei (DAPI), the two tumour nests (PanCK), T cells at the tumour margin and around the follicle (CD3e), and the follicle at the top right (CD20)."}
+show_channel <- function(ch) {
+  sg_plot_overlay(img, channel = match(ch, img$channels)) + labs(title = ch)
+}
+patchwork::wrap_plots(lapply(c("DAPI", "PanCK", "CD3e", "CD20"), show_channel))
+```
+
+## Segmenting nuclei and cells
+
+`sg_segment_watershed()` finds the DAPI foreground with Otsu's threshold,
+takes as seeds the parts that lie deeper than 30% of the largest distance to
+the background, and floods from these seeds.
+
+```{r nuclei, message = TRUE}
+nuclei <- sg_segment_watershed(img, channel = 1L, seed_method = "distance",
+                               h = 0.3, expand_pixels = 0L)
+nuclei
+```
+
+Because the nuclei were drawn, the result can be scored against them.
+`sg_evaluate_segmentation()` compares every pair of objects, which takes long
+on a whole section, so the check runs on a 160 × 160 µm window at the margin
+of the large nest.
+
+```{r evaluate}
+win <- 200:359                                      # rows and columns
+scores <- sg_evaluate_segmentation(new_sg_mask(nuclei$labels[win, win]),
+                                   new_sg_mask(truth[win, win]))
+as.data.frame(scores)
+```
+
+Nearly every nucleus is found (detection F1 of
+`r round(scores$value[scores$metric == "f1_detection"], 2)` at an overlap of
+0.5). Outlines agree less closely: at an overlap of 0.75 the average precision
+drops to `r round(scores$value[scores$metric == "ap75"], 2)`.
+
+Cells are the nuclei grown outwards by up to three pixels. The pure R engine
+is chosen explicitly: the EBImage engine ignores `expand_max` and would give
+every background pixel to its nearest nucleus.
+
+```{r cells, message = TRUE}
+cells <- sg_segment_propagate(img, nuclei, expand_max = 3L,
+                              engine = "voronoi_r")
+cells
+```
+
+```{r overlay, fig.height = 6.4, fig.alt = "Cell outlines from segmantR drawn over the DAPI channel in a window at the tumour margin", fig.cap = "segmantR cell outlines (magenta) over DAPI in the 160 × 160 µm window used for scoring: one outline per nucleus."}
+window_img <- new_sg_image(img$pixels[win, win, ], channels = img$channels)
+sg_plot_overlay(window_img, new_sg_mask(cells$labels[win, win]),
+                channel = 1L, outline_width = 0.4)
+```
+
+`sg_extract_features()` then measures every cell: intensity statistics per
+channel, shape, and the centroid.
+
+```{r features}
+features <- sg_extract_features(
+  img, cells, features = c("intensity", "morphology", "location"))
+dim(features)
+features[1:3, c("cell_id", "area", "DAPI_mean", "PanCK_mean", "CD3e_mean",
+                "centroid_row", "centroid_col")]
+```
+
+## A validated cell table
+
+cellspecR reads the feature table through its segmantR adapter. The adapter
+converts pixel centroids and areas to micrometres and names every
+measurement by compartment, marker and statistic.
+
+```{r cellspec, message = TRUE, collapse = TRUE}
+table_path <- file.path(tempdir(), "synthetic-section.tsv")
+write.table(features, table_path, sep = "\t", quote = FALSE, row.names = FALSE)
+cs_detect_format(table_path)[, c("format", "score")]
+section <- cs_read(table_path, format = "segmantr", pixel_size = 1,
+                   sample_id = "synthetic-01")
+section
+cs_validate(section)
+```
+
+`cs_feature_support()` describes how much signal each marker carries. It
+reports, but does not decide: the blank CD68 channel still varies through
+noise and is listed as `ok`.
+
+```{r support}
+cs_feature_support(section)[, c("marker", "q01", "q50", "q99", "support")]
+```
+
+The table is written as a cellspec directory with a SHA-256 manifest, which
+is what gatekeepR reads.
+
+```{r write}
+cellspec_dir <- file.path(tempdir(), "section-cellspec")
+cs_write(section, cellspec_dir, overwrite = TRUE)
+list.files(cellspec_dir)
+```
+
+## Gating cell populations
+
+The gating configuration names the measurement behind each marker (mean cell
+intensity), transforms it with asinh, and estimates one cut per marker with a
+two-component mixture. The hierarchy is evaluated in order and the first rule
+that matches wins. Cells positive for both PanCK and CD45 are flagged as
+unresolved instead of being forced into a class.
+
+```{r config}
+markers <- c("PanCK", "CD45", "CD3e", "CD8", "CD20", "CD68")
+config <- gk_config(
+  signal_policy = gk_signal_policy(markers, compartment = "cell",
+                                   statistic = "mean"),
+  panel = gk_panel(markers, role = "identity", transform = "asinh",
+                   cofactor = 0.05, threshold_method = "mixture"),
+  hierarchy = gk_hierarchy(
+    rules = list(
+      gk_rule("R010", "Tumour cells", all_of = "PanCK", none_of = "CD45"),
+      gk_rule("R020", "CD8 T cells", all_of = c("CD45", "CD3e", "CD8")),
+      gk_rule("R030", "Other T cells", all_of = c("CD45", "CD3e")),
+      gk_rule("R040", "B cells", all_of = c("CD45", "CD20"), none_of = "CD3e"),
+      gk_rule("R050", "Macrophages", all_of = c("CD45", "CD68"),
+              none_of = c("CD3e", "CD20")),
+      gk_rule("R060", "Other immune cells", all_of = "CD45")
+    ),
+    flags = list(epithelial_immune = gk_flag(all_of = "PanCK", any_of = "CD45")),
+    flag_policy = c(epithelial_immune = "unresolved"),
+    undefined_label = "Unlabelled", version = "1.0"
+  )
+)
+prepared <- gk_prepare(cellspec_dir, config, quiet = TRUE)
+thresholds <- gk_thresholds(prepared, config)
+as.data.frame(thresholds)[, c("marker", "method", "status", "estimate")]
+```
+
+```{r thresholds-plot, fig.height = 4.8, fig.alt = "Histograms of the transformed mean intensity of each marker with the gatekeepR cut as a dashed line", fig.cap = "gatekeepR cuts (dashed) on the transformed signal. Five markers split into negative and positive cells; CD68 has no positive group and gets no cut."}
+cut <- as.data.frame(thresholds)
+cut$marker <- factor(cut$marker, levels = markers)
+strip <- setNames(paste0(cut$marker, "\n", gsub("_", " ", tolower(cut$status))),
+                  cut$marker)
+score <- data.frame(
+  marker = factor(rep(colnames(prepared$score), each = nrow(prepared$score)),
+                  levels = markers),
+  value = as.vector(prepared$score))
+ggplot(score, aes(value)) +
+  geom_histogram(bins = 60, fill = "grey65") +
+  geom_vline(data = cut, aes(xintercept = estimate), linetype = 2,
+             colour = "#e34948", na.rm = TRUE) +
+  facet_wrap(~ marker, scales = "free", nrow = 2, labeller = as_labeller(strip)) +
+  scale_y_sqrt() +
+  labs(x = "asinh(mean cell intensity / 0.05)", y = "Cells (square-root scale)") +
+  theme_minimal(base_size = 10)
+```
+
+gatekeepR then classifies every cell. The macrophage rule needs CD68, so it is
+switched off and recorded rather than applied with a guessed cut.
+
+```{r classify}
+classified <- gk_classify(prepared, thresholds, config)
+classified$disabled_rules
+counts <- summary(classified)
+counts$proportion <- round(counts$proportion, 3)
+counts[, c("cell_type", "n", "proportion")]
+```
+
+The drawn type of each segmented cell is that of the drawn nucleus under its
+centroid, so the gating can be checked cell by cell.
+
+```{r agreement}
+centroid <- cbind(round(features$centroid_row), round(features$centroid_col))
+drawn_id <- truth[centroid]
+drawn_type <- c("none", drawn$type)[drawn_id + 1L]
+calls <- classified$cells
+gated <- calls$cell_type[match(as.character(features$cell_id), calls$cell_id)]
+table(gated = gated, drawn = drawn_type)
+expected <- c(Tumour = "Tumour cells", CD8T = "CD8 T cells",
+              CD4T = "Other T cells", B = "B cells",
+              Myeloid = "Other immune cells", Stromal = "Unlabelled")
+agreement <- mean(gated == expected[drawn_type])
+round(agreement, 3)
+```
+
+Where do the remaining cells go wrong? Each disagreement is checked for a
+drawn neighbour of another type within 12 µm:
+
+```{r disagreements}
+wrong <- which(gated != expected[drawn_type])
+touching <- vapply(wrong, function(i) {
+  k <- drawn_id[i]
+  d <- sqrt((drawn$x - drawn$x[k])^2 + (drawn$y - drawn$y[k])^2)
+  any(d > 0 & d < 12 & drawn$type != drawn$type[k])
+}, logical(1))
+c(disagreements = length(wrong), next_to_other_type = sum(touching))
+```
+
+Of the `r length(wrong)` disagreements, `r sum(touching)` lie next to a cell of
+another type. A cell grown three pixels around its nucleus also takes up
+signal from its neighbours, which lifts it into the shoulder just right of
+the negative peak, where the mixture cuts lie. Tumour cells next to CD8 T
+cells and CD8 T cells next to tumour cells thus end up "Unresolved", and some
+stromal cells take on an immune neighbour's markers.
+
+## Spatial neighbourhoods
+
+phenoscapR imports the cellspec table without changing coordinates or
+measurements. The gatekeepR labels are joined by cell identifier.
+
+```{r spatial-object}
+means <- cs_features(section, kind = "intensity", statistic = "mean")
+tissue <- FromCellspec(section, features = means)
+tissue@meta_data$phenotype <-
+  calls$cell_type[match(tissue@meta_data$cell_id, calls$cell_id)]
+tissue
+```
+
+```{r cell-map, fig.height = 6.2, fig.alt = "Map of all cells coloured by the cell type assigned by gatekeepR", fig.cap = "gatekeepR cell types in tissue coordinates, y pointing down as in the image: tumour nests, the B-cell follicle with its T-cell rim, and CD8 T cells along the tumour edge."}
+type_colours <- c("Tumour cells" = "#e34948", "CD8 T cells" = "#2a78d6",
+                  "Other T cells" = "#1baf7a", "B cells" = "#eda100",
+                  "Other immune cells" = "#008300", "Unlabelled" = "#c9c7c1",
+                  "Unresolved" = "#2b2a28")
+CellMap(tissue, colours = type_colours, pt_size = 1.3,
+        title = "Cell types from gatekeepR") +
+  scale_y_reverse()
+```
+
+`InteractionMatrix()` counts, for every pair of cell types, how often they lie
+within 20 µm of each other, and compares this with 199 random relabellings of
+the same cells.
+
+```{r interactions, fig.height = 5.6, fig.alt = "Heatmap of log2 observed over expected neighbour counts for every pair of cell types", fig.cap = "Neighbours within 20 µm, log2 of observed over expected counts: red pairs meet more often than by chance, blue pairs less often."}
+pairs <- InteractionMatrix(tissue, radius = 20, method = "permutation",
+                           n_perm = 199L, seed = 1L)
+InteractionPlot(pairs) +
+  theme(axis.text.x = element_text(angle = 40, hjust = 1))
+```
+
+Tumour cells sit with tumour cells, and B cells with B cells and other T cells.
+Read along the tumour column:
+
+```{r interaction-table}
+pairs_df <- as.data.frame(pairs)
+near_tumour <- pairs_df[pairs_df$to == "Tumour cells",
+                        c("from", "observed", "expected", "interaction_score",
+                          "z_score")]
+near_tumour[, 3:5] <- round(near_tumour[, 3:5], 2)
+print(near_tumour[order(-near_tumour$interaction_score), ], row.names = FALSE)
+```
+
+Every immune population lies next to tumour cells less often than by chance,
+because the nests hold few immune cells, but CD8 T cells least so. The
+distance from each cell to its nearest tumour cell, in micrometres, shows the
+same margin from the other side:
+
+```{r distances}
+to_tumour <- sapply(c("CD8 T cells", "Other T cells", "B cells"), function(type) {
+  quantile(CrossNNDistance(tissue, from = type, to = "Tumour cells"),
+           c(0.25, 0.5, 0.75))
+})
+round(to_tumour, 1)
+```
+
+Finally, `CellularNeighbourhoods()` describes each cell by the cell types among
+its 15 nearest neighbours and clusters these profiles into four neighbourhoods.
+
+```{r neighbourhoods}
+tissue <- CellularNeighbourhoods(tissue, n_neighbourhoods = 4L, k = 15L,
+                                 seed = 1L)
+round(tissue@spatial$neighbourhood_composition, 2)
+```
+
+```{r neighbourhood-map, fig.height = 6.2, fig.alt = "Map of all cells coloured by the cellular neighbourhood they belong to", fig.cap = "Cellular neighbourhoods: tumour core (CN1), follicle with its T-cell rim (CN2), tumour margin (CN3) and stroma (CN4)."}
+cn_colours <- c(CN1 = "#6250d6", CN2 = "#e87ba4", CN3 = "#008300",
+                CN4 = "#eda100")
+CellMap(tissue, colour_by = "neighbourhood", colours = cn_colours,
+        pt_size = 1.3, title = "Cellular neighbourhoods") +
+  scale_y_reverse()
+```
+
+The four neighbourhoods follow the drawn compartments without being told about
+them. CN1 is mostly tumour cells, CN2 B cells and other T cells, CN3 a mix of
+tumour cells, CD8 T cells and unlabelled cells along the nest edges, and CN4
+about half unlabelled stromal cells with scattered immune cells.
+
+## What this shows, and its limits
+
+The four packages hand data to each other through documented objects: a
+segmantR mask and feature table, a cellspec directory with checksums, a
+gatekeepR classification, and a phenoscapR object. On this image the chain
+recovers the drawn populations and their arrangement: the tumour nests, the
+follicle, and CD8 T cells concentrated at the tumour margin. gatekeepR also
+refused to call CD68, which carried no stain, and said so.
+
+The image is deliberately easy. Nuclei are round, never overlap and sit at
+least 10 µm apart, the signal has no autofluorescence or crosstalk beyond
+blur, and there is a single section, so nothing here is a statistical result
+about tissue. Even so, `r round(100 * (1 - agreement))`% of the cells get a
+label that differs from the drawn type, because a cell's measurement picks up
+its neighbours' signal and the automatic cuts sit close to the negative peak.
+The cut-offs shown here are unreviewed. On real images, segmentation needs
+review (segmantR's annotation and mask review tools), cut-offs need review and
+locking in a snapshot (`gk_review()`, `gk_app()`, `gk_lock()`), and spatial
+statistics need several sections and a study design before they mean
+anything.
+
+## Package versions
+
+```{r versions}
+pkgs <- c("phenoloom", suite)
+data.frame(package = pkgs,
+           version = vapply(pkgs, function(p) format(packageVersion(p)), ""),
+           commit = vapply(pkgs, function(p) packageDescription(p)$RemoteSha, ""),
+           row.names = NULL)
+```
