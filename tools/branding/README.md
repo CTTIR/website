@@ -18,10 +18,3 @@ Rscript tools/branding/render.R --apply
 
 `assets.csv` records each identity, original filename and destination. Master
 files are copied byte-for-byte so the supplied font outlines remain intact.
-
-A file in `overrides/<identity>/<rendered>` takes precedence over the hexmakR
-master. cttiR is recoloured black, white and gold in its own repository
-(`tools/branding/identity_colours.csv` there); `overrides/cttiR/` holds its
-renders, copied from `Rscript tools/branding/render.R <dir>` in cttiR. The
-site's main icon uses cttiR: the home-page avatar is its named light hex, and
-the favicons and app icons use its dark artwork.
