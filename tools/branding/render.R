@@ -17,6 +17,9 @@ map <- utils::read.csv(file.path(branding, "assets.csv"),
 if (!all(c("identity", "rendered", "destination") %in% names(map)) ||
     anyNA(map) || anyDuplicated(map$destination)) stop("Invalid asset map.")
 master_file <- function(identity, rendered) {
+  # Identities recoloured in their own repository ship their renders here.
+  override <- file.path(branding, "overrides", identity, rendered)
+  if (file.exists(override)) return(normalizePath(override, winslash = "/"))
   if (grepl("^icon-(32|48|64|128|256)[.]png$", rendered)) {
     size <- as.integer(sub("^icon-([0-9]+)[.]png$", "\\1", rendered))
     return(hexmakR::hex_asset(identity, layout = "icon", format = "png",
