@@ -1,6 +1,6 @@
 # Research-theme projects. Cross-links resolve to:
 #   Software cards: /software/#<packageName>
-#   Workflow cards: /workflows/#<slug>
+#   Workflow cards: /projects/#<slug> (Projects & Workflows page)
 
 # TODO: Add a project hero image / illustration once available.
 - name: "Single-Cell Analysis"
