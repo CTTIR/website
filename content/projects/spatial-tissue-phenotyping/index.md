@@ -402,27 +402,18 @@ as.data.frame(thresholds)[, c("marker", "method", "status", "estimate")]
 
 
 ``` r
-cut <- as.data.frame(thresholds)
-cut$marker <- factor(cut$marker, levels = markers)
-strip <- setNames(paste0(cut$marker, "\n", gsub("_", " ", tolower(cut$status))),
-                  cut$marker)
-score <- data.frame(
-  marker = factor(rep(colnames(prepared$score), each = nrow(prepared$score)),
-                  levels = markers),
-  value = as.vector(prepared$score))
-ggplot(score, aes(value)) +
-  geom_histogram(bins = 60, fill = "grey65") +
-  geom_vline(data = cut, aes(xintercept = estimate), linetype = 2,
-             colour = "#e34948", na.rm = TRUE) +
-  facet_wrap(~ marker, scales = "free", nrow = 2, labeller = as_labeller(strip)) +
-  scale_y_sqrt() +
-  labs(x = "asinh(mean cell intensity / 0.05)", y = "Cells (square-root scale)") +
-  theme_minimal(base_size = 10)
+image <- unique(prepared$cells$image_id)
+density_plots <- lapply(markers, function(m) {
+  gk_plot_density(thresholds, m, image) +
+    labs(title = m, caption = NULL) +
+    theme_minimal(base_size = 9)
+})
+patchwork::wrap_plots(density_plots, nrow = 2)
 ```
 
 <div class="figure" style="text-align: center">
-<img src="figures/thresholds-plot-1.png" alt="Histograms of the transformed mean intensity of each marker with the gatekeepR cut as a dashed line" width="100%" />
-<p class="caption">gatekeepR cuts (dashed) on the transformed signal. Five markers split into negative and positive cells; CD68 has no positive group and gets no cut.</p>
+<img src="figures/thresholds-plot-1.png" alt="gatekeepR density plots of the transformed mean intensity of each marker, with the gatekeepR cut as a dashed line" width="100%" />
+<p class="caption">gatekeepR's density plot for each marker, with its cut (dashed). Five markers split into negative and positive cells. CD68 has no positive group, so gatekeepR reports it as not callable, fits no density and sets no cut; its panel stays empty.</p>
 </div>
 
 gatekeepR then classifies every cell. The macrophage rule needs CD68, so it is
@@ -708,6 +699,6 @@ data.frame(package = pkgs,
 #> 1  phenoloom   0.1.1 16dae1ee98b1701bd15c10d3a09860fbc635a1f3
 #> 2   segmantR   0.2.0 882c2fb7fe0546f71f6f11bbfd3de6103859b098
 #> 3  cellspecR   1.1.0 bd940f1baf937cd6a78f8741193ac419d34c712b
-#> 4  gatekeepR   1.0.0 9514a37b688f2dc3abecfaf0e0153a0e0835bb91
+#> 4  gatekeepR   1.0.0 64be151325ce36e6ff5fd1c576f341c96c69f1c2
 #> 5 phenoscapR   0.2.0 d5959bd538374648ddb4207f8c54171ac48ebc32
 ```
