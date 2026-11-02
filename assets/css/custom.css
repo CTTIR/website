@@ -166,6 +166,32 @@ body.colorscheme-dark .cttir-card__logo--placeholder { color: #9a9a9a; }
   letter-spacing: 0.01em;
   color: var(--cttir-card-muted);
 }
+/* R package sub-headers carry their v5 colour family as a small hex. */
+.cttir-family { display: flex; align-items: center; gap: 0.55rem; }
+.cttir-family::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.8rem;
+  height: 0.92rem;
+  background: var(--cttir-family, currentColor);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.cttir-family--core { --cttir-family: #9A7B26; }
+.cttir-family--spectral { --cttir-family: #0072B2; }
+.cttir-family--spatial { --cttir-family: #009E73; }
+.cttir-family--omics { --cttir-family: #CC79A7; }
+.cttir-family--clinical { --cttir-family: #D55E00; }
+.cttir-family--methods { --cttir-family: #56B4E9; }
+.cttir-family--simulation { --cttir-family: #E69F00; }
+.cttir-family--evidence { --cttir-family: #F0E442; }
+.cttir-family--platform { --cttir-family: #000000; }
+/* On dark pages, core uses the bright gold and platform its slate material. */
+body.colorscheme-dark .cttir-family--core { --cttir-family: #D4AF37; }
+body.colorscheme-dark .cttir-family--platform { --cttir-family: #8FAABD; }
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .cttir-family--core { --cttir-family: #D4AF37; }
+  body.colorscheme-auto .cttir-family--platform { --cttir-family: #8FAABD; }
+}
 /* Three-dot maturity indicator */
 .cttir-status {
   display: inline-flex;
