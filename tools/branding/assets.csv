@@ -1,5 +1,11 @@
 identity,rendered,destination
-CTTIR,lockup.png,static/images/cttir-logo.png
+cttiR,lockup.png,static/images/cttir-logo.png
+cttiR,hex-dark.svg,static/images/favicon.svg
+cttiR,icon-16.png,static/images/favicon-16.png
+cttiR,icon-32.png,static/images/favicon-32.png
+cttiR,icon-180.png,static/images/apple-touch-icon.png
+cttiR,icon-192.png,static/images/icon-192.png
+cttiR,icon-512.png,static/images/icon-512.png
 CTTIR,lockup-dark.svg,static/images/hex/CTTIR-brand-dark.svg
 CTTIR,lockup.svg,static/images/hex/CTTIR-brand.svg
 argus-one,lockup-dark.svg,static/images/hex/argus-one-dark.svg
