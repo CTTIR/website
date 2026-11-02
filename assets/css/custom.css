@@ -29,11 +29,20 @@ body.colorscheme-dark {
 a { color: var(--cttir-accent); }
 a:hover { color: var(--cttir-accent-hover); }
 
-/* Landing avatar + nav */
+/* Landing avatar: the institution mark follows the site theme. */
 .about .avatar img {
+  display: block;
   width: 180px;
   height: auto;
+  margin: 0 auto;
   border-radius: 0;
+}
+.about .avatar img.cttir-brand-dark { display: none; }
+body.colorscheme-dark .about .avatar img.cttir-brand-light { display: none; }
+body.colorscheme-dark .about .avatar img.cttir-brand-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .about .avatar img.cttir-brand-light { display: none; }
+  body.colorscheme-auto .about .avatar img.cttir-brand-dark { display: block; }
 }
 /* Footer nav row */
 .cttir-footer-nav {

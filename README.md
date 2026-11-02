@@ -19,10 +19,14 @@ GitHub Actions workflow `.github/workflows/hugo.yml` builds and publishes the si
 
 ## Branding assets
 
-- `static/images/cttir-logo.png` — CTTIR v5 artwork-only hex for the landing page.
-- `static/images/favicon-16.png` and `favicon-32.png` — native-size CTTIR v5 favicon exports.
-- `static/images/favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, and `icon-512.png` — CTTIR v5 browser and device icons, referenced by the icon configuration and `static/site.webmanifest`.
+- `static/images/cttir-mark.svg` and `cttir-mark-dark.svg` — the CTTIR institution mark on the landing page, switched with the site theme by `layouts/_partials/home/avatar.html`.
+- `static/images/favicon.svg`, `favicon-16.png` and `favicon-32.png` — favicons from the dark institution mark.
+- `static/images/apple-touch-icon.png`, `icon-192.png`, and `icon-512.png` — device icons, referenced by the icon configuration and `static/site.webmanifest`.
 - `static/images/hex/qupflowR.svg` — CTTIR v5 qupflowR artwork for its software card.
+
+The institution files are copied from `assets/branding/institution/` in
+[CTTIR/.github](https://github.com/CTTIR/.github/tree/main/assets/branding/institution),
+where `tools/branding/institution.R` renders them. Packages keep their hex logos.
 
 Software-card artwork is configured in `data/software.yaml`. The CTTIR identity
 and its reproducible R source are maintained in

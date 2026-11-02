@@ -1,0 +1,9 @@
+{{/* The CTTIR institution mark, light or dark with the site theme. */}}
+{{ with site.Params.avatarURL }}
+<div class="avatar">
+  <img class="cttir-brand-light" src="{{ . | relURL }}" alt="CTTIR" width="180" height="180">
+  {{ with site.Params.avatarDarkURL }}
+  <img class="cttir-brand-dark" src="{{ . | relURL }}" alt="CTTIR" width="180" height="180">
+  {{ end }}
+</div>
+{{ end }}
