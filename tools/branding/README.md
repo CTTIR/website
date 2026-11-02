@@ -25,6 +25,11 @@ border), recoloured in its own repository; `overrides/cttiR/` holds its
 `lockup.svg` and `lockup-dark.svg`, copied from cttiR's
 `man/figures/logo-with-name.svg` and `logo-with-name-dark.svg`.
 
+hyperloom and phenoloom are the suite packages of their topics: their
+overrides keep the topic colours with the CTTIR gold border, copied from
+each repository's `man/figures/logo-with-name.svg` and
+`logo-with-name-dark.svg`.
+
 argus-one, attaclone-dedup, metadata-mender and pwa-quest are not R
 packages and use square logos in the wine apps family; their overrides are
 copied from each repository's `assets/branding/logo-with-name.svg` and
