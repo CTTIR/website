@@ -119,6 +119,26 @@
   logo: /website/images/hex/tivis.r.svg
   logo_dark: /website/images/hex/tivis.r-dark.svg
 
+- name: hyperloom
+  status: usable
+  category: "R Packages"
+  group: "Spectral imaging"
+  description: "Suite package for CTTIR hyperspectral imaging, bringing together hyperspectR, hyperspectaculR, cuvis.r and tivis.r."
+  github: https://github.com/CTTIR/hyperloom
+  docs: https://github.com/CTTIR/hyperloom#readme
+  logo: /website/images/hex/hyperloom.svg
+  logo_dark: /website/images/hex/hyperloom-dark.svg
+
+- name: hypermodR
+  status: draft
+  category: "R Packages"
+  group: "Spectral imaging"
+  description: "Hyperspectral modelling and validation — proposed interpretable and black-box workflows, image and video interoperability, optional model backends and a Shiny workbench."
+  github: https://github.com/CTTIR/hypermodR
+  docs: https://github.com/CTTIR/hypermodR#readme
+  logo: /website/images/hex/hypermodR.svg
+  logo_dark: /website/images/hex/hypermodR-dark.svg
+
 - name: bambamR
   status: usable
   category: "R Packages"
@@ -345,6 +365,26 @@
   logo: /website/images/hex/gatekeepR.svg
   logo_dark: /website/images/hex/gatekeepR-dark.svg
 
+- name: mssrscopR
+  status: usable
+  category: "R Packages"
+  group: "Spatial biology"
+  description: "Single-frame mean-shift super-resolution (MSSR) structure maps."
+  github: https://github.com/CTTIR/mssrscopR
+  docs: https://cttir.github.io/mssrscopR/
+  logo: /website/images/hex/mssrscopR.svg
+  logo_dark: /website/images/hex/mssrscopR-dark.svg
+
+- name: phenoloom
+  status: usable
+  category: "R Packages"
+  group: "Spatial biology"
+  description: "Suite package for CTTIR spatial biology, bringing together segmantR, cellspecR, gatekeepR and phenoscapR."
+  github: https://github.com/CTTIR/phenoloom
+  docs: https://github.com/CTTIR/phenoloom#readme
+  logo: /website/images/hex/phenoloom.svg
+  logo_dark: /website/images/hex/phenoloom-dark.svg
+
 - name: brainwritR
   status: usable
   category: "Applications"
@@ -374,6 +414,16 @@
   docs: https://github.com/CTTIR/inferguidR#readme
   logo: /website/images/hex/inferguidR.svg
   logo_dark: /website/images/hex/inferguidR-dark.svg
+
+- name: sorenR
+  status: draft
+  category: "R Packages"
+  group: "Learning & inference"
+  description: "Experimental self-organising representations with bounded updates."
+  github: https://github.com/CTTIR/sorenR
+  docs: https://github.com/CTTIR/sorenR#readme
+  logo: /website/images/hex/sorenR.svg
+  logo_dark: /website/images/hex/sorenR-dark.svg
 
 - name: sandtablR
   status: draft

@@ -1,7 +1,7 @@
 +++
 title = "Software"
 description = "Open-source software from the CTTIR group"
-intro = "Public packages, applications and learning resources from CTTIR. Repository coverage checked on 14 October 2026. Public availability does not imply a stable release or scientific validation."
+intro = "Public packages, applications and learning resources from CTTIR. All public CTTIR R packages listed as of 2 November 2026. Public availability does not imply a stable release or scientific validation."
 +++
 
 ## Previously catalogued DOI records
