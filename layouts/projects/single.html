@@ -1,0 +1,41 @@
+{{ define "content" }}
+{{/* Walkthrough or project overview behind a Projects & Workflows tile. */}}
+<section class="container page">
+  <article class="cttir-walkthrough">
+    <header>
+      <h1 class="title"><span class="title-text">{{ .Title }}</span></h1>
+      {{ with .Params.question }}<p class="cttir-card__question"><em>{{ . }}</em></p>{{ end }}
+      {{ with .Params.data }}<p class="cttir-walkthrough__data"><strong>Data:</strong> {{ . | markdownify }}</p>{{ end }}
+    </header>
+
+    {{ with .Params.pipeline }}
+    <figure class="cttir-pipeline-figure">
+      <ol class="cttir-pipeline" aria-label="Pipeline">
+        {{ range . }}
+        <li class="cttir-pipeline__step{{ if .pkg }} is-package{{ else }} is-data{{ end }}">
+          {{ with .pkg }}
+            {{ $pkg := . }}
+            {{ range first 1 (where site.Data.software "name" $pkg) }}
+              {{ if .logo }}
+              <span class="cttir-brand-images">
+                <img class="cttir-pipeline__logo cttir-brand-light" src="{{ .logo }}" alt="{{ $pkg }} logo" loading="lazy" />
+                {{ with .logo_dark }}<img class="cttir-pipeline__logo cttir-brand-dark" src="{{ . }}" alt="{{ $pkg }} logo" loading="lazy" />{{ end }}
+              </span>
+              {{ end }}
+            {{ end }}
+            <a class="cttir-pipeline__pkg" href="{{ printf "software/#%s" $pkg | relURL }}"><code>{{ $pkg }}</code></a>
+          {{ end }}
+          <span class="cttir-pipeline__label">{{ .label }}</span>
+        </li>
+        {{ end }}
+      </ol>
+      {{ with $.Params.pipeline_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{ end }}
+
+    {{ .Content }}
+
+    <p class="cttir-walkthrough__back"><a href="{{ "projects/" | relURL }}">← Projects &amp; Workflows</a></p>
+  </article>
+</section>
+{{ end }}

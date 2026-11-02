@@ -192,6 +192,59 @@ body.colorscheme-dark .cttir-family--platform { --cttir-family: #8FAABD; }
   body.colorscheme-auto .cttir-family--core { --cttir-family: #D4AF37; }
   body.colorscheme-auto .cttir-family--platform { --cttir-family: #8FAABD; }
 }
+/* Walkthrough pages: package pipeline as a left-to-right flow. */
+.cttir-pipeline-figure { margin: 1.5rem 0 2rem; }
+.cttir-pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.5rem 1.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cttir-pipeline__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-width: 7.5rem;
+  max-width: 11rem;
+  padding: 0.6rem 0.7rem;
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  background: var(--cttir-card-bg);
+  color: var(--cttir-card-fg);
+  border: 1px solid var(--cttir-border);
+  border-radius: 0.5rem;
+}
+.cttir-pipeline__step.is-data { border-style: dashed; }
+.cttir-pipeline__step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -1.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cttir-card-muted);
+  font-size: 1.1rem;
+}
+.cttir-pipeline__logo { width: 52px; height: auto; display: block; margin: 0 auto; }
+.cttir-pipeline .cttir-brand-images .cttir-brand-dark { display: none; }
+body.colorscheme-dark .cttir-pipeline .cttir-brand-light { display: none; }
+body.colorscheme-dark .cttir-pipeline .cttir-brand-images .cttir-brand-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .cttir-pipeline .cttir-brand-light { display: none; }
+  body.colorscheme-auto .cttir-pipeline .cttir-brand-images .cttir-brand-dark { display: block; }
+}
+.cttir-pipeline__pkg code { font-size: 0.85rem; }
+.cttir-pipeline__label { color: var(--cttir-card-muted); }
+.cttir-pipeline-figure figcaption { margin-top: 0.6rem; font-size: 0.85rem; color: var(--cttir-card-muted); }
+.cttir-walkthrough img { max-width: 100%; height: auto; }
+.cttir-walkthrough__data { font-size: 0.95rem; }
+.cttir-walkthrough__back { margin-top: 2.5rem; }
 /* Three-dot maturity indicator */
 .cttir-status {
   display: inline-flex;
