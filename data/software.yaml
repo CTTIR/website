@@ -421,7 +421,7 @@
   category: R Packages
   group: Parsers & Data I/O
   description: R client for literature and signal surveillance through a separately
-    deployed researchd server; retrieves records and manages surveillance questions.
+    deployed server; retrieves records and manages surveillance questions.
   github: https://github.com/CTTIR/researchR
   docs: https://github.com/CTTIR/researchR#readme
   logo: /website/images/hex/researchR.svg
@@ -437,39 +437,6 @@
   docs: https://github.com/CTTIR/delphyR#readme
   logo: /website/images/hex/delphyr.svg
   logo_dark: /website/images/hex/delphyr-dark.svg
-
-- name: cttiR-model
-  status: draft
-  category: Infrastructure
-  description: Experimental CPU-first tooling for versioned research resources, local
-    services and evaluation; training and release remain deferred.
-  github: https://github.com/CTTIR/cttiR-model
-  docs: https://github.com/CTTIR/cttiR-model#readme
-  logo: ''
-
-- name: .github
-  status: usable
-  category: Infrastructure
-  description: Organisation profile, contribution guidance and shared repository workflows.
-  github: https://github.com/CTTIR/.github
-  docs: https://github.com/CTTIR/.github#readme
-  logo: https://raw.githubusercontent.com/CTTIR/.github/main/assets/branding/logo.svg
-
-- name: website
-  status: usable
-  category: Infrastructure
-  description: Source of the CTTIR organisation website and public software catalogue.
-  github: https://github.com/CTTIR/website
-  docs: https://github.com/CTTIR/website#readme
-  logo: https://raw.githubusercontent.com/CTTIR/.github/main/assets/branding/logo.svg
-
-- name: cttir.r-universe.dev
-  status: draft
-  category: Infrastructure
-  description: Package-registry configuration listing qviewparsR, cuvis.r, tivis.r and hyperspectR for r-universe builds; consult the registry for current build availability.
-  github: https://github.com/CTTIR/cttir.r-universe.dev
-  docs: ""
-  logo: ''
 
 - name: courses
   status: usable
@@ -494,13 +461,4 @@
   description: Shared research resources, references and supporting materials.
   github: https://github.com/CTTIR/ressources
   docs: https://github.com/CTTIR/ressources#readme
-  logo: ''
-
-- name: researchd
-  status: draft
-  category: Applications
-  description: Self-hosted academic literature and signal surveillance server, with an
-    R pipeline, browser dashboard, token-authenticated API and researchR client.
-  github: https://github.com/CTTIR/researchd
-  docs: https://github.com/CTTIR/researchd#readme
   logo: ''

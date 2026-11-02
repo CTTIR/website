@@ -53,9 +53,8 @@ work; a released CTTIR-trained model is not implied.
   dynamic disruptions.
 - **Data access and research services.** Parsers such as
   [qviewparsR](https://github.com/CTTIR/qviewparsR) turn specialised data into
-  reusable R objects. [researchR](https://github.com/CTTIR/researchR) and
-  [researchd](https://github.com/CTTIR/researchd) provide client/server tooling
-  for academic literature surveillance.
+  reusable R objects. [researchR](https://github.com/CTTIR/researchR) is an R
+  client for academic literature surveillance.
 - **Teaching and shared resources.** A four-course biostatistics curriculum,
   practical tutorials and curated method references support the use and critical
   appraisal of these tools. Explore [Tutorials & Courses](../tutorials/) and

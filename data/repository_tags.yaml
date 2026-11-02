@@ -1,9 +1,7 @@
 # Additional public-scope topics; core topics/types come from software.yaml.
 # Project and workflow membership comes from projects.yaml and workflows.yaml.
 cttiR: [Workflow orchestration, Reproducible research]
-cttiR-model: [Workflow orchestration, Reproducible research]
 researchR: [Literature research]
-researchd: [Literature research]
 scimapR: [Literature research]
 argus-one: [Literature research]
 attaclone-dedup: [Literature research]
@@ -23,8 +21,5 @@ dynasimR: [Simulation]
 reflowR: [Reproducible research]
 themakR: [Reproducible research]
 hexmakR: [Reproducible research]
-website: [Reproducible research]
-.github: [Reproducible research]
-cttir.r-universe.dev: [Reproducible research]
 shinylaunchR: [Workflow orchestration]
 qupflowR: [Imaging & Microscopy, Workflow orchestration]
