@@ -251,7 +251,7 @@
 - name: songR
   status: usable
   category: "R Packages"
-  group: "Learning & inference"
+  group: "Dimension reduction & visualisation"
   description: "Native R/C++ implementation of SONG (Self-Organizing Nebulous Growths) for nonlinear dimensionality reduction and visualisation."
   github: https://github.com/CTTIR/songR
   doi: 10.5281/zenodo.21889964
@@ -388,7 +388,8 @@
 
 - name: brainwritR
   status: usable
-  category: "Applications"
+  category: "R Packages"
+  group: "Consensus & ideation"
   description: "Development R/Shiny application for classroom brainwriting, with timed rounds, QR-code participation, SQLite persistence, mobile reconnect support and German, English and French interfaces."
   github: https://github.com/CTTIR/brainwritR
   docs: ""
@@ -408,7 +409,7 @@
 - name: inferguidR
   status: draft
   category: R Packages
-  group: "Learning & inference"
+  group: "Statistical inference"
   description: Guided inference, power analysis and diagnostic accuracy, with explicit
     assumptions, typed results, reproducible exports and a Shiny workbench.
   github: https://github.com/CTTIR/inferguidR
@@ -416,10 +417,30 @@
   logo: /website/images/hex/inferguidR.svg
   logo_dark: /website/images/hex/inferguidR-dark.svg
 
+- name: infercalcR
+  status: draft
+  category: "R Packages"
+  group: "Statistical inference"
+  description: "Explicit statistical procedures, descriptive summaries and diagnostic calculations behind one result contract, the computational core of the inference packages. Not public yet."
+  github: ""
+  docs: ""
+  logo: /website/images/hex/infercalcR.svg
+  logo_dark: /website/images/hex/infercalcR-dark.svg
+
+- name: infereportR
+  status: draft
+  category: "R Packages"
+  group: "Statistical inference"
+  description: "Tables, manuscript-ready text and ggplot annotations from finalized statistical results, without recomputing the inference. Not public yet."
+  github: ""
+  docs: ""
+  logo: /website/images/hex/infereportR.svg
+  logo_dark: /website/images/hex/infereportR-dark.svg
+
 - name: sorenR
   status: draft
   category: "R Packages"
-  group: "Learning & inference"
+  group: "Dimension reduction & visualisation"
   description: "Experimental self-organising representations with bounded updates."
   github: https://github.com/CTTIR/sorenR
   docs: https://github.com/CTTIR/sorenR#readme
@@ -473,7 +494,8 @@
 
 - name: delphyR
   status: draft
-  category: Applications
+  category: "R Packages"
+  group: "Consensus & ideation"
   description: Delphi-study platform with R analysis packages, a multilingual Shiny
     interface and PostgreSQL workflows; synthetic development examples, not a production
     deployment.

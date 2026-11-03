@@ -15,8 +15,8 @@
     {{ $software := .Site.Data.software }}
     {{/* R packages are grouped by their v5 colour family, in the token order,
          with cttiR's reserved core palette first. */}}
-    {{ $rGroups := slice "CTTIR core" "Spectral imaging" "Spatial biology" "Molecular data" "Clinical science" "Learning & inference" "Systems & simulation" "Evidence & discovery" "Research infrastructure" }}
-    {{ $family := dict "CTTIR core" "core" "Spectral imaging" "spectral" "Spatial biology" "spatial" "Molecular data" "omics" "Clinical science" "clinical" "Learning & inference" "methods" "Systems & simulation" "simulation" "Evidence & discovery" "evidence" "Research infrastructure" "platform" }}
+    {{ $rGroups := slice "CTTIR core" "Spectral imaging" "Spatial biology" "Molecular data" "Clinical science" "Statistical inference" "Dimension reduction & visualisation" "Systems & simulation" "Evidence & discovery" "Consensus & ideation" "Research infrastructure" }}
+    {{ $family := dict "CTTIR core" "core" "Spectral imaging" "spectral" "Spatial biology" "spatial" "Molecular data" "omics" "Clinical science" "clinical" "Statistical inference" "methods" "Dimension reduction & visualisation" "embedding" "Systems & simulation" "simulation" "Evidence & discovery" "evidence" "Consensus & ideation" "consensus" "Research infrastructure" "platform" }}
     {{ range $cat := slice "R Packages" "Zotero Plugins" "Applications" "Education & Resources" "Others" }}
       {{ $items := where $software "category" $cat }}
       {{ if $items }}
