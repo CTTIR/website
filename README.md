@@ -32,6 +32,16 @@ Software-card artwork is configured in `data/software.yaml`. The CTTIR identity
 and its reproducible R source are maintained in
 [CTTIR/.github](https://github.com/CTTIR/.github/tree/main/tools/branding).
 
+## Projects & Workflows
+
+Each tile on the Projects & Workflows page links to a page in
+`content/projects/<slug>/`: an overview for a project and an executed
+walkthrough for a workflow. Walkthroughs are R Markdown sources in
+`tools/walkthroughs/src/`, knitted by `tools/walkthroughs/render.R` on bundled
+or synthetic data; see `tools/walkthroughs/README.md`. Tiles marked
+`hidden: true` in `data/projects.yaml` or `data/workflows.yaml` are kept but
+not shown.
+
 ## Repository network
 
 The About page includes a repository/tag graph below Scope. Its Hugo shortcode
