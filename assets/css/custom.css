@@ -185,6 +185,8 @@ body.colorscheme-dark .cttir-card__logo--placeholder { color: #9a9a9a; }
 .cttir-family--simulation { --cttir-family: #E69F00; }
 .cttir-family--evidence { --cttir-family: #F0E442; }
 .cttir-family--platform { --cttir-family: #000000; }
+.cttir-family--embedding { --cttir-family: #146554; }
+.cttir-family--consensus { --cttir-family: #91617B; }
 /* On dark pages, core uses the bright gold and platform its slate material. */
 body.colorscheme-dark .cttir-family--core { --cttir-family: #D4AF37; }
 body.colorscheme-dark .cttir-family--platform { --cttir-family: #8FAABD; }
