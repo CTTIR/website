@@ -18,7 +18,9 @@ A four-part biostatistics curriculum, taught with R. Site: <https://cttir.github
 </tbody>
 </table>
 
-Clinical data science course: [Clinical Data Science in R · Course](https://r-heller.github.io/clinical-data-science-in-r-course/) — eight workshops on clinical AI and translational trauma research (diagnostic accuracy, grouped validation, longitudinal and mechanistic models, simulation, regulation, data protection and incident response), each with an R lab on synthetic data. It follows the four-stage progression of the biostatistics curriculum above.
+Clinical data science course: [Clinical Data Science in R · Course](https://cttir.github.io/clinical-data-science-in-r-course/) — eight workshops on clinical AI and translational trauma research (diagnostic accuracy, grouped validation, longitudinal and mechanistic models, simulation, regulation, data protection and incident response), each with an R lab on synthetic data. It follows the four-stage progression of the biostatistics curriculum above.
+
+Source: [CTTIR/clinical-data-science-in-r-course](https://github.com/CTTIR/clinical-data-science-in-r-course). Course text, tables and figures are licensed under CC BY 4.0; code is MIT-licensed.
 
 ## Tutorials
 
