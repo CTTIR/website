@@ -1,6 +1,6 @@
 +++
-title = "Tutorials & Courses"
-description = "Tutorials and course material from CTTIR"
+title = "Tutorials, Courses & Books"
+description = "Tutorials, courses and open books from CTTIR"
 +++
 
 Teaching material maintained by CTTIR. Source repositories: [CTTIR/tutorials](https://github.com/CTTIR/tutorials) and [CTTIR/courses](https://github.com/CTTIR/courses). Material is published under the MIT license, matching the upstream repositories.
@@ -21,6 +21,17 @@ A four-part biostatistics curriculum, taught with R. Site: <https://cttir.github
 Clinical data science course: [Clinical Data Science in R · Course](https://cttir.github.io/clinical-data-science-in-r-course/) — eight workshops on clinical AI and translational trauma research (diagnostic accuracy, grouped validation, longitudinal and mechanistic models, simulation, regulation, data protection and incident response), each with an R lab on synthetic data. It follows the four-stage progression of the biostatistics curriculum above.
 
 Source: [CTTIR/clinical-data-science-in-r-course](https://github.com/CTTIR/clinical-data-science-in-r-course). Course text, tables and figures are licensed under CC BY 4.0; code is MIT-licensed.
+
+## Books
+
+Open books maintained by CTTIR, with reproducible examples in R:
+
+- [Methods in R](https://cttir.github.io/methods-in-r/) — biomedical methods, diagnostics and guidance for authors and reviewers. [Source](https://github.com/CTTIR/methods-in-r).
+- [Clinical Data Science in R](https://cttir.github.io/clinical-data-science-in-r/) — clinical AI and translational trauma research, with 28 chapters and synthetic-data labs. [Source](https://github.com/CTTIR/clinical-data-science-in-r).
+- [Scientometrics in R](https://cttir.github.io/scientometrics-in-r/) — bibliometric indicators, networks, text mining and reproducible reporting. [Source](https://github.com/CTTIR/scientometrics-in-r).
+- [Strategy in R](https://cttir.github.io/strategy-in-r/) — game theory, simulation and machine intelligence. [Source](https://github.com/CTTIR/strategy-in-r).
+
+See each book's repository for its content and code licences.
 
 ## Tutorials
 
