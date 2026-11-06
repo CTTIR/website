@@ -3,7 +3,7 @@ title = "Tutorials, Courses & Books"
 description = "Tutorials, courses and open books from CTTIR"
 +++
 
-Teaching material maintained by CTTIR. Source repositories: [CTTIR/tutorials](https://github.com/CTTIR/tutorials) and [CTTIR/courses](https://github.com/CTTIR/courses). Material is published under the MIT license, matching the upstream repositories.
+Teaching material and open books maintained by CTTIR. Source repositories for the biostatistics curriculum: [CTTIR/tutorials](https://github.com/CTTIR/tutorials) and [CTTIR/courses](https://github.com/CTTIR/courses). Content and code licences are stated alongside each resource and in its repository.
 
 ## Courses
 
