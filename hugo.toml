@@ -54,9 +54,25 @@ enableEmoji = true
     weight = 3
     url = "software/"
   [[menu.main]]
-    name = "Tutorials & Courses"
+    identifier = "teaching"
+    name = "Teaching"
     weight = 5
     url = "tutorials/"
+  [[menu.main]]
+    parent = "teaching"
+    name = "Tutorials"
+    weight = 1
+    url = "tutorials/"
+  [[menu.main]]
+    parent = "teaching"
+    name = "Books"
+    weight = 2
+    url = "books/"
+  [[menu.main]]
+    parent = "teaching"
+    name = "Courses"
+    weight = 3
+    url = "courses/"
   [[menu.main]]
     name = "Ressources"
     weight = 6

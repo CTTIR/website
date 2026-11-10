@@ -17,7 +17,7 @@
          with cttiR's reserved core palette first. */}}
     {{ $rGroups := slice "CTTIR core" "Spectral imaging" "Spatial biology" "Molecular data" "Clinical science" "Statistical inference" "Dimension reduction & visualisation" "Systems & simulation" "Evidence & discovery" "Consensus & ideation" "Research infrastructure" }}
     {{ $family := dict "CTTIR core" "core" "Spectral imaging" "spectral" "Spatial biology" "spatial" "Molecular data" "omics" "Clinical science" "clinical" "Statistical inference" "methods" "Dimension reduction & visualisation" "embedding" "Systems & simulation" "simulation" "Evidence & discovery" "evidence" "Consensus & ideation" "consensus" "Research infrastructure" "platform" }}
-    {{ range $cat := slice "R Packages" "Zotero Plugins" "Applications" "Education & Resources" "Others" }}
+    {{ range $cat := slice "R Packages" "Zotero Plugins" "Applications" "Tutorials" "Books" "Courses" "Others" }}
       {{ $items := where $software "category" $cat }}
       {{ if $items }}
         <h2 class="cttir-section-title">{{ $cat }}</h2>

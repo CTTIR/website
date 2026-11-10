@@ -3,6 +3,10 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # Daily rebuild so the version and last-update lines on the software
+    # cards follow the package repositories.
+    - cron: '23 4 * * *'
   workflow_dispatch:
 
 permissions:
@@ -42,6 +46,10 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Get Hugo modules
         run: hugo mod get -u
+      - name: Refresh software versions and update dates
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/update_software_meta.py
       - name: Build
         env:
           HUGO_ENVIRONMENT: production

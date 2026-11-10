@@ -44,8 +44,8 @@ data. Check each source's access conditions, licence and documentation before us
   infrastructure, with links to source and documentation.
 - [R ecosystem](https://cttir.github.io/ressources/ressources/r-ecosystem.html)
   — complementary R packages and development resources.
-- [Tutorials & Courses](../tutorials/) — practical guides and the biostatistics
-  curriculum.
+- [Tutorials](../tutorials/), [Books](../books/) and [Courses](../courses/) — practical
+  guides on R in general, open books and the biostatistics curriculum.
 
 Suggest additions or report broken links through the
 [resource repository](https://github.com/CTTIR/ressources/issues).

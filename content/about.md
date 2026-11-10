@@ -57,7 +57,7 @@ work; a released CTTIR-trained model is not implied.
   client for academic literature surveillance.
 - **Teaching and shared resources.** A four-course biostatistics curriculum,
   practical tutorials and curated method references support the use and critical
-  appraisal of these tools. Explore [Tutorials & Courses](../tutorials/) and
-  [Ressources](../ressources/).
+  appraisal of these tools. Explore the [tutorials](../tutorials/), [books](../books/), [courses](../courses/)
+  and [Ressources](../ressources/).
 
 {{< repository-network >}}

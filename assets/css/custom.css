@@ -298,6 +298,16 @@ body.colorscheme-dark .cttir-pipeline .cttir-brand-images .cttir-brand-dark { di
   font-size: 0.9rem;
   font-weight: 600;
 }
+.cttir-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.9rem;
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--cttir-card-muted);
+  font-variant-numeric: tabular-nums;
+}
+.cttir-card__version { font-weight: 600; }
 
 /* Horizontal tile grid (Projects + Workflows) */
 .cttir-tiles {

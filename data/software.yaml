@@ -176,9 +176,9 @@
   status: usable
   category: "R Packages"
   group: "Clinical science"
-  description: "Auditor live-evaluation dashboard for haematological oncology cohorts — quality and coverage indicators, OPS-coded complex-therapy and diagnostics counts, Kaplan–Meier, oncoprint, and cytogenetics summaries in an interactive Shiny app."
-  github: https://github.com/CTTIR/zhncommandR
-  docs: https://cttir.github.io/zhncommandR/
+  description: "Auditor live-evaluation dashboard for haematological oncology cohorts — quality and coverage indicators, OPS-coded complex-therapy and diagnostics counts, Kaplan–Meier, oncoprint, and cytogenetics summaries in an interactive Shiny app. Not public yet."
+  github: ""
+  docs: ""
   logo: /website/images/hex/zhncommandR.svg
   logo_dark: /website/images/hex/zhncommandR-dark.svg
 
@@ -421,9 +421,9 @@
   status: draft
   category: "R Packages"
   group: "Statistical inference"
-  description: "Explicit statistical procedures, descriptive summaries and diagnostic calculations behind one result contract, the computational core of the inference packages. Not public yet."
-  github: ""
-  docs: ""
+  description: "Explicit statistical procedures, descriptive summaries and diagnostic calculations behind one result contract, the computational core of the inference packages."
+  github: https://github.com/CTTIR/infercalcR
+  docs: https://github.com/CTTIR/infercalcR#readme
   logo: /website/images/hex/infercalcR.svg
   logo_dark: /website/images/hex/infercalcR-dark.svg
 
@@ -500,31 +500,80 @@
     interface and PostgreSQL workflows; synthetic development examples, not a production
     deployment.
   github: https://github.com/CTTIR/delphyR
+  version_file: packages/delphyr/DESCRIPTION
   docs: https://github.com/CTTIR/delphyR#readme
   logo: /website/images/hex/delphyr.svg
   logo_dark: /website/images/hex/delphyr-dark.svg
 
-- name: courses
+- name: R Tutorials
   status: usable
-  category: Education & Resources
-  description: Biostatistics curriculum covering foundations, regression, study design
-    and machine learning.
-  github: https://github.com/CTTIR/courses
-  docs: https://github.com/CTTIR/courses#readme
-  logo: ''
-
-- name: tutorials
-  status: usable
-  category: Education & Resources
-  description: Hands-on tutorials for CTTIR software and reproducible research methods.
+  category: Tutorials
+  description: Tutorials on R in general, for anyone working with data and not tied to
+    CTTIR projects; a knowledge base of more than 550 runnable method pages in 16 topic
+    areas, from probability and visualisation to regression, Bayesian inference, survival
+    analysis, machine learning and bioinformatics, with a test-selection decision tree
+    and companion Shiny apps; a first point of entry that also serves as an in-depth
+    reference.
   github: https://github.com/CTTIR/tutorials
-  docs: https://github.com/CTTIR/tutorials#readme
+  docs: https://cttir.github.io/tutorials/
   logo: ''
 
-- name: ressources
+- name: Methods in R
   status: usable
-  category: Education & Resources
-  description: Shared research resources, references and supporting materials.
-  github: https://github.com/CTTIR/ressources
-  docs: https://github.com/CTTIR/ressources#readme
+  category: Books
+  description: Open book for biomedical authors and peer reviewers, covering common methods
+    with R code, diagnostics and reviewer-facing red flags.
+  github: https://github.com/CTTIR/methods-in-r
+  docs: https://cttir.github.io/methods-in-r/
   logo: ''
+
+- name: Clinical Data Science in R
+  status: usable
+  category: Books
+  description: Open textbook on methods in clinical AI and translational trauma research,
+    with 28 chapters from the clinical question to model evaluation, imaging, simulation
+    and ethics, and R labs on synthetic data.
+  github: https://github.com/CTTIR/clinical-data-science-in-r
+  docs: https://cttir.github.io/clinical-data-science-in-r/
+  logo: ''
+
+- name: Scientometrics in R
+  status: usable
+  category: Books
+  description: Open book on bibliometric data acquisition, indicators, network analysis,
+    text mining and reproducible reporting in R.
+  github: https://github.com/CTTIR/scientometrics-in-r
+  docs: https://cttir.github.io/scientometrics-in-r/
+  logo: ''
+
+- name: Strategy in R
+  status: usable
+  category: Books
+  description: Open book on game theory, simulation and machine intelligence, implemented
+    in R.
+  github: https://github.com/CTTIR/strategy-in-r
+  docs: https://cttir.github.io/strategy-in-r/
+  logo: ''
+
+- name: R Course
+  status: usable
+  category: Courses
+  description: A four-course biostatistics programme in R and Quarto, from the scientific
+    process and core tests through regression, study design and causal inference to
+    statistical learning on high-dimensional biomedical data; a structured starting
+    point that goes well beyond the basics.
+  github: https://github.com/CTTIR/courses
+  docs: https://cttir.github.io/courses/
+  logo: ''
+
+- name: Clinical Data Science Course
+  status: usable
+  category: Courses
+  description: 'Clinical Data Science in R: eight workshops (32 teaching units) on clinical
+    AI and translational trauma research, from diagnostic accuracy and grouped validation
+    to longitudinal and mechanistic models, simulation, regulation and data protection,
+    with R labs on synthetic data.'
+  github: https://github.com/CTTIR/clinical-data-science-in-r-course
+  docs: https://cttir.github.io/clinical-data-science-in-r-course/
+  logo: ''
+
