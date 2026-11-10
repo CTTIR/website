@@ -15,7 +15,7 @@ Albert-Einstein-Straße 47
 02977 Hoyerswerda
 Deutschland
 
-**E-Mail:** 58561665+r-heller@users.noreply.github.com
+**E-Mail:** cttir.dev@outlook.com
 
 **Website:** <https://cttir.github.io/website/>
 
