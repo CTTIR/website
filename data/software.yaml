@@ -172,16 +172,6 @@
   docs: https://cttir.github.io/molpathR/
   logo: /website/images/hex/molpathR.svg
   logo_dark: /website/images/hex/molpathR-dark.svg
-- name: zhncommandR
-  status: usable
-  category: "R Packages"
-  group: "Clinical science"
-  description: "Auditor live-evaluation dashboard for haematological oncology cohorts — quality and coverage indicators, OPS-coded complex-therapy and diagnostics counts, Kaplan–Meier, oncoprint, and cytogenetics summaries in an interactive Shiny app. Not public yet."
-  github: ""
-  docs: ""
-  logo: /website/images/hex/zhncommandR.svg
-  logo_dark: /website/images/hex/zhncommandR-dark.svg
-
 - name: harbouR
   status: usable
   category: "R Packages"

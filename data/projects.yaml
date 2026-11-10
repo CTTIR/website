@@ -53,7 +53,6 @@
     - { pkg: qviewparsR,  note: "multiplex protein parsing" }
     - { pkg: pressR,      note: "cohort reporting" }
     - { pkg: molpathR,    note: "molecular pathology cohort assembly and interactive exploration" }
-    - { pkg: zhncommandR, note: "haematological-oncology cohort audit dashboard" }
     - { pkg: songR,       note: "joint interpretable embeddings across modalities" }
     - { pkg: dynasimR,    note: "synthetic ground truth for integration benchmarking" }
   workflows:
