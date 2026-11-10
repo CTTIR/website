@@ -1,11 +1,11 @@
 +++
 title = "Impressum"
-description = "Anbieterkennzeichnung gemäß § 5 TMG / § 18 MStV"
+description = "Anbieterkennzeichnung gemäß § 5 DDG / § 18 MStV"
 +++
 
 ## Impressum
 
-Angaben gemäß § 5 TMG.
+Angaben gemäß § 5 DDG.
 
 **Name:** R. Heller
 
