@@ -405,3 +405,8 @@ body.colorscheme-dark .cttir-brand-images .cttir-brand-dark { display: block; }
 }
 
 .cttir-brand-images { display: flex; justify-content: center; align-self: center; }
+
+/* Ongoing projects (projectsync) */
+.cttir-ongoing{list-style:none;padding-left:0}
+.cttir-ongoing li{padding:.2rem 0}
+.cttir-ongoing code{margin-right:.4rem}

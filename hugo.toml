@@ -42,6 +42,10 @@ enableEmoji = true
 
 [menu]
   [[menu.main]]
+    name = "Ongoing Projects"
+    weight = 2
+    url = "ongoing/"
+  [[menu.main]]
     name = "About"
     weight = 1
     url = "about/"

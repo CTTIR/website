@@ -1,0 +1,15 @@
+{{ define "content" }}
+<section class="container page">
+  <article>
+    <header><h1 class="title"><span class="title-text">{{ .Title }}</span></h1></header>
+    {{ .Content }}
+    {{ with .Params.ongoing }}
+    <p class="cttir-muted">{{ len .areas }} research areas · updated {{ .generated }}</p>
+    {{ range .areas }}
+      <h2 class="cttir-section-title" id="{{ .id | urlize }}">{{ .title }} <small>({{ .id }})</small></h2>
+      {{ with .projects }}<ul class="cttir-ongoing">{{ range . }}<li><code>{{ .id }}</code> {{ .title }}</li>{{ end }}</ul>{{ end }}
+    {{ end }}
+    {{ end }}
+  </article>
+</section>
+{{ end }}
