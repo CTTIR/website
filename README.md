@@ -7,15 +7,41 @@ Built with [Hugo](https://gohugo.io/) (extended) and the [Coder](https://github.
 ## Local development
 
 ```bash
-hugo mod get -u
+hugo mod verify
 hugo server -D
 ```
 
-Then open <http://localhost:1313/website/>.
+Use Hugo extended 0.150.0 and the Go version in `go.mod` (currently 1.26.1),
+matching CI. Builds resolve the theme from committed `go.mod` / `go.sum`;
+they do not upgrade it. Then open <http://localhost:1313/website/>.
+
+For a production check:
+
+```bash
+python3 -m unittest discover -s tests -v
+hugo --gc --minify
+hugo mod verify
+git diff --exit-code -- go.mod go.sum
+python3 tools/check_site.py public
+```
+
+The link check validates local HTML navigation, fragments and referenced assets
+under the configured `/website/` site path. Links to other sites or sibling
+GitHub Pages projects are outside this offline check. Pass `--base-url` to the
+checker if changing the deployment URL, and update `hugo.toml` consistently.
+
+Theme upgrades are deliberate changes: run
+`hugo mod get github.com/luizdepra/hugo-coder@<version>`, review and commit both
+module files, then run the production checks. Do not use `hugo mod get -u` as
+part of a normal build.
 
 ## Deployment
 
-GitHub Actions workflow `.github/workflows/hugo.yml` builds and publishes the site. After first push to `main`, in the GitHub repository: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+GitHub Actions workflow `.github/workflows/hugo.yml` validates pull requests with
+read-only repository permissions and builds the site from pinned modules. Only
+`main` builds can upload the Pages artifact and deploy. The daily metadata refresh
+remains enabled for publication builds; pull requests use the committed snapshot.
+The site base URL comes from `hugo.toml`. After first push to `main`, in the GitHub repository: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
 ## Branding assets
 

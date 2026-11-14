@@ -1,7 +1,6 @@
 baseURL = "https://cttir.github.io/website/"
 languageCode = "en-us"
 title = "CTTIR"
-theme = "github.com/luizdepra/hugo-coder"
 defaultContentLanguage = "en"
 enableEmoji = true
 
