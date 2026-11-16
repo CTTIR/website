@@ -567,3 +567,13 @@
   docs: https://cttir.github.io/clinical-data-science-in-r-course/
   logo: ''
 
+- name: Game Theory Course
+  status: draft
+  category: Courses
+  description: '#equilibria: tutorials on game theory, decision-making, simulation and
+    AI/ML in R, arranged in four courses with 32 topic areas and an interactive
+    Nash-equilibrium explorer.'
+  github: https://github.com/CTTIR/equilibria
+  docs: https://cttir.github.io/equilibria/
+  logo: ''
+
